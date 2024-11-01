@@ -1,0 +1,59 @@
+.c-steps {
+    @extend %rel; z-index: 100;
+    width: 100vw;
+    align-self: baseline;
+    background-image: url(../img/bg/dark.jpg);
+    text-align: center;
+    color: white;
+    
+    p {
+        font-size: rem(30);
+        
+        &:nth-of-type(2) {
+            max-width: 91%;
+            margin: 1em auto 0 auto;
+            font-size: rem(24);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+		    font-size: rem(22);
+		    
+		    &:nth-of-type(2) {
+                font-size: rem(18);
+            }
+		}
+    }
+
+    &__col {
+        @media ( min-width: $tablet + 1px ) {
+            width: 70%;             
+            padding: 0 40px;
+        }
+    }
+
+    &__content {
+        @extend %flex;
+        @extend %flex-x;
+        @extend %flex-wrap;
+        margin-bottom: 100px; 
+        
+        @media ( max-width: $smartphone + px ) {
+            margin-bottom: 50px;
+        }
+    }
+    
+    .o-header {
+		@extend %rel;
+		margin-bottom: 4rem;
+		
+		@media ( max-width: $smartphone + px ) {
+			margin-bottom: 4rem;
+		}
+	}
+	
+	.c-logo {
+    	@media ( max-width: $smartphone + px ) {
+    	    display: none;
+    	}
+	}
+}

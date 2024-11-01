@@ -1,0 +1,18 @@
+.b-lazy {
+	@extend %anim;
+	opacity: 0;
+	
+	.c-portfolio & {
+		//transform: translateY(100px);	
+	}
+	
+	&.b-loaded {
+		opacity: 1;
+		
+		.c-portfolio & {
+			//transform: translateY(0);	
+		}
+	}
+}
+
+

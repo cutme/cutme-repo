@@ -1,0 +1,34 @@
+.o-container {
+	@extend %anim;
+	@extend %rel;
+    overflow: hidden;
+/*
+	&:after {
+    	@extend %abs; 
+    	@extend %abs-after;
+    	@extend %anim--fast;
+    	width: 100%; height: 100%;
+    	z-index: -1;
+    	left: 0; top: 0;
+    	background: rgba(black, .7);
+    	opacity: 0;
+	}
+*/
+
+/*
+	.is-loaded &,
+	.pace-done & {
+		opacity: 1;
+	}
+	
+*/
+/*
+    &.is-apla {
+        &:after {
+            opacity: 1;
+            z-index: 100;
+        }
+    }
+*/
+	
+}

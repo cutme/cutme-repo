@@ -1,0 +1,120 @@
+
+       <div class="c-contact" id="contact">
+           <div itemscope itemtype="http://schema.org/Organization" class="c-logo">
+				<a 
+                    itemprop="url" 
+                    href="/" 
+                    class="c-logo__img" 
+                    title="Cięcie do HTML, psd do html, kodowanie stron www">
+                    <img itemprop="logo" src=<%= require("./img/assets/logo-black.svg") %> width="145" height="28" alt="cutme">    
+                </a>
+			</div>
+
+            <div class="o-wrap o-wrap--normal o-section">
+
+                <header class="o-header o-header__section js-fadeInChildren">
+                    <h5 class="o-header__small ">Zostaw kontakt</h5>
+                    <h3 class="o-header__medium">#działajmy!</h3>
+                </header>
+
+                <div class="c-contact__content">
+
+                    <ul class="c-contact__social js-fadeInChildren">
+                        <li><i class="icon-envelope-o"></i><a itemprop="email" href="mailto:info@cutme.pl">info@cutme.pl</a></li>
+                        <li><i class="icon-device-mobile"></i><a itemprop="telephone" href="tel:691630013">691 630 013</a></li>
+                        <li><i class="icon-messenger"></i><a href="http://m.me/cutmepl" target="_blank">Messenger</a></li>
+                        <li><i class="icon-skype"></i><a href="skype:bartoszm">Skype</a></li>
+                    </ul>
+
+                    <div class="c-contactform ">
+                        <div class="content">
+	
+                            <form action="https://cutme.pl/contact.php" method="post" id="contactForm" novalidate class="js-fadeInChildren">
+                                <fieldset id="formFields">
+                                
+                                    <span class="input">
+										<input 
+											class="input__field" 
+											type="text" 
+											id="input-0" 
+											name="name" 
+											autocomplete="off" />
+										
+										<label class="input__label" for="input-1">
+											<span class="input__label-content">Imię i nazwisko</span>
+											<span class="messages"></span>
+										</label>
+									
+										<svg 
+											class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+		 
+											<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+										</svg>
+										
+										
+									</span>
+							
+									<span class="input">
+										<input 
+											class="input__field" 
+											type="email" 
+											id="input-1" 
+											name="email" 
+											autocomplete="off" />
+										
+										<label class="input__label" for="input-1">
+											<span class="input__label-content">E-mail</span>
+											<span class="messages"></span>
+										</label>
+									
+										<svg 
+											class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+		 
+											<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+										</svg>
+										
+										
+									</span>
+								
+									<span class="input">
+										<textarea rows="1" 
+											class="input__field input__field--textarea" 
+											id="input-2" 
+											name="message"></textarea>
+											
+										<label class="input__label" for="input-2">
+											<span class="input__label-content">Opisz w kilku słowach zlecenie.</span>
+										</label>
+									
+										<svg 
+											class="graphic" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">			
+		 
+											<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+										</svg>
+									</span>
+									
+								
+									<div class="c-contactform__submit">
+
+										<div class="c-contactform__spinner is-hidden" id="spinner"></div>
+
+										<button type="submit" class="o-btn o-btn--oval o-btn--redonwhite" id="submita"><span>Wyślij</span></button>
+									</div>
+								</fieldset>
+								
+								<fieldset class="c-contactform__thanks is-hidden" id="formThanks">
+									<h4>Dziękuję za kontakt!</h4>
+
+									<p>
+									    Cieszę się, że zdecydowałeś się napisać.<br>
+										Odpowiem tak szybko, jak to tylko możliwe.
+									</p>
+								</fieldset>
+							</form>
+							
+						</div>
+					</div>
+
+                </div>
+            </div>
+        </div>

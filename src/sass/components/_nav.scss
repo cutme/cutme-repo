@@ -1,0 +1,85 @@
+.c-nav {
+	@include z-index(nav);
+	position: fixed;
+    right: 50px; top: 25px;
+    animation: fadeInFromNone 200ms forwards ease-out;
+    transform: translateX(50px);
+	
+	&.is-rolled {
+    	display: none;
+	}
+	
+	&.is-visible {
+    	@extend %flex;
+        @extend %flex-xy;
+        display: flex;
+        right: 0; top: 0;
+        background-color: white;
+        width: 40%; height: 100%;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 90%;
+        }
+        
+	}
+
+	&__menu {
+	    @extend %flex;
+	    padding: 0 50px;
+	    
+	    @media screen and ( max-width: $smartphone + px ) {
+	        display: none;
+	    }
+	    
+	    .is-visible & {
+            display: flex;
+    	    flex-direction: column;
+    	    width: 100%;
+
+	    }
+
+    	li {
+            padding: .2rem 1rem;
+            text-transform: uppercase;
+            font-family: $serif;
+
+    	    .is-visible & {
+    	        //border-bottom: 1px solid rgba(black, .1);
+    	        font-size: rem(32);
+    	        
+                @media ( max-width: $smartphone + px ) {
+    	            font-size: rem(18);
+    	        }
+    	    }    	    
+    	    
+    	    a {
+        	    @extend %ulink;
+        	    letter-spacing: .5px;
+        	    font-weight: $bold;
+        	    user-select: none;
+        	    
+        	    .is-visible & {
+                    font-size: rem(24);
+        	    }
+
+        	    &:before, &:after {
+            	    background-color: $c-black;
+            	    
+            	    .is-visible & {
+            	        display: none;
+            	    }
+        	    }
+        	    
+        	    &:hover {
+            	    .is-visible & {
+            	        color: $c-red;
+            	    }
+        	    }
+    	    }
+    	}
+	}
+	
+	&--white {
+    	color: white;
+	}
+}

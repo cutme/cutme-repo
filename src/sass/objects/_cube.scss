@@ -1,0 +1,15 @@
+$cube-height: 64px;
+
+.o-cube {
+	@extend %rel;
+	display: inline-block;
+	height: $cube-height;	 
+	transition: all 250ms ease;
+	transform-style: preserve-3d;
+	
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+	    display: block;
+	    width: 100%;
+	}
+	
+}
