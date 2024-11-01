@@ -11,30 +11,36 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 
 console.log(process.env.NODE_ENV);
 
 const templateFileMapper = [
-    { template: "./src/index.ejs", file: "index.html" },   
+    { template: "./src/artykul.ejs", file: "artykul.html" },
+    { template: "./src/index.ejs", file: "index.html" },
+    { template: "./src/blog.ejs", file: "blog.html" },
 ]
 
 const htmlPlugins = () => {
   return templateFileMapper.map(entry => {
     return new HtmlWebpackPlugin({
-      template: entry.template,
-      filename: entry.file,
-      minify: {
+        inject: 'html',
+        template: entry.template,
+        filename: entry.file,
+        minify: {
 //        removeScriptTypeAttributes: true,
-        
-        collapseWhitespace: true,
-        keepClosingSlash: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true
-
-      }
+            collapseWhitespace: true,
+          //  keepClosingSlash: true,
+            removeComments: true,
+          //  removeRedundantAttributes: true,
+          //  removeScriptTypeAttributes: true,
+          //  removeStyleLinkTypeAttributes: true,
+          //  useShortDoctype: true
+        },
+        scriptLoading: 'defer',
+        templateParameters: {
+            className: 'production'
+        },
     });
   })
 };
@@ -81,23 +87,30 @@ module.exports = {
         new CopyPlugin({
             patterns: [
             {
-                from: '**/*.json',
-                to: '../dist',
-            	context: 'src'
-            },
-            {
-                from: '**/*.php',
-                to: '../dist',
-            	context: 'src'
-            },
-            {
                 from: path.resolve(__dirname, '../src/img/assets/og-image.jpg'),
                 to: '../dist/img/assets'
+            },
+            {
+                from: path.resolve(__dirname, '../src/*.pdf'),
+                to: path.resolve(__dirname, '../dist'),
+                flatten: true
             }
             ],
         }),
         
-
+        new HtmlCriticalPlugin({
+            base: path.join(path.resolve(__dirname), '../dist/'),
+            src: 'index.html',
+            dest: 'index.html',
+            inline: true,
+            minify: true,
+            extract: true,
+            width: 375,
+            height: 565,
+            penthouse: {
+                blockJSRequests: false,
+            }
+        })
     ]),
 	
 	optimization: {

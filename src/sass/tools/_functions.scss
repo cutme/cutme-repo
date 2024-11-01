@@ -43,36 +43,7 @@
   z-index: z-index($key);
 }
 
-
-/*
-
-@function get-vw-1920($target) {
-	$vw-context: ($project * 0.01);
-	@return ($target / $vw-context) * 1vw;
+@function toRem($value) {
+    $remValue: ($value / 16) + rem;	
+    @return $remValue;
 }
-
-@function get-vw-1400($target) {
-	$vw-context: (1400 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-1220($target) {
-	$vw-context: (1220 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-tablet($target) {
-	$vw-context: ($tablet * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-tablet-portrait($target) {
-	$vw-context: ($tablet_portrait * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-640($target) {
-	$vw-context: (600 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-*/

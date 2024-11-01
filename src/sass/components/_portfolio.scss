@@ -10,8 +10,8 @@
 	&__content {
 	    @extend %flex;
     	@extend %flex-wrap;
-    	max-width: 1600px;
-    	margin: 0 auto;
+    	//max-width: 1600px;
+    	//margin: 0 auto;
     	
     	@media ( max-width: 1200px ) {
             max-width: 1024px;
@@ -30,7 +30,8 @@
 	
 	&__box {
 		width: 25%;
-		max-height: 480px;
+		background-color: #020202;
+//		max-height: 480px;
 		overflow: hidden;
 		
 		@media ( max-width: $tablet + px ) {
@@ -39,6 +40,7 @@
 
         img {
             @extend %anim;
+            width: 100%;
         }
 
 		&--big {
@@ -153,24 +155,19 @@
 	&__highlight {
     	margin-left: -10px;
     	padding: 0 10px;
-    	line-height: 1.1em;
+    	line-height: 1.4rem;
     	font: {
-    	    size: rem(16);
-    	    weight: $regular;
+    	    size: clamp(14px, toRem(16), toRem(16));
 	    }
 	    color: white;
     	
-    	@media ( min-width: $tablet + 1px ) and ( max-width: 1200px ) {
-    	    font-size: get-vw-1200(16);
-    	}
-    	
     	&--small {
-        	font-size: rem(14);
+        	font-size: 14px;
+        	line-height: 1rem;
     	}
 	}
 	
 	&__line {
-    	line-height: 1.4em;	
     	color: #2f3238;
     	transition: opacity .35s, transform .55s;
     	transform: translate3d(-580px,0,0);
@@ -181,7 +178,7 @@
     	
     	&:nth-of-type(2) {
         	transition-delay: .25s;
-        	line-height: 1;
+        	//line-height: 1;
     	}
     	
     	&:nth-of-type(3) {
@@ -190,22 +187,21 @@
 	}
 
 	&__item {
-		//will-change: opacity;
 		@extend %anim;
 		@extend %rel;
 		display: block;
 		overflow: hidden;
-		background-color: white;
+		//background-color: white;
 		
 		&:after {
     		@extend %abs-after;
     		left: 0; top: 0;
     		z-index: 10;
     		width: 100%; height: 100%;
-    		box-shadow: inset 0 0 0 1px white;
+//    		box-shadow: inset 0 0 0 1px white;
     		
     		@media ( max-width: $smartphone_portrait + px ) {
-    		    box-shadow: inset 0 0 0 2px white;
+//    		    box-shadow: inset 0 0 0 2px white;
     		}
 		}
 		
@@ -253,24 +249,24 @@
 
 	&__lead {
     	//@extend %font-serif;
-    	text-transform: uppercase;
-    	font-family: $serif;
-    	font-size: rem(40);
-    	font-weight: $bold2;
+//     	text-transform: uppercase;
+        margin-bottom: 12px;
+    	font-size: clamp(24px, toRem(40), toRem(40));
+    	font-weight: $light;
+//    	font-weight: $bold2;
     	color: white;
     	
+/*
     	@media ( min-width: $tablet + 1px ) and ( max-width: 1200px ) {
     	    font-size: get-vw-1200(40);
     	}
+*/
     	
     	&--small {    	    
-        	font-size: rem(26);
-        	font-weight: $bold2;
-        	
-        	@media ( min-width: $tablet + 1px ) and ( max-width: 1200px ) {
-        	    font-size: get-vw-1200(26);
-        	}
-        	
+        	font: {
+            	size: clamp(22px, toRem(26), toRem(26));
+            	//weight: $bold2;
+            }
     	}
     }
 }

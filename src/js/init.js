@@ -1,18 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-   // const cover = document.getElementById('cover');
-    
     const init = () => {
-
         //document.documentElement.removeAttribute('style');
-        document.documentElement.classList.add('is-loaded');
-        
-        document.querySelector('.c-welcome').removeAttribute('style')
-        
+        document.documentElement.classList.add('is-loaded');        
         window.anims();
-        
-        
+
         setTimeout(() => {
+            document.getElementById('cover').remove();
             //window.carousels();
             //cover.remove();
             

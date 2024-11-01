@@ -1,13 +1,18 @@
+html {    
+    @media ( max-width: $base + px ) {
+        font-size: calc(16 / $base * 100 * 1vw);
+    }
+}
+
 body {
-	@include antialias;
-	line-height: 1.5;
+    @include antialias;
+	line-height: normal;
 	text-rendering: optimizeSpeed;
 	font: {
 		family: $text;
-		size: #{$base-font-size}px;
 		weight: $light;
-		display: fallback;
 	}
+	
 	color: $c-black;
 }
 

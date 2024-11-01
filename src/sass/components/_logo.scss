@@ -1,14 +1,11 @@
 .c-logo {
 	@include z-index(logo);
 	@extend %abs;
-	//@extend %anim;
 	left: 30px; top: 0;
 	width: 145px;
 	height: 100vh;
-	//height: 400vh;
 	clip: rect(auto, auto, auto, auto);
 	overflow: hidden;
-	//transition-duration: 600ms;
 
 	&__img {
 		position: fixed;

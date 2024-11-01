@@ -1,3 +1,5 @@
+$gap: clamp(32px, toRem(48), toRem(48));
+
 %abs {
 	position: absolute;
 	z-index: 5;
@@ -16,10 +18,9 @@
 	content: ' ';
 }
 
-%anim {
-    
+%anim {   
     transition-property: all;
-    transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    transition-timing-function: cubic-bezier(.250, .100, .250, 1.000);
 }
 
 %anim--fast {
@@ -102,6 +103,10 @@
 
 %flex {
     display: flex;
+}
+
+%flex-column {
+    flex-direction: column;
 }
 
 %flex-x {

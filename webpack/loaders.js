@@ -75,7 +75,7 @@ const fonts = {
 }
 
 const images = {
-    test: /\.(jpg|png|svg|gif|webp|ico)$/i,
+    test: /\.(jpg|png|svg|gif|webp|ico|mp4|pdf)$/i,
     exclude: /fonts/,
     use: [
         {

@@ -1,11 +1,64 @@
-import { gsap, Power1 } from "gsap";
+import { gsap, elastic } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Lenis from 'lenis';
 
-document.addEventListener('DOMContentLoaded',function() {
+document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
     
-    window.anims = function() {
+    window.gsap_parallax = () => {
+        gsap.utils.toArray(".gs-parallax").forEach(function(section) {            
+            gsap.to(".gs-parallax", {
+                yPercent: 40,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".gs-parallax",
+                    scrub: 0,
+                    start: 'top top',
+                }, 
+            });
+        });
+    };
+
+    window.anims = () => {
+        gsap_parallax();
         
+        ScrollTrigger.batch(".c-portfolio__box", {
+            onEnter: elements => {
+                gsap.from(elements, {
+                    autoAlpha: 0,
+                    x: 60,
+                    stagger: 0.15,
+                    ease: 'elastic.out(1, .8)',
+                    duration: 2
+                });
+            },
+        });
+
+
+/*
+  gsap.from(image, {
+      scrollTrigger: {
+        trigger: image,
+        start: '-50px bottom',
+        toggleActions: "play reverse complete reverse",
+    },
+    
+        x: 40,
+        autoAlpha: 0,
+        ease: 'elastic.out(1, .8)',
+        stagger: 0.1,
+    })
+*/
+  
+        const lenis = new Lenis();
+        lenis.on('scroll', ScrollTrigger.update)
+    
+        gsap.ticker.add((time)=>{
+            lenis.raf(time * 1000)
+        })
+        
+        gsap.ticker.lagSmoothing(0);
+              
         gsap.utils.toArray(".js-fadeInChildren > *:not(.c-logo)").forEach(function(section) {
             gsap.from(section, {
                 scrollTrigger: {
@@ -18,27 +71,6 @@ document.addEventListener('DOMContentLoaded',function() {
                 y: 50
             });
         });
-        
-        const doubl = document.querySelector('#double');
-        if (doubl) {
-            ScrollTrigger.matchMedia({
-                "(min-width: 1025px)": ()=> {
-                    gsap.to(doubl, {
-                        xPercent: -50,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: doubl,
-                            pin: true,
-                            scrub: 1,
-                            start: 'top top',
-                            end: `${doubl.offsetWidth/4}`,
-                            pinSpacing: 1,
-                            snap: 1
-                        }
-                    });
-                }
-            })   
-        }
         
         if (document.querySelector('.c-welcome')) { 
             const textWrapper1 = document.querySelector('.c-welcome .char1');
@@ -64,8 +96,8 @@ document.addEventListener('DOMContentLoaded',function() {
             const cto = {
                 y: 0,
                 opacity: 1,
-                stagger: 0.05,
-                duration: 1.2,
+                stagger: 0.02,
+                duration: 1,
                 scaleY: 1,
                 ease: 'elastic.out(1, .8)',
             }
@@ -79,40 +111,46 @@ document.addEventListener('DOMContentLoaded',function() {
                 chars2, cfrom, cto, '-=1'
             )
             
-            .from(document.querySelector('.c-welcome h2'), {
-                duration: 2.5,
-                x: 40,
-                autoAlpha: 0,
-                ease: 'elastic.out(1, .8)',
-            }, '-=2')
-            
-            .from(document.querySelector(".c-welcome .c-welcome__skills"), {
+            .from(document.querySelector(".c-welcome h2"), {
                 duration: 1.6,
                 y: 40,
                 autoAlpha: 0,
                 ease: 'elastic.out(1, .8)',
             }, '-=2.2')
             
-            .from(document.querySelectorAll(".c-welcome .c-welcome__skills strong"), {
+            .from(document.querySelector(".c-welcome__skills"), {
+                duration: 1.6,
+                y: 40,
+                autoAlpha: 0,
+                ease: 'elastic.out(1, .8)',
+            }, '-=2.2')
+            
+            .from(document.querySelectorAll(".c-welcome__skills span"), {
                 duration: 1.2,
                 x: 40,
                 autoAlpha: 0,
                 ease: 'elastic.out(1, .8)',
                 stagger: 0.1,
             }, '-=2.4')
-            
-            .from(document.querySelector(".c-welcome .c-welcome__cube"), {
-                duration: 1.6,
-                y: -40,
-                autoAlpha: 0,
-                ease: 'elastic.out(1, .8)',
-            }, '-=2')
 
             .from(document.querySelector(".c-welcome .c-logo"), {
                 duration: 1.5,
                 autoAlpha: 0,
                 ease: 'elastic.out(1, .8)',
-            }, '-=2')
+            }, '-=1')
+            
+            .from(document.querySelector(".c-welcome .o-more"), {
+                duration: 1.6,
+                y: 40,
+                autoAlpha: 0,
+                ease: 'elastic.out(1, .8)',
+            }, '-=1')
+            
+            .from(document.querySelector(".c-welcome video"), {
+                duration: 3,
+                autoAlpha: 0,
+            })
+
         }
     };
 

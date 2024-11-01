@@ -15,22 +15,20 @@ const minify = {
     removeScriptTypeAttributes: true,
 }
 
-
-
 const templateFileMapper = [
-
     { template: "./src/index.ejs", file: "index.html" },
-
 ]
 
-
 const htmlPlugins = () => {
-  return templateFileMapper.map(entry => {
-    return new HtmlWebpackPlugin({
-      template: entry.template,
-      filename: entry.file,
-    });
-  })
+    return templateFileMapper.map(entry => {
+        return new HtmlWebpackPlugin({
+            template: entry.template,
+            filename: entry.file,
+            templateParameters: {
+               className: 'dev'
+            },
+        });
+    })
 };
 
                     

@@ -1,22 +1,18 @@
 <% include ./src/includes/head %>
 <body>
 
-<body style="background-color: #e4e4e4;" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSWJ5JLZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<% include ./src/includes/head-gtm--noscript %>
+<% include ./src/includes/cover %>
 
-	<div itemprop="mainContentOfPage" role="main" class="o-container">
-    	<div class="c-double" id="double">
-            <% include ./src/includes/welcome %>
-            <% include ./src/includes/portfolio %>
-        </div>
-        
+	<main itemprop="mainContentOfPage" role="main">
+        <% include ./src/includes/welcome %>
+        <% include ./src/includes/portfolio %>        
         <% include ./src/includes/steps %>
         <% include ./src/includes/contact %>
     	<% include ./src/includes/opinions %>
-	</div>
+	</main>
+
     <% include ./src/includes/footer %>
     
 <script src="//code.tidio.co/mlayqazkjkapvwreklbcmiuxkhgpvrfk.js" async></script>
