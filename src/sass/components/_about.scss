@@ -1,0 +1,75 @@
+.c-about {
+	@extend %flex;
+	@extend %flex-y;
+	@extend %rel; 
+	background-color: $c-gray3;
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		text-align: center;
+	}
+
+	.o-header {
+		@extend %rel;
+		margin-bottom: 8rem;
+		text-align: center;
+		
+		span {
+    		& + span {
+        		@media screen and ( max-width: $smartphone + px ) { 
+        		    display: block;
+        		}
+    		}
+		}
+	}
+
+	article {
+		letter-spacing: .3px;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+		    column-count: 2;
+            column-gap: 40px;
+		}
+
+        > div {
+            -webkit-column-break-inside: avoid; /* Chrome, Safari */
+            page-break-inside: avoid;           /* Theoretically FF 20+ */
+            break-inside: avoid-column;         /* IE 11 */
+            display:table;                      /* Actually FF 20+ */
+        }
+        
+        a {
+            font-weight: $bold;
+        }
+        
+        h4 {
+        	margin-bottom: .5em;
+        	line-height: 1.1;
+        	letter-spacing: 1px;
+        	text-transform: uppercase;
+        	font: {
+        	    family: $serif;
+                size: rem(24);
+                weight: $bold2;
+        	}
+        	
+        	@media screen and ( max-width: $smartphone_portrait + px ) {
+        	    font-size: rem(24);
+        	}
+    	}
+
+        p {
+            margin-bottom: 2.5em;
+            //line-height: 1.6em;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+    		    font-size: rem(16);
+    		}
+        }        
+	}
+	
+	.c-logo {
+    	@media screen and ( max-width: $smartphone + px ) {
+    	    display: none;
+    	}
+	}
+}

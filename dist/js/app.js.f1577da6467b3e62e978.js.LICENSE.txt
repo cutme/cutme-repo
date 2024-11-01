@@ -1,0 +1,64 @@
+/*!
+  hey, [be]Lazy.js - v1.8.2 - 2016.10.25
+  A fast, small and dependency free lazy load script (https://github.com/dinbror/blazy)
+  (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
+*/
+
+/*!
+ * CSSPlugin 3.12.2
+ * https://greensock.com
+ *
+ * Copyright 2008-2023, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * GSAP 3.12.2
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2023, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * Observer 3.12.2
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2023, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * ScrollToPlugin 3.12.2
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2023, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * ScrollTrigger 3.12.2
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2023, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * validate.js 0.13.1
+ *
+ * (c) 2013-2019 Nicklas Ansman, 2013 Wrapp
+ * Validate.js may be freely distributed under the MIT license.
+ * For all details and documentation:
+ * http://validatejs.org/
+ */

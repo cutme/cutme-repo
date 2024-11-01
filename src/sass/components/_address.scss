@@ -1,0 +1,17 @@
+.c-address {
+    text-align: center;
+    font-size: rem(14);
+    letter-spacing: 1px;
+    color: white;
+    
+    p { 
+        @media screen and ( min-width: $smartphone_portrait + 1px ) {
+            display: inline-block;
+            padding: 0 20px;
+            
+            &:first-of-type {
+                border-right: 1px solid rgba(white, .5);
+            }
+        }        
+    }
+}

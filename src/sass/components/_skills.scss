@@ -1,0 +1,30 @@
+.c-skills {
+	@extend %rel; 
+    background-image: url(../img/bg/dark.jpg);
+	padding: 60px 30px;
+
+	&__items {
+	    margin-bottom: 40px;
+	    text-align: center;
+		color: white;
+	}
+	
+	[class^="icon-"] {
+		display: inline-block;
+		margin: 10px;
+		font-size: rem(34);
+		opacity: .5;
+		
+		&.anim--loaded {
+		    opacity: .5;
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font-size: rem(24);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+		    margin: 10px 5px;
+		}
+	}
+}

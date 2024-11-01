@@ -1,0 +1,74 @@
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	font-family: $text;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input, textarea {
+	width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	text-rendering: optimizeLegibility; 
+	
+	font: {
+		family: $text;
+	}
+	cursor: text;
+	color: inherit;
+}
+
+input {
+	&[disabled],
+	&[readonly] {
+		opacity: .5;
+	}
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+input {
+	&[type=text],
+	&[type=email],
+	&[type=tel] {
+		width: 100%;
+	}
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+::-webkit-input-placeholder {color: inherit;}
+:-moz-placeholder {color: inherit; }
+::-moz-placeholder {color: inherit; }
+:-ms-input-placeholder { color: inherit; }
+
+input[type=checkbox]:not(old) {
+	display: none;
+}
+
+select {
+	opacity: 0;
+}

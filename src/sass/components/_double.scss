@@ -1,0 +1,6 @@
+.c-double {
+    @media ( min-width: $tablet + 1px ) {
+    	display: flex;
+	    width: 200vw;
+    }
+}

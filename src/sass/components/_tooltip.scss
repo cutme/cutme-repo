@@ -1,0 +1,34 @@
+.c-tooltip {
+    @extend %flex;
+    @extend %flex-xy;
+    position: fixed;
+    left: 0; top: 0; z-index: 30;
+    width: 100%; height: 100%;
+    background-color: rgba(black, .96);
+    opacity: 0;
+    display: none;
+    
+    &.is-visible {
+        @extend %flex;
+        animation: fadeInFromNone 200ms forwards ease-out;
+    }
+    
+    &__content {
+        width: 768px;
+        padding: 20px;
+        font-size: rem(30);
+        line-height: 1.6;
+        color: white;
+    }
+    
+    h2 {
+        font-size: rem(60);
+    }
+    
+    span {
+        background-color: rgba($c-red, .66);
+        padding: 0 10px;
+    	color: white;
+    }
+}
+

@@ -1,0 +1,52 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/anims';
+@import 'tools/blazy';
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+//@import 'tools/pace';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/btn';
+@import 'objects/container';
+//@import 'objects/cube';
+@import 'objects/form';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/overlay';
+@import 'objects/section';
+@import 'objects/wrap';
+
+@import 'components/about';
+@import 'components/bg';
+@import 'components/clients';
+@import 'components/contact';
+@import 'components/contactform';
+@import 'components/double';
+//@import 'components/cover';
+//@import 'components/desktop';
+@import 'components/logo';
+//@import 'components/nav';
+//@import 'components/navtrigger';
+//@import 'components/offer';
+@import 'components/opinions';
+@import 'components/portfolio';
+@import 'components/skills';
+@import 'components/steps';
+//@import 'components/thing';
+//@import 'components/tooltip';
+@import 'components/welcome';
+
+@import 'trumps/trumps';
+

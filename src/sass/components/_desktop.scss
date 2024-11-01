@@ -1,0 +1,31 @@
+.c-desktop {
+	@extend %rel;
+	z-index: 10;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 75%;
+	//filter: grayscale(100%);
+	
+	
+    @media screen and ( min-width: 1600 + px ) {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		height: 50vh;
+
+		img {
+			height: 100%;
+			width: auto;
+			max-width: none;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+		}
+	}
+	
+}
