@@ -1,24 +1,7 @@
 
        <div class="c-contact" id="contact">
-           <div itemscope itemtype="http://schema.org/Organization" class="c-logo">
-				<a 
-                    itemprop="url" 
-                    href="/" 
-                    class="c-logo__img" 
-                    title="Cięcie do HTML, psd do html, kodowanie stron www">
-                    <img itemprop="logo" src=<%= require("./img/assets/logo-black.svg") %> width="145" height="28" alt="cutme">    
-                </a>
-			</div>
-
             <div class="o-wrap o-wrap--normal o-section">
-
-                <header class="o-header o-header__section js-fadeInChildren">
-                    <h5 class="o-header__small ">Zostaw kontakt</h5>
-                    <h3 class="o-header__medium">#działajmy!</h3>
-                </header>
-
                 <div class="c-contact__content">
-
                     <ul class="c-contact__social js-fadeInChildren">
                         <li><i class="icon-envelope-o"></i><a itemprop="email" href="mailto:info@cutme.pl">info@cutme.pl</a></li>
                         <li><i class="icon-device-mobile"></i><a itemprop="telephone" href="tel:691630013">691 630 013</a></li>
@@ -28,10 +11,8 @@
 
                     <div class="c-contactform ">
                         <div class="content">
-	
                             <form action="https://cutme.pl/contact.php" method="post" id="contactForm" novalidate class="js-fadeInChildren">
                                 <fieldset id="formFields">
-                                
                                     <span class="input">
 										<input 
 											class="input__field" 
@@ -41,7 +22,7 @@
 											autocomplete="off" />
 										
 										<label class="input__label" for="input-1">
-											<span class="input__label-content">Imię i nazwisko</span>
+											<span class="input__label-content">Twoje imię i nazwisko</span>
 											<span class="messages"></span>
 										</label>
 									
@@ -63,7 +44,7 @@
 											autocomplete="off" />
 										
 										<label class="input__label" for="input-1">
-											<span class="input__label-content">E-mail</span>
+											<span class="input__label-content">Podaj proszę Twój adres e-mail</span>
 											<span class="messages"></span>
 										</label>
 									
@@ -83,7 +64,7 @@
 											name="message"></textarea>
 											
 										<label class="input__label" for="input-2">
-											<span class="input__label-content">Opisz w kilku słowach zlecenie.</span>
+											<span class="input__label-content">W czym mogę Ci pomóc?</span>
 										</label>
 									
 										<svg 
@@ -98,7 +79,7 @@
 
 										<div class="c-contactform__spinner is-hidden" id="spinner"></div>
 
-										<button type="submit" class="o-btn o-btn--oval o-btn--redonwhite" id="submita"><span>Wyślij</span></button>
+										<button type="submit" class="o-btn o-btn--primary o-btn--big" id="submita"><span>Wyślij</span></button>
 									</div>
 								</fieldset>
 								

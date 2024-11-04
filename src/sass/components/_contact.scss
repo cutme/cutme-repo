@@ -15,35 +15,34 @@
 	}
 
 	&__social {
-		
-		@media screen and ( max-width: $base + px ) {
+		@media ( max-width: $base + px ) {
 			margin-bottom: 100px;
 		}
 		
 		li {
 			@extend %flex;
 			@extend %flex-y;
-			margin-bottom: .8rem;
-			font-size: rem(26);
+			margin-bottom: 12px;
+			font-size: clamp(24px, toRem(26), toRem(26));
 			white-space: nowrap;
 			
-			@media screen and ( max-width: $smartphone_portrait + px ) {
-				font-size: rem(24);
+			@media ( max-width: $smartphone_portrait + px ) {
+				font-size: clamp(16px, toRem(24), toRem(24));
 			}
 
 			i {
-				margin-right: 20px;
-				width: 30px;
+				margin-right: 24px;
+				width: 24px;
 				text-align: center;
 			}
 			
 			a {
 			    @extend %anim--medium;
 				@extend %ulink;
-				padding: 0 10px;
+				padding: 6px 12px;
 				
 				&:before, &:after {
-    				background-color: $c-blue1;
+    				background-color: $c-violet;
     				height: 100%;
     				z-index: -1;
 				}
@@ -66,20 +65,16 @@
 	.icon-device-mobile {
 		font-size: rem(30);
 	}
-	
-	.c-logo {
-		@media screen and ( max-width: $smartphone + px ) {
-			display: none;
-		}
-	}
-	
+
 	.o-btn {
     	&:before {
         	border-color: $c-black;
         }
-	}
-	
-	.o-header {
-		margin-bottom: 3rem;
+        
+        &:hover {
+            span {
+                color: $c-black;
+            }
+        }
 	}
 }

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.utils.toArray(".gs-parallax").forEach(function(section) {            
             gsap.to(".gs-parallax", {
                 yPercent: 40,
+                opacity: .1,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".gs-parallax",

@@ -8,17 +8,29 @@
 	white-space: nowrap;
 	border-radius: 24px;
 //	border: 1px solid transparent;
-	padding: 0 40px;
+	padding: 0 32px;
 	letter-spacing: .5px;
 	font: {
 	    size: clamp(14px, toRem(16), toRem(16));
 	    weight: $light;
     }
-	
 	cursor: pointer;
 	
 	span {
         width: 100%;
+	}
+	
+	&--big {
+    	height: 60px;
+    	border-radius: 30px;
+    	font-size: 18px;
+    	padding: 0 48px;
+	}
+	
+	&--small {
+    	height: 32px;
+    	font-size: 12px;
+    	padding: 0 12px;
 	}
 	
 	&:before {
@@ -30,7 +42,6 @@
     	border-radius: 36px;
     	opacity: 0;
     	transition-duration: .5s;
-    	
 	}
 
 	&:hover {
@@ -38,42 +49,21 @@
 
     	&:before {
         	opacity: .2;
-/*
         	animation: {
                 name: pulse;
-                duration: 1.2s;
+                duration: 2s;
                 timing-function: ease-in-out;
                 iteration-count: infinite;
                 play-state: running
             }
-*/
-    	}
-	}
-
-	&--black {
-    	background-color: black;
-        border-color: black;
-        color: white;
-        
-        &:hover {
-            background-color: transparent;
-	        border-color: black;
-	        color: black;
     	}
 	}
 	
-	&--red,
-	&--redonwhite {
-    	//background-color: $c-red;
-    	//border-color: $c-red;
-        color: white;
-        
+	&--primary {        
         background-color: $c-violet;
         border-color: $c-violet;
-        
-	}
-	
-	&--red {        
+        color: white;
+
         &:hover {
             background-color: transparent;
 	        border-color: white;
@@ -81,33 +71,21 @@
     	}
 	}
 	
-	&--redonwhite {
-        transition: .25s ease-in-out;
-
-	    &:hover {
-	        background-color: transparent;
-	        border-color: black;
-	        color: black;
-	    }
-	}
-	
 	&:active {
 		transform: scale(.97);
 	}
 }
-/*
 
 @keyframes pulse {
     0% {
-        opacity: 0;
+        opacity: .2
     }
     
     50% {
-        opacity: .2;
+        opacity: .3;
     }
     
     100% {
-        opacity: 0;
+        opacity: .2;
     }
 }
-*/
