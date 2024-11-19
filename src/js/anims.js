@@ -160,6 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'elastic.out(1, .8)',
             }, '-=1')
             
+            .from(document.querySelector(".c-welcome__icons"), {
+                duration: 1.6,
+//                y: 40,
+                autoAlpha: 0,
+                ease: 'elastic.out(1, .8)',
+            }, '-=2')
+            
+            
+            
 /*
             .from(document.querySelector(".c-welcome video"), {
                 duration: 3,

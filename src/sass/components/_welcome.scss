@@ -76,6 +76,21 @@
     	}
 	}	
 	
+	&__icons {
+    	@extend %abs;
+    	right: 32px; top: 52px;
+    	
+    	a {
+        	font-size: 24px;
+        	color: white;
+        	opacity: .3;
+        	
+        	&:hover {
+            	opacity: .5;
+        	}
+    	}
+	}
+	
 	.o-logo {
     	@include z-index(logo);
     	@extend %abs;
