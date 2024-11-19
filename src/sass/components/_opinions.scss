@@ -16,29 +16,14 @@
 		
 		p {
 			margin-bottom: 2rem;
-			line-height: 1.4;
-		
-			@media screen and ( min-width: $tablet + 1px ) {
-				font-size: rem(30);
-			}	
-			
-			@media screen and ( max-width: $smartphone_portrait + px ) {
-    	        font-size: rem(18);
-    	    }
+			line-height: 1.4em;
+			font-size: clamp(18px, toRem(30), toRem(30))
 		}
 		
 		span {
 			@extend %rel;
 			display: block;
-			font-size: rem(14);
-			
-			@media screen and ( min-width: $tablet + 1px ) {
-				font-size: rem(18);
-			}
-			
-			@media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
-				font-size: rem(16);
-			}
+			font-size: clamp(10px, toRem(14), toRem(14));
 			
 			&:before {
 				content: '― ';

@@ -1,0 +1,12 @@
+<section class="c-portfolio__item c-portfolio__item--narrow c-portfolio__item--05" 
+	     onclick="window.open('http://florianmalak.com', '_blank')">
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">Malak</h3>
+        <p itemprop="description">Portfolio artysty przesłane w&nbsp;formacie PSD, zakodowane oraz wdrożone do CMS.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+    <img itemprop="image" srcset="<%=require("./img/portfolio/flo.webp")%> 1x, 
+    				              <%=require("./img/portfolio/flo@2x.webp")%> 2x" 
+    				              alt="Malak" loading="lazy" width="400" height="480" 
+    				              src=<%=require("./img/portfolio/flo.webp")%> />
+</section>

@@ -15,31 +15,33 @@
 	}
 
 	&__social {
-		@media ( max-width: $base + px ) {
-			margin-bottom: 100px;
-		}
+    	margin-bottom: clamp(64px, toRem(112), toRem(112));
 		
 		li {
 			@extend %flex;
 			@extend %flex-y;
-			margin-bottom: 12px;
-			font-size: clamp(24px, toRem(26), toRem(26));
+			margin-bottom: clamp(6px, toRem(12), toRem(12));
+			font-size: 26px;
+//			font-size: clamp(24px, toRem(26), toRem(26));
 			white-space: nowrap;
+			
 			
 			@media ( max-width: $smartphone_portrait + px ) {
 				font-size: clamp(16px, toRem(24), toRem(24));
 			}
 
 			i {
-				margin-right: 24px;
+				margin-right: clamp(12px, toRem(24), toRem(24));
 				width: 24px;
 				text-align: center;
+				font-size: clamp(20px, toRem(26), toRem(26));
 			}
 			
 			a {
 			    @extend %anim--medium;
 				@extend %ulink;
 				padding: 6px 12px;
+				font-size: clamp(20px, toRem(26), toRem(26));
 				
 				&:before, &:after {
     				background-color: $c-violet;
@@ -54,16 +56,30 @@
 		}
 	}
 	
-	.icon-envelope-o {
-		font-size: rem(26);
-	}
-	
-	.icon-messenger {
-		font-size: rem(26);
-	}
-	
-	.icon-device-mobile {
-		font-size: rem(30);
+	.o-article {
+    	max-width: 90%;
+    	margin-bottom: clamp(64px, toRem(120), toRem(120));
+    	
+    	@media ( max-width: $tablet_portrait + px ) {
+    		max-width: 100%;
+    	}
+    	
+    	h2 {
+        	margin-bottom: 24px;
+        	font-size: clamp(32px, toRem(48), toRem(48));
+    	}
+
+    	p {
+        	//letter-spacing: -0.2px;
+        	margin-bottom: 24px;
+        	line-height: 1.3em;
+        	font-size: clamp(20px, toRem(32), toRem(32));
+        	
+        	@media ( min-width: $tablet_portrait + 1px ) {
+        		
+        		max-width: 90%
+        	}
+    	}
 	}
 
 	.o-btn {

@@ -1,0 +1,14 @@
+<section class="c-portfolio__item c-portfolio__item--narrow c-portfolio__item--09" onclick="window.open('http://126.cutme.pl', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">126 marek</h3>
+        <p itemprop="description">W&nbsp;tym zleceniu powierzono mi <strong>pocięcie projektu graficznego do semantycznego kodu</strong> oraz stworzenie animacji.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/126.webp")%> 1x, 
+    					              <%=require("./img/portfolio/126@2x.webp")%> 2x" 
+    					              alt="126" loading="lazy" width="400" height="480" 
+    					              src=<%=require("./img/portfolio/126.webp")%> />
+    </picture>
+</section>

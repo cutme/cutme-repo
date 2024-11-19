@@ -1,7 +1,5 @@
-.c-contactform {
-	margin-top: -40px;
-	
-	@media screen and ( min-width: $base + 1px ) {
+.c-contactform {	
+	@media ( min-width: $base + 1px ) {
 		width: 50%;
 	}
 	
@@ -31,7 +29,6 @@
 	}
 
 	.content {
-		font-size: 150%;
 	}
 	
 	.input {
@@ -41,27 +38,20 @@
     	width: 100%;
     	vertical-align: top;
     	overflow: hidden;
-    	padding-top: 1em;
+    	padding-top: 24px;
     	
     	&__field {
     		position: relative;
     		display: block;
     		-webkit-appearance: none; /* for box shadows to show on iOS */
-    		padding: .5em 0;
     		padding: 12px 0;
     		width: 100%;
     		background: transparent;
     		font: {
-//        		size: 1.25em;
-        		size: 32px;
+        		size: clamp(24px, toRem(30), toRem(30));
         		weight: $light;
             }
-    		
-    		@media ( max-width: $smartphone + px ) {
-    			padding: .8em 0;
-    			font-size: 12px;
-    		}
-    		
+
     		&:focus {
     			outline: none;
     		}
@@ -69,22 +59,21 @@
     		&--textarea {
     			margin-bottom: 20px;
     			margin-top: 20px;
-    			font-size: clamp(16px, toRem(24), toRem(24));    			
+    			font-size: clamp(16px, toRem(24), toRem(24));
     		}
     	}
     	
     	&__label {
         	@extend %abs;
     		display: inline-block;
-    		float: right;
-    		font-size: .85em;
+    		font-size: 20px;
     		-webkit-font-smoothing: antialiased;
     	    -moz-osx-font-smoothing: grayscale;
     		-webkit-touch-callout: none;
     		user-select: none;
 
-    		top: .55em;
     		left: 0;
+    		top: 0;
     		display: block;
     		width: 100%;
     		pointer-events: none;
@@ -95,13 +84,12 @@
     	
     	&__label-content {
         	@extend %rel;
-    		position: relative;
     		display: block;
-    		padding: 1.4em 0;
+    		padding: 24px 0;
     		width: 100%;
     		
     		@media ( max-width: $smartphone + px ) {
-    		    font-size: 12px;
+    		    font-size: 16px;
     		}
     	}
     	
@@ -128,7 +116,7 @@
     
     .input__field:focus + .input__label,
     .input--filled .input__label {
-    	transform: translate3d(0, -24px, 0) scale3d(.75, .75, 1);
+    	transform: translate3d(0, clamp(-8px, toRem(-24), toRem(-24)), 0) scale3d(.75, .75, 1);
     	opacity: .5;
     }
     
@@ -139,7 +127,7 @@
 	
 	&__submit {
 		//@media screen and ( min-width: $smartphone + 1px ) {
-			padding-top: 40px;
+			padding-top: 24px;
 		//}
 
 		.o-cube {
@@ -159,13 +147,9 @@
 		opacity: 0;
 		
 		br {
-			@media screen and ( max-width: $smartphone + px ) {
+			@media ( max-width: $smartphone + px ) {
 				display: none;
 			}
-		}
-		
-		@media screen and ( min-width: $base + 1px ) {
-			margin-top: -50px;
 		}
 		
 		&.is-visible {
@@ -174,16 +158,33 @@
 
 		h4 {
 			font-size: clamp(24px, toRem(30), toRem(30));
-			margin-bottom: 1.6rem;
+			margin-bottom: 24px;
 		}
 		
 		p {
+    		line-height: 1.4em;
 			font-size: clamp(16px, toRem(20), toRem(20));
 		}
 	}
 	
 	.is-hidden {
 		display: none;
+	}
+	
+	#recaptcha {
+    	margin-top: clamp(24px, toRem(48), toRem(48));
+
+    	div {
+        	iframe {
+            	display: block;
+        	}
+        	
+        	&.has-error {
+            	iframe {
+                	border: 1px solid $c-red;
+            	}
+        	}
+    	}
 	}
 }
 

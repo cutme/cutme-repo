@@ -1,0 +1,14 @@
+<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--15" onclick="window.open('https://leasingujesz.cutme.pl/1.0-index.html', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">Leasingujesz</h3>
+        <p itemprop="description">Moim zadaniem było <strong>zakodowanie szablonu z&nbsp;projektu graficznego</strong> dla firmy specjalizującej się w&nbsp;pożyczkach i&nbsp;leasingu, oferującej możliwość porównywania ofert wielu towarzystw leasingowych.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/lea.webp")%> 1x, 
+    					              <%=require("./img/portfolio/lea@2x.webp")%> 2x" 
+    					              alt="Leasingujesz" loading="lazy" width="800" height="480" 
+    					              src=<%=require("./img/portfolio/lea.webp")%> />
+    </picture>
+</section>

@@ -1,0 +1,15 @@
+<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--12" onclick="window.open('https://klosinski.net/metodateczowki/', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">Metoda Tęczówki</h3>
+        <p itemprop="description">W ramach tego projektu byłem odpowiedzialny za <strong>zakodowanie strony</strong> oraz animacje. Dzięki starannie dobranym efektom i&nbsp;dbałości o&nbsp;szczegóły, udało się uzyskać efekt, który przyciągnął uwagę nie tylko użytkowników, ale również ekspertów z&nbsp;branży. Strona została wyróżniona przez <a href="https://css-awards.com/website/metoda-teczowki-by-jacek-klosinski/" target="_blank">CSS Awards</a>.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/met.webp")%> 1x, 
+        				              <%=require("./img/portfolio/met@2x.webp")%> 2x" 
+        				              alt="Metoda Tęczówki" loading="lazy" width="800" height="480" 
+        				              src=<%=require("./img/portfolio/met.webp")%> />
+    </picture>
+</section>
+

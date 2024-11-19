@@ -1,0 +1,14 @@
+<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--13" onclick="window.open('https://cutme.github.io/bikeme/dist/', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">BikeMe</h3>
+        <p itemprop="description">Zakodowanie projektu do statycznych szablonów HTML oraz wdrożenie do Wordpress.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/bik.webp")%> 1x, 
+        				              <%=require("./img/portfolio/bik@2x.webp")%> 2x" 
+        				              alt="BikeMe" loading="lazy" width="800" height="480" 
+        				              src=<%=require("./img/portfolio/bik.webp")%> />
+    </picture>
+</section>

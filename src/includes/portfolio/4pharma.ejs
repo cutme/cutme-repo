@@ -1,0 +1,14 @@
+<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--19" onclick="window.open('https://4pharma.cutme.pl', '_blank')"> 
+    <% include ../corner %>
+    <article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">4pharma</h3>
+        <p itemprop="description">Wdrożenie dla agencji doradztwa cyfrowego dostarczającej rozwiązania dla nowoczesnego rynku farmaceutycznego. Moim zadaniem było zakodowane dynamicznej strony z użyciem efektu parallax na podstawie projektu.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>   
+	<picture> 					
+    <img itemprop="image" srcset="<%=require("./img/portfolio/4pharma.webp")%> 1x, 
+					              <%=require("./img/portfolio/4pharma@2x.webp")%> 2x" 
+					              alt="4pharma" loading="lazy" width="800" height="480" 
+					              src=<%=require("./img/portfolio/4pharma.webp")%> />
+    </picture>
+</section>

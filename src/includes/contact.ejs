@@ -1,12 +1,27 @@
 
        <div class="c-contact" id="contact">
             <div class="o-wrap o-wrap--normal o-section">
+                
+                <article class="o-article js-fadeInChildren">
+<!--                     <h2>Zacznijmy działać!</h2> -->
+                        
+                    <p>Chcesz, aby Twój projekt graficzny został wdrożony zgodnie z&nbsp;najlepszymi praktykami, był w&nbsp;pełni responsywny, dopracowany w&nbsp;każdym detalu i&nbsp;robił wrażenie?</p>
+                </article>
+                
                 <div class="c-contact__content">
                     <ul class="c-contact__social js-fadeInChildren">
-                        <li><i class="icon-envelope-o"></i><a itemprop="email" href="mailto:info@cutme.pl">info@cutme.pl</a></li>
+                        <li><i class="icon-envelope-o"></i><script language="JavaScript">
+var part1 = "info";
+var part2 = Math.pow(2,6);
+var part3 = String.fromCharCode(part2);
+var part4 = "cutme.pl";
+var part5 = part1 + String.fromCharCode(part2) + part4;
+document.write("<a itemprop='email' href=" + "mai" + "lto" + ":" 
++ part5 + ">" + part1 + part3 + part4 + "</a>");
+</script></li>
                         <li><i class="icon-device-mobile"></i><a itemprop="telephone" href="tel:691630013">691 630 013</a></li>
                         <li><i class="icon-messenger"></i><a href="http://m.me/cutmepl" target="_blank">Messenger</a></li>
-                        <li><i class="icon-skype"></i><a href="skype:bartoszm">Skype</a></li>
+<!--                         <li><i class="icon-skype"></i><a href="skype:bartoszm">Skype</a></li> -->
                     </ul>
 
                     <div class="c-contactform ">
@@ -22,8 +37,7 @@
 											autocomplete="off" />
 										
 										<label class="input__label" for="input-1">
-											<span class="input__label-content">Twoje imię i nazwisko</span>
-											<span class="messages"></span>
+											<span class="input__label-content">Z kim mam przyjemność?</span>
 										</label>
 									
 										<svg 
@@ -44,8 +58,7 @@
 											autocomplete="off" />
 										
 										<label class="input__label" for="input-1">
-											<span class="input__label-content">Podaj proszę Twój adres e-mail</span>
-											<span class="messages"></span>
+											<span class="input__label-content">Twój adres e-mail</span>
 										</label>
 									
 										<svg 
@@ -64,7 +77,7 @@
 											name="message"></textarea>
 											
 										<label class="input__label" for="input-2">
-											<span class="input__label-content">W czym mogę Ci pomóc?</span>
+											<span class="input__label-content">W czym mogę pomóc?</span>
 										</label>
 									
 										<svg 
@@ -74,12 +87,10 @@
 										</svg>
 									</span>
 									
+									<div id="recaptcha"></div>
 								
 									<div class="c-contactform__submit">
-
-										<div class="c-contactform__spinner is-hidden" id="spinner"></div>
-
-										<button type="submit" class="o-btn o-btn--primary o-btn--big" id="submita"><span>Wyślij</span></button>
+										<button type="submit" class="o-btn o-btn--primary o-btn--big" id="submita"><div class="c-contactform__spinner is-hidden" id="spinner"></div><span class="title">Wyślij</span></button>
 									</div>
 								</fieldset>
 								

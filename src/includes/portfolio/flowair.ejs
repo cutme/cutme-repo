@@ -1,0 +1,15 @@
+<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--17" onclick="window.open('https://flowair.cutme.pl', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">FlowAir</h3>
+        <p itemprop="description"><strong>Kodowanie projektu graficznego</strong> strony prezentującej kurtynę powietrzną SLIM. Klient prosił o dynamiczne przedstawienie swojego produktu, więc mamy tu zaimplementowane filmy poklatkowe, parallax i&nbsp;dedykowany skrypt galerii.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/flowair.webp")%> 1x, 
+    					              <%=require("./img/portfolio/flowair@2x.webp")%> 2x" 
+    					              alt="flowair" loading="lazy" width="800" height="480" 
+    					              src=<%=require("./img/portfolio/flowair.webp")%> />
+    </picture>
+</section>
+

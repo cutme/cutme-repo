@@ -16,33 +16,32 @@ const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 console.log(process.env.NODE_ENV);
 
 const templateFileMapper = [
-    { template: "./src/artykul.ejs", file: "artykul.html" },
-    { template: "./src/index.ejs", file: "index.html" },
-    { template: "./src/blog.ejs", file: "blog.html" },
+    { template: "./src/index.ejs", file: "index.html", title: "", og: "og.jpg", dev: "", prod: ""  },
 ]
 
 const htmlPlugins = () => {
   return templateFileMapper.map(entry => {
-    return new HtmlWebpackPlugin({
-        inject: 'html',
-        template: entry.template,
-        filename: entry.file,
-        minify: {
-//        removeScriptTypeAttributes: true,
-            collapseWhitespace: true,
-          //  keepClosingSlash: true,
-            removeComments: true,
-          //  removeRedundantAttributes: true,
-          //  removeScriptTypeAttributes: true,
-          //  removeStyleLinkTypeAttributes: true,
-          //  useShortDoctype: true
-        },
-        scriptLoading: 'defer',
-        templateParameters: {
-            className: 'production'
-        },
-    });
-  })
+    const options = {
+      template: entry.template,
+      filename: entry.file,
+      minify: {
+        removeScriptTypeAttributes: true,
+        collapseWhitespace: true,
+        removeComments: true
+      },
+    };
+    
+    if (entry.title) {
+        options.templateParameters = {
+          title: entry.title,
+          og: entry.og,
+          dev: entry.dev,
+          prod: entry.prod
+        };
+    }
+
+    return new HtmlWebpackPlugin(options);
+  });
 };
 
 
@@ -87,14 +86,14 @@ module.exports = {
         new CopyPlugin({
             patterns: [
             {
+                from: '**/*.php',
+                to: '../dist',
+            	context: 'src'
+            },
+            {
                 from: path.resolve(__dirname, '../src/img/assets/og-image.jpg'),
                 to: '../dist/img/assets'
             },
-            {
-                from: path.resolve(__dirname, '../src/*.pdf'),
-                to: path.resolve(__dirname, '../dist'),
-                flatten: true
-            }
             ],
         }),
         
@@ -111,6 +110,8 @@ module.exports = {
                 blockJSRequests: false,
             }
         })
+        
+
     ]),
 	
 	optimization: {

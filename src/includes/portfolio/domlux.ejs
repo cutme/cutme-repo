@@ -1,0 +1,15 @@
+<section class="c-portfolio__item c-portfolio__item--21 c-portfolio__item--narrow" onclick="window.open('https://domlux.cutme.pl', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">DomLux</h3>
+        <p itemprop="description">Zakodowanie projektu strony producenta ekskluzywnych mebli. Naszym wspólnym mianownikiem przy tej realizacji była dbałość o&nbsp;szczegóły i&nbsp;estetykę wykonania.</p>
+        <button type="button" class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" 
+             srcset="<%=require("./img/portfolio/domlux.webp")%> 1x, 
+    	             <%=require("./img/portfolio/domlux@2x.webp")%> 2x" 
+             alt="domlux" loading="lazy" width="400" height="480" 
+             src=<%=require("./img/portfolio/domlux.webp")%> />					             
+	</picture>
+</section>

@@ -79,12 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const textWrapper2 = document.querySelector('.c-welcome .char2');
             textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='char'>$&</span>");
+/*
+            
+            const textWrapper3 = document.querySelector('.c-welcome .char3');
+            textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='char'>$&</span>");
           
+*/
             textWrapper1.style.visibility = 'visible';
             textWrapper2.style.visibility = 'visible';
+//             textWrapper3.style.visibility = 'visible';
             
             let chars1 = textWrapper1.querySelectorAll('.char')
             let chars2 = textWrapper2.querySelectorAll('.char')
+//             let chars3 = textWrapper3.querySelectorAll('.char')
         
             let tl = gsap.timeline();
             
@@ -112,6 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 chars2, cfrom, cto, '-=1'
             )
             
+/*
+            .fromTo(
+                chars3, cfrom, cto, '-=1'
+            )
+            
+*/
             .from(document.querySelector(".c-welcome h2"), {
                 duration: 1.6,
                 y: 40,
@@ -124,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: 40,
                 autoAlpha: 0,
                 ease: 'elastic.out(1, .8)',
-            }, '-=2.2')
+            }, '-=1.8')
             
             .from(document.querySelectorAll(".c-welcome__skills span"), {
                 duration: 1.2,
@@ -132,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 autoAlpha: 0,
                 ease: 'elastic.out(1, .8)',
                 stagger: 0.1,
-            }, '-=2.4')
+            }, '-=2')
 
             .from(document.querySelector(".c-welcome .c-logo"), {
                 duration: 1.5,
@@ -147,10 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'elastic.out(1, .8)',
             }, '-=1')
             
+/*
             .from(document.querySelector(".c-welcome video"), {
                 duration: 3,
                 autoAlpha: 0,
-            })
+            }, '-=1')
+*/
 
         }
     };

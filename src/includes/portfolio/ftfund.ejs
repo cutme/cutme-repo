@@ -1,0 +1,14 @@
+<section class="c-portfolio__item c-portfolio__item--narrow c-portfolio__item--14" onclick="window.open('https://ftfund.cutme.pl', '_blank')">
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">FT Fund</h3>
+        <p itemprop="description"><strong>Zakodowanie oraz wdrożenie do Wordpress</strong> projektu landpage firmy pożyczkowej.</p>
+        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+	</article>
+	<picture>
+        <img itemprop="image" srcset="<%=require("./img/portfolio/ftf.webp")%> 1x, 
+        				              <%=require("./img/portfolio/ftf@2x.webp")%> 2x" 
+        				              alt="FT Fund" loading="lazy" width="400" height="480" 
+        				              src=<%=require("./img/portfolio/ftf.webp")%> />
+    </picture>
+</section>
