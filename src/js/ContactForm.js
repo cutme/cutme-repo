@@ -13,6 +13,10 @@ import InView from 'inview';
 
     var Form = ctme.Form = function () { };
 
+    function isMobile() {
+      return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+    }
+
     // Reguła walidacji dla CAPTCHA
     validate.validators.recaptcha = function(value) {
         if (!value) {
@@ -152,9 +156,11 @@ import InView from 'inview';
 
         let inview = InView(contact, function(isInView) {
             if (isInView) {
-                if (!status && input) {
-                    setTimeout(() => input.focus({ preventScroll: true }), 1000);
-                    status = true;
+                if (!isMobile()) {
+                    if (!status && input) {
+                        setTimeout(() => input.focus({ preventScroll: true }), 1000);
+                        status = true;
+                    }
                 }
             } else {
                 if (status) {

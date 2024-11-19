@@ -78,7 +78,7 @@
 	
 	&__icons {
     	@extend %abs;
-    	right: 32px; top: 52px;
+    	right: clamp(24px, toRem(32), toRem(32)); top: 52px;
     	
     	a {
         	font-size: 24px;
