@@ -12,6 +12,10 @@
 	&--primary {
     	@extend %btn--primary;
 	}
+	
+	&:active {
+    	transform: scale3d(.95, .95, 1);
+	}
 }
 
 @keyframes pulse {

@@ -1,31 +1,11 @@
 .o-section {
     @extend %rel;
 	padding: {
-		top: 160px;
-		bottom: 140px;
+		top: clamp(72px, toRem(168), toRem(168));
+		bottom: clamp(72px, toRem(168), toRem(168));
 	}
 	
 	&--nobottompadding {
 	    padding-bottom: 0;
-	}
-	
-	
-
-	@media screen and ( max-width: $smartphone + px ) {
-		padding: {
-			top: 60px;
-			bottom: 60px;
-		}
-	}
-	
-	&--header {
-	    padding-bottom: 0;
-	    
-	    @media screen and ( max-width: $smartphone + px ) {
-	        padding: {
-    			top: 100px;
-    			bottom: 40px;
-    		}
-	    }
 	}
 }
