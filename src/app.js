@@ -2,7 +2,6 @@ import css from './sass/style.scss';
 require('./js/anims.js');
 require('./js/smoothscroll.js');
 require('./js/polyfills.js');
-require('./js/fonts.js');
 require('./js/init.js');
 require('./js/ContactForm.js');
 require('./js/Framework.js');

@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             document.getElementById('cover').remove();
-            //window.carousels();
-            //cover.remove();
-            
-/*
             (function() {
         		var wf = document.createElement('script');
         		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
@@ -19,11 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         		var s = document.getElementsByTagName('script')[0];
         		s.parentNode.insertBefore(wf, s);
         	})();
-*/
-        	
         }, 250);
     };
-    
+
     window.addEventListener('load', init);
 
 }, false);
