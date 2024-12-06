@@ -6,38 +6,6 @@
     display: none;
 }
 
-.no-padding {
-    padding: {
-        top: 0;
-        bottom: 0;
-    }
-}
-
-.no-overflow {
-	overflow: hidden;
-}
-
-.u-bg {
-	background-size: cover;
-	
-	&--bright {
-	    background-color: $c-gray3;
-	}
-}
-
-.u-rel {
-    @extend %rel;
-}
-
-.u-shadow {
-    @extend %rel; z-index: 15;
-    box-shadow: rgba(0,0,0,0.1) 0 0px 60px;
-}
-
-.u-text-center {
-    text-align: center;
-}
-
 .u-cover {
     transition: all 250ms ease-out;
     opacity: 1;

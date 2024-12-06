@@ -1,14 +1,14 @@
 
-        <section class="c-welcome gs-parallax">
-            <img itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %> loading="lazy" width="145" height="28" alt="cutme" class="o-logo" />   
+        <section class="flex flex-col items-center justify-center text-center text-white c-welcome h-lvh after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax">
+            <img itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %> 
+				 loading="lazy" width="145" height="28" alt="cutme" class="absolute transform -translate-x-1/2 left-1/2 sm:transform-none sm:left-12 top-12 opacity-30" />   
             
-            <h2>Bartosz Mediger, front-end developer</h2>
+            <h2 class="tracking-wide mb-3 ~text-sm/base opacity-50">Bartosz Mediger, front-end developer</h2>
 
-            <h1><span class="char1">Kodowanie projektów graficznych</span>
+            <h1 class="max-w-screen-md ~mb-8/14 ~text-2xl/5xl text-x font-roslindale !~leading-loose/normal" ><span class="char1">Kodowanie projektów graficznych</span>
                 <span class="char2">i wdrażanie do WordPress.</span></h1>
-<!--             <h3>z dbałością o każdy detal.</h3> -->
 
-            <section class="c-welcome__skills">
+            <section class="c-welcome__skills max-w-screen-sm ~mb-12/9 font-normal ~text-2xs/xs uppercase opacity-60">
         		<span>Responsive Design</span> 
         		<span>Interactive animations</span> 
         		<span>Semantic code</span>
@@ -16,31 +16,10 @@
         		<span>Pixel Perfect</span> 
         	</section>
         	
-        	<section class="c-welcome__icons">
-            	<a href="https://github.com/cutme?tab=repositories" target="_blank" class="icon-github"></a>
+        	<section class="absolute c-welcome__icons top-12 ~right-6/12">
+            	<a href="https://github.com/cutme?tab=repositories" target="_blank" class="text-2xl icon-github opacity-30 hover:opacity-50"></a>
         	</section>
-        	
-<!--
-            <section class="c-welcome__skills">
-        		<span>ACF</span> 
-        		<span>Adobe XD</span> 
-        		<span>Avocode</span> 
-        		<span>Barba JS</span> 
-        		<span>BEM/ITCSS</span>
-        		<span>CSS/Scss</span> 
-        		<span>Figma</span>
-        		<span>GIT</span>
-        		<span>GSAP</span> 
-        		<span>Gulp</span>
-        		<span>HTML</span>      
-        		<span>JavaScript</span> 
-        		<span>jQuery</span> 
-                <span>Webpack</span> 
-                <span>Wordpress</span> 
-                <span>Zeplin</span>
-        	</section>
--->
-        	
+        
         	<section class="o-more">
             	<button class="o-btn o-btn--oval o-btn--primary" data-target="#portfolio">Sprawdź przykłady</button>
         	</section>

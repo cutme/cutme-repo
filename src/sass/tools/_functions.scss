@@ -1,38 +1,5 @@
-@function em( $target, $context: $base-font-size ) {
-    @return ( $target / $context ) * 1em;
-}
-
-@function rem( $target, $context: $base-font-size ) {
-	@return ( $target / 16 ) * 1rem;
-}
-
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
-}
-
-@function get-vw-1190($target) {
-	$vw-context: (1190 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-1180($target) {
-	$vw-context: (1180 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-1200($target) {
-	$vw-context: (1200 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-1024($target) {
-	$vw-context: (1024 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
-@function get-vw-smartphone($target) {
-	$vw-context: ($smartphone * 0.01);
-	@return ($target / $vw-context) * 1vw;
 }
 
 @function z-index($key) {

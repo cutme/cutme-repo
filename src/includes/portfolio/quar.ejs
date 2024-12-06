@@ -2,10 +2,10 @@
     <% include ../corner %>
 	<article itemscope itemtype="https://schema.org/Project">
         <h3 itemprop="name">Quar Studio</h3>
-        <p itemprop="description">Moim zadaniem było <strong>zakodowanie</strong> oraz <strong>wdrożenie do CMS Wordpress projektu graficznego</strong> - portfolio projektanta, grafika UX/UI.</p>
+        <p itemprop="description" class="~text-sm/base">Moim zadaniem było <strong>zakodowanie</strong> oraz <strong>wdrożenie do CMS Wordpress projektu graficznego</strong> - portfolio projektanta, grafika UX/UI.</p>
         <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
 	</article>
-	<picture>
+	<picture class="relative">
         <img itemprop="image" srcset="<%=require("./img/portfolio/qua.webp")%> 1x, 
     					              <%=require("./img/portfolio/qua@2x.webp")%> 2x" 
     					              alt="Quar" loading="lazy" width="800" height="480" 

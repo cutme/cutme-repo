@@ -3,7 +3,6 @@ button, input, textarea {
 	border: none;
 	border-color: inherit;
 	border-radius: 0;
-	font-family: $text;
 	color: inherit;
 }
 
@@ -16,10 +15,6 @@ input, textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
 	text-rendering: optimizeLegibility; 
-	
-	font: {
-		family: $text;
-	}
 	cursor: text;
 	color: inherit;
 }

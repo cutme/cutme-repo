@@ -9,7 +9,6 @@ const css = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-
     scss = {
         test: /\.scss$/,
         use: [
@@ -23,24 +22,21 @@ if (process.env.NODE_ENV === 'production') {
             {
                 loader: "postcss-loader",
                 options: {
-                    ident: 'postcss',
                     sourceMap: true,
-                    plugins: [
-                        require('autoprefixer')({
-                            'browsers': ['> 1%', 'last 2 versions']
-                        }),
-                        require('cssnano')({
-                            zindex: false
-                        })
-                    ]
+                    postcssOptions: {
+                        plugins: [
+                            require('autoprefixer'),
+                            require('cssnano')({
+                                zindex: false
+                            })
+                        ]
+                    }
                 }
             },
             { loader: "sass-loader", options: {} }
         ]
     };
-    
 } else {
-
     scss = {
         test: /\.scss$/,
         use: [
@@ -48,7 +44,6 @@ if (process.env.NODE_ENV === 'production') {
             'happypack/loader?id=scss'
         ]
     };
-
 }
 
 

@@ -44,30 +44,30 @@ if (process.env.NODE_ENV === 'production') {
     
     css = new HappyPack({
         id: 'scss',
-        threadPool: happyThreadPool,
-        use: [
-            {
-                loader: 'style-loader',
-            },
-    
+        loaders: [
             {
                 loader: 'css-loader',
                 options: {
-                    minimize: true,
-                    sourceMap: true,
-                    importLoader: 2
+                    sourceMap: true
                 }
             },
-    
             {
                 loader: 'postcss-loader',
                 options: {
-                    ident: 'postcss'
+                    sourceMap: true,
+                    postcssOptions: {
+                        plugins: [
+                            require('autoprefixer'),
+                            require('tailwindcss') // Dodaj, jeśli używasz TailwindCSS
+                        ]
+                    }
                 }
             },
-    
             {
-                loader: 'sass-loader'
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
             }
         ]
     });    

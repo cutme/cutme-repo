@@ -1,25 +1,12 @@
 import { gsap, elastic } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-import smoothscroll from 'smoothscroll-polyfill';
-smoothscroll.polyfill();
-
 document.addEventListener('DOMContentLoaded', ()=> {
     gsap.registerPlugin(ScrollToPlugin)
     window.runScroll = function(el, o) {
         let offsetTop = document.querySelector(el).offsetTop;
         o === undefined ? o = 0 : false;
-        
         gsap.to(window, { duration: 1.3, scrollTo: el, ease: 'elastic.out(1, .8)' });
-
-
-//        , ease: 'elastic.out(1, .8)'
-/*
-        scroll({
-            top: offsetTop - o,
-            behavior: "smooth"
-        })
-*/
     };
 
     const gtt = document.querySelectorAll("[data-target]");

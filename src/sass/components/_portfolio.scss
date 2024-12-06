@@ -1,10 +1,7 @@
-.c-portfolio {
-	@extend %rel; z-index: 210;
-	@extend %flex;
-    @extend %flex-wrap;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
+.c-portfolio {	
+	h3 {
+		@apply font-roslindale ~text-3xl/5xl whitespace-nowrap;
+	}
 
 	img {
     	transition: opacity 1s, transform 1s;
@@ -47,20 +44,11 @@
 		}
 		
 		h3 {
-    		margin-bottom: clamp(6px, toRem(12), toRem(12));
-        	font: {
-            	size: clamp(24px, toRem(40), toRem(40));
-                weight: $light;
-            }
-        	color: white;
-        	
     		transition-delay: .15s;
 		}
-		
+
 		p {
         	margin-bottom: 12px;
-        	line-height: 1.3em;
-        	font-size: clamp(14px, toRem(16), toRem(16));	
         	transition-delay: .25s;
         	
         	@media ( max-width: $tablet_portrait + px ), ( hover: none ) {
@@ -88,10 +76,7 @@
 		}
 	}
 	
-	picture {
-    	@extend %rel;
-    	display: block;
-    	
+	picture {    	
     	&:before {
     		@extend %abs-after;
     		@extend %anim;
@@ -142,6 +127,10 @@
 		}
 		
 		&--double {
+			h3 {
+				@apply ~text-2xl/4xl
+			}
+			
     		& > a {
         		&:hover {
         		    @media ( min-width: $tablet_portrait + 1px ) {
@@ -268,19 +257,6 @@
             pointer-events: none;
 		}
 		
-		/*
-&:before {
-    		@extend %abs-after;
-    		@extend %anim;
-    		width: 100%; height: 100%;
-    		pointer-events: none;
-            background-image: linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.85));
-            transition: all 2s ease-in-out;
-            transform: translate3d(0, 100%, 0);
-            opacity: 0;
-		}
-*/
-		
 		&:not(.c-portfolio__item--double) {
     		&:hover {
     		    @media ( min-width: $tablet_portrait + 1px ) {
@@ -327,7 +303,6 @@
 		@media ( max-width: $tablet_portrait + px ), ( hover: none ) {
 			background-color: #2f3238;
 	        transform: scale3d(.99, .99, 1);
-	        //border-radius: 24px;
 	        
 	        .o-corner {
 		        transform: translate3d(0,0,0);
@@ -361,26 +336,7 @@
 		    }
 		}
 	}
-    
-    &__item {
-        &--narrow,
-        &--small {
-            article {
-                max-width: 100%;
-            }
-            h2 {
-                font: {
-                	size: clamp(22px, toRem(26), toRem(26));
-                }
-            }
-            
-            p {
-                //line-height: 1.2rem;
-            	font-size: 14px;
-            }
-        }
-    }
-    
+
     .o-corner {
         @extend %abs; z-index: 10;
         transition: all .5s ease-in-out;
@@ -389,7 +345,6 @@
         width: clamp(48px, toRem(60), toRem(60)); height: clamp(48px, toRem(60), toRem(60));
         background-color: black;
         border-top-left-radius: calc(50% + 5px);
-        
         transform: translate3d(100%, 100%, 0);
         
         &:before {
@@ -414,7 +369,6 @@
         
         b {
             @extend %abs;
-            //@extend %gradient--2;
             right: 0; bottom: 0;
             width: clamp(40px, toRem(48), toRem(48)); height: clamp(40px, toRem(48), toRem(48));
             border-radius: 50%;

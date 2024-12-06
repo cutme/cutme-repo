@@ -2,7 +2,6 @@
 
 $apercu:    'Apercu Pro', sans-serif;
 $icons:		'icomoon';
-$text:		$apercu;
 
 
 // Font weights
@@ -11,7 +10,6 @@ $light:				300;
 $regular:			400;
 $bold:              500;
 $bold2:             700;
-
 
 $z-index: (
 	logo          : 100,
@@ -22,10 +20,8 @@ $z-index: (
 
 // Default
 
-$base-font-size:	22;
+$base-font-size:	16;
 $base:				1200;
-
-
 
 // RWD
 

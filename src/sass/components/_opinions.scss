@@ -1,50 +1,20 @@
 .c-opinions {
-    @extend %rel;
-    width: 100vw;
     background-image: url(../img/bg/dark.jpg);
-
-	&__content {
-	    width: 100%;
-		margin-bottom: 6rem;
-		text-align: center;
-		color: white;
-	}
-
-	blockquote {
-	    padding: 0 20px;
-		color: $c-gray2;
-		
-		p {
-			margin-bottom: 2rem;
-			line-height: 1.4em;
-			font-size: clamp(18px, toRem(30), toRem(30))
-		}
-		
-		span {
-			@extend %rel;
-			display: block;
-			font-size: clamp(10px, toRem(14), toRem(14));
-			
-			&:before {
-				content: '― ';
-			}
-		}
-	}
 	
 	br {
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media ( max-width: theme('screens.md') ) {
 			display: none;
 		}
 	}
-	
-	.c-logo {
-		@media screen and ( max-width: $smartphone + px ) {
-			display: none;
-		}
+
+	.carousel {
+		display: flex;
+	//	overflow: hidden; /* Ukryj elementy poza widocznym obszarem */
+		width: 100%; /* Ustaw szerokość kontenera */
 	}
-	
-	.o-header {
-		@extend %rel;
-		margin-bottom: 4rem;
+	.slide {
+		flex: 0 0 100%; /* Każdy slajd zajmuje 100% szerokości */
+		width: 100%;
+		text-align: center;
 	}
 }

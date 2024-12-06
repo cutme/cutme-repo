@@ -2,10 +2,10 @@
     <% include ../corner %>
 	<article itemscope itemtype="https://schema.org/Project">
         <h3 itemprop="name">m7h</h3>
-        <p itemprop="description">Projekt od <a href="https://klosinski.net" target="_blank" onclick="event.stopPropagation()">Jacka Kłosińskiego</a>, który promował swój system marketingowy "7 goddzin". Semantyka kodu i&nbsp;optymalizacja pod SEO, miała ułatwić mu dalsze pozycjonowanie.</p>
+        <p itemprop="description" class="~text-sm/base">Projekt od <a href="https://klosinski.net" target="_blank" onclick="event.stopPropagation()">Jacka Kłosińskiego</a>, który promował swój system marketingowy "7 goddzin". Semantyka kodu i&nbsp;optymalizacja pod SEO, miała ułatwić mu dalsze pozycjonowanie.</p>
         <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
 	</article>  
-	<picture>
+	<picture class="relative">
         <img itemprop="image" srcset="<%=require("./img/portfolio/m7h.webp")%> 1x, 
     					              <%=require("./img/portfolio/m7h@2x.webp")%> 2x" 
     					              alt="m7h" loading="lazy" width="400" height="480" 

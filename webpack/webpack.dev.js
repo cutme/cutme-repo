@@ -6,18 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
 
-const minify = {
-    collapseWhitespace: true,
-    removeComments: true,
-    minifyJS: true,
-    minifyURLs: true,
-    removeEmptyAttributes: true,
-    removeScriptTypeAttributes: true,
-}
-
 const templateFileMapper = [
     { template: "./src/index.ejs", file: "index.html" },
-]
+];
 
 const htmlPlugins = () => {
     return templateFileMapper.map(entry => {
@@ -25,68 +16,59 @@ const htmlPlugins = () => {
             template: entry.template,
             filename: entry.file,
             templateParameters: {
-               className: 'dev'
+                className: 'dev',
             },
+            inject: 'body', // Wstrzyknij skrypty w odpowiednim miejscu w pliku HTML
         });
-    })
+    });
 };
 
-                    
 module.exports = {
     mode: 'development',
 
     entry: {
-        app: "./src/app.js"
+        app: "./src/app.js",
     },
-    
+
     devServer: {
-        contentBase: './dist',
-        hot: true
+        contentBase: path.resolve(__dirname, './dist'),
+        watchContentBase: true, // Monitoruj zmiany w plikach HTML i CSS
+        hot: true, // Włącz Hot Module Replacement
+        port: 8080,
+        watchOptions: {
+            ignored: /node_modules/, // Ignoruj zmiany w node_modules
+        },
     },
 
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: "js/[name].bundle.js",
-        publicPath: ''
+        publicPath: '/',
     },
 
     module: {
-    	rules: [
-    	    loaders.css,
-    		loaders.scss,
+        rules: [
+            loaders.css,
+            loaders.scss,
             loaders.fonts,
             loaders.images,
             loaders.js,
-            loaders.ejs
-		]
+            loaders.ejs,
+        ],
     },
-
-   
 
     plugins: htmlPlugins().concat([
         new ProgressBarPlugin(),
         new webpack.ProvidePlugin({
-            _: "underscore"
+            _: "underscore",
         }),
-
-        plugins.MiniCssExtractPlugin,        
+        plugins.MiniCssExtractPlugin,
         plugins.css,
         plugins.js,
-        plugins.HotModuleReplacementPlugin
+        new webpack.HotModuleReplacementPlugin(), // Włącz HMR
     ]),
-	
+
     optimization: {
-        namedModules: true, // NamedModulesPlugin()
-        /*
-splitChunks: { // CommonsChunkPlugin()
-            name: 'commons',
-            minChunks: 2
-        },
-        noEmitOnErrors: true, // NoEmitOnErrorsPlugin
-        concatenateModules: true //ModuleConcatenationPlugin
-*/
-    }
+        namedModules: true, // Użyj nazwanych modułów
+    },
 };
-
-
-

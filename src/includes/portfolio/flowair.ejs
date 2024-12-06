@@ -2,10 +2,10 @@
     <% include ../corner %>
 	<article itemscope itemtype="https://schema.org/Project">
         <h3 itemprop="name">FlowAir</h3>
-        <p itemprop="description"><strong>Kodowanie projektu graficznego</strong> strony prezentującej kurtynę powietrzną SLIM. Klient prosił o dynamiczne przedstawienie swojego produktu, więc mamy tu zaimplementowane filmy poklatkowe, parallax i&nbsp;dedykowany skrypt galerii.</p>
+        <p itemprop="description" class="~text-sm/base"><strong>Kodowanie projektu graficznego</strong> strony prezentującej kurtynę powietrzną SLIM. Klient prosił o dynamiczne przedstawienie swojego produktu, więc mamy tu zaimplementowane filmy poklatkowe, parallax i&nbsp;dedykowany skrypt galerii.</p>
         <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
 	</article>
-	<picture>
+	<picture class="relative">
         <img itemprop="image" srcset="<%=require("./img/portfolio/flowair.webp")%> 1x, 
     					              <%=require("./img/portfolio/flowair@2x.webp")%> 2x" 
     					              alt="flowair" loading="lazy" width="800" height="480" 

@@ -34,22 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             },
         });
-
-
-/*
-  gsap.from(image, {
-      scrollTrigger: {
-        trigger: image,
-        start: '-50px bottom',
-        toggleActions: "play reverse complete reverse",
-    },
-    
-        x: 40,
-        autoAlpha: 0,
-        ease: 'elastic.out(1, .8)',
-        stagger: 0.1,
-    })
-*/
   
         const lenis = new Lenis();
         lenis.on('scroll', ScrollTrigger.update)
@@ -59,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         
         gsap.ticker.lagSmoothing(0);
-              
+       
         gsap.utils.toArray(".js-fadeInChildren > *:not(.c-logo)").forEach(function(section) {
             gsap.from(section, {
                 scrollTrigger: {

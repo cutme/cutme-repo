@@ -7,10 +7,15 @@
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    
+
     <% include head-meta %>
-    <% include head-fav %>
-    <% include head-gtm %>
+    <% //include head-fav %>
+    
+<% if (process.env.NODE_ENV === 'production') { %> 
+    <% include head-gtm %> 
+<% } else { %>
+    <meta name="robots" content="noindex, nofollow">
+<% } %>
     
     <title>Kodowanie projektów | Pixel Perfect, Wordpress</title>
     <script>

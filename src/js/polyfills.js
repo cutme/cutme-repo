@@ -1,5 +1,3 @@
-// Polyfills
-
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('remove')) {

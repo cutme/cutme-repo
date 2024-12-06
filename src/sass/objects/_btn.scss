@@ -1,12 +1,39 @@
 .o-btn {
-	@extend %btn;
+	@apply relative inline-flex items-center justify-center h-12 pl-8 pr-8 rounded-3xl whitespace-nowrap;
+	transition: all .25s cubic-bezier(.250, .100, .250, 1.000);
+
+	&:before {
+    	@extend %abs-pseudo; z-index: 10;
+    	@extend %abs-xy;
+    	@extend %anim;
+    	width: calc(100% + 10px); height: calc(100% + 10px);
+    	border: 1px solid white;
+    	border-radius: 36px;
+    	opacity: 0;
+    	transition-duration: .5s;
+	}
+
+	&:hover {
+    	transform: scale3d(1.02, 1.02, 1.02);
+
+    	&:before {
+        	opacity: .2;
+        	animation: {
+                name: pulse;
+                duration: 2s;
+                timing-function: ease-in-out;
+                iteration-count: infinite;
+                play-state: running
+            }
+    	}
+	}
 	
 	&--big {
     	@extend %btn--big;
 	}
 	
 	&--small {
-    	@extend %btn--small;
+		@apply text-sm h-10 pl-4 pr-4;
 	}
 	
 	&--primary {

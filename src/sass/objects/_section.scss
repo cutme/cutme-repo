@@ -1,11 +1,11 @@
-.o-section {
-    @extend %rel;
-	padding: {
-		top: clamp(72px, toRem(168), toRem(168));
-		bottom: clamp(72px, toRem(168), toRem(168));
-	}
+// .o-section {
+//     @extend %rel;
+// 	padding: {
+// 		top: clamp(72px, toRem(168), toRem(168));
+// 		bottom: clamp(72px, toRem(168), toRem(168));
+// 	}
 	
-	&--nobottompadding {
-	    padding-bottom: 0;
-	}
-}
+// 	&--nobottompadding {
+// 	    padding-bottom: 0;
+// 	}
+// }

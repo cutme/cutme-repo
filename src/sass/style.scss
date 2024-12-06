@@ -2,33 +2,25 @@
 @import 'settings/global.scss';
 
 @import 'tools/anims';
-@import 'tools/clear';
 @import 'tools/functions';
 @import 'tools/mixins';
 
-@import 'generic/reset';
-@import 'generic/box-sizing';
-
 @import 'elements/extends';
-@import 'elements/fonts';
 @import 'elements/form';
-@import 'elements/media';
+@import 'elements/fonts';
 @import 'elements/page';
 @import 'elements/typography';
 
 @import 'objects/btn';
 @import 'objects/icons';
-@import 'objects/section';
 @import 'objects/wrap';
 
-@import 'components/about';
 @import 'components/clients';
 @import 'components/contact';
 @import 'components/contactform';
 @import 'components/logo';
 @import 'components/opinions';
 @import 'components/portfolio';
-@import 'components/skills';
 @import 'components/welcome';
 
 @import 'trumps/trumps';
