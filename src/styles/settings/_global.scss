@@ -1,0 +1,31 @@
+// Fonts
+
+$apercu:    'Apercu Pro', sans-serif;
+$icons:		'icomoon';
+
+
+// Font weights
+
+$light:				300;
+$regular:			400;
+$bold:              500;
+$bold2:             700;
+
+$z-index: (
+	logo          : 100,
+	nav           : 310,
+	navtrigger    : 320
+);
+
+
+// Default
+
+$base-font-size:	16;
+$base:				1280;
+
+// RWD
+
+$tablet:				1024;
+$tablet_portrait:		900;
+$smartphone:			640;
+$smartphone_portrait:	480;

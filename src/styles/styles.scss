@@ -1,0 +1,26 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/anims';
+@import 'tools/functions';
+@import 'tools/mixins';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/btn';
+@import 'objects/icons';
+@import 'objects/wrap';
+
+@import 'components/clients';
+@import 'components/contact';
+@import 'components/contactform';
+@import 'components/logo';
+@import 'components/opinions';
+@import 'components/portfolio';
+@import 'components/welcome';
+
+@import 'trumps/trumps';
+

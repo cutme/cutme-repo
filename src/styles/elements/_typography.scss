@@ -1,0 +1,31 @@
+body {
+	@include antialias;
+	text-rendering: optimizeSpeed;
+}
+
+a {
+	@extend %anim--fast;
+	// color: inherit;
+	// cursor: pointer;
+	// text-decoration: none;
+
+	// &:hover,
+	// &:active,
+	// &:focus {
+	// 	outline: none;
+	// }
+
+	// &:after,
+	// &:before {
+	// 	@extend %anim--fast;
+	// }
+
+	// i {
+	// 	@extend %anim--fast;
+	// }
+}
+
+::selection {
+	background-color: $c-violet;
+	color: white;
+}

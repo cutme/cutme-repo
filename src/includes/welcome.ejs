@@ -1,33 +1,33 @@
+<section
+				 class="flex flex-col items-center justify-center text-center text-white c-welcome h-lvh after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax">
+	<img style="visibility: hidden" itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %>
+				 loading="lazy" width="145" height="28" alt="cutme" class="absolute transform -translate-x-1/2 logo left-1/2 sm:transform-none sm:left-12 top-12 opacity-30" />
 
-        <section class="flex flex-col items-center justify-center text-center text-white c-welcome h-lvh after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax">
-            <img itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %> 
-				 loading="lazy" width="145" height="28" alt="cutme" class="absolute transform -translate-x-1/2 left-1/2 sm:transform-none sm:left-12 top-12 opacity-30" />   
-            
-            <h2 class="tracking-wide mb-3 ~text-sm/base opacity-50">Bartosz Mediger, front-end developer</h2>
+	<h1 class="max-w-screen-md ~mb-8/14 ~text-2xl/5xl text-x order-2 font-roslindale !~leading-loose/normal opacity-0">
+		<span class="char1">Kodowanie projektów graficznych</span>
+		<span class="char2">i wdrażanie do WordPress.</span>
+	</h1>
 
-            <h1 class="max-w-screen-md ~mb-8/14 ~text-2xl/5xl text-x font-roslindale !~leading-loose/normal" ><span class="char1">Kodowanie projektów graficznych</span>
-                <span class="char2">i wdrażanie do WordPress.</span></h1>
+	<h2 class="tracking-wide mb-3 ~text-sm/base opacity-50 order-1" style="visibility: hidden">Bartosz Mediger, front-end developer</h2>
 
-            <section class="c-welcome__skills max-w-screen-sm ~mb-12/9 font-normal ~text-2xs/xs uppercase opacity-60">
-        		<span>Responsive Design</span> 
-        		<span>Interactive animations</span> 
-        		<span>Semantic code</span>
-        		<span>SEO friendly</span> 
-        		<span>Pixel Perfect</span> 
-        	</section>
-        	
-        	<section class="absolute c-welcome__icons top-12 ~right-6/12">
-            	<a href="https://github.com/cutme?tab=repositories" target="_blank" class="text-2xl icon-github opacity-30 hover:opacity-50"></a>
-        	</section>
-        
-        	<section class="o-more">
-            	<button class="o-btn o-btn--oval o-btn--primary" data-target="#portfolio">Sprawdź przykłady</button>
-        	</section>
-        	
-<!--
-        	<video muted progress autoplay loop>
-                <source src=<%= require('./img/welcome/853919-hd_1920_1080_25fps.mp4') %> type="video/mp4" >
-                Your browser does not support HTML video.
-            </video>
--->
-		</section>
+	<div
+			 class="c-welcome__skills max-w-screen-sm ~mb-9/12 order-3 font-normal ~text-2xs/xs uppercase opacity-60" style="visibility: hidden">
+		<span>Responsive Design</span>
+		<span>Interactive animations</span>
+		<span>Semantic code</span>
+		<span>SEO friendly</span>
+		<span>Pixel Perfect</span>
+	</div>
+
+	<div class="absolute c-welcome__icons top-12 ~right-6/12 opacity-0">
+		<a href="https://github.com/cutme?tab=repositories"
+			 target="_blank"
+			 class="text-2xl icon-github opacity-30 hover:opacity-50"
+			 aria-label="View GitHub repositories"></a>
+	</div>
+
+	<div class="order-4 opacity-0 o-more">
+		<button class="o-btn o-btn--oval o-btn--primary"
+						data-target="#portfolio">Zobacz realizacje</button>
+	</div>
+</section>

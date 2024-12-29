@@ -1,0 +1,9 @@
+.c-clients {
+	&__item {
+		@apply flex justify-center items-center;
+
+		img {
+			@apply ~h-6/10 w-auto ml-auto mr-auto;
+		}
+	}
+}

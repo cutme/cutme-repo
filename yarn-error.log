@@ -1,25 +1,25 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn dev
+  /usr/local/bin/node /Users/apple/.yarn/bin/yarn.js install
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/apple/.yarn/bin:/Users/apple/.config/yarn/global/node_modules/.bin
+  /Users/apple/.yarn/bin:/Users/apple/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/apple/.yarn/bin:/Users/apple/.config/yarn/global/node_modules/.bin
 
 Yarn version: 
-  1.22.11
+  1.22.19
 
 Node version: 
-  16.14.0
+  18.19.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/apple/Projekty/cutme-repo/package.json: Unexpected token / in JSON at position 1348
+  SyntaxError: /Users/apple/Projekty/cutme-repo/package.json: Unexpected token } in JSON at position 2224
       at JSON.parse (<anonymous>)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at /Users/apple/.yarn/lib/cli.js:1629:59
       at Generator.next (<anonymous>)
-      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+      at step (/Users/apple/.yarn/lib/cli.js:310:30)
+      at /Users/apple/.yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -32,31 +32,25 @@ npm manifest:
           "browserslist": "^4.1.0",
           "concurrently": "^9.1.0",
           "css-loader": "^1.0.0",
-          "expose-loader": "^0.7.5",
           "file-loader": "^2.0.0",
           "happypack": "^5.0.0",
-          "html-loader": "^0.5.5",
           "html-webpack-plugin": "^3.2.0",
           "image-webpack-loader": "^4.3.1",
           "mini-css-extract-plugin": "^0.4.2",
           "postcss-loader": "^4.0.0",
-          "prettier": "^3.4.0",
           "progress-bar-webpack-plugin": "^1.11.0",
           "rimraf": "^2.6.2",
           "sass-loader": "^7.1.0",
           "style-loader": "^0.23.0",
-          "url-loader": "^1.1.1",
-          "vanilla-lazyload": "^17.5.0",
           "webpack": "^4.27.1",
           "webpack-cli": "^3.1.0",
           "webpack-command": "^0.4.1",
           "webpack-dev-server": "^3.1.7"
       },
       "scripts": {
-          "dev": "concurrently \"webpack-dev-server --host 0.0.0.0 --config webpack/webpack.dev.js\" \"tailwindcss -i src/input.scss -o src/output.css --watch\"",
-          "devo": "webpack-dev-server --host 0.0.0.0 --config webpack/webpack.dev.js",
-          "prod": "npm run clean && webpack -p --config webpack/webpack.prod.js",
-         // "build-css": "npx tailwindcss -i src/input.css -o src/output.css --watch",
+          "dev": "concurrently \"webpack-dev-server --host 0.0.0.0 --config webpack/webpack.dev.js\" \"tailwindcss -i src/styles/tailwind.scss -o src/styles/tailwind-output.scss --watch\"",
+          "prod": "npm run clean && tailwindcss -i src/styles/tailwind.scss -o src/styles/tailwind-output.scss && webpack -p --config webpack/webpack.prod.js",
+          "test": "npm run clean && tailwindcss -i src/styles/tailwind.scss -o src/styles/tailwind-output.scss && webpack -p --config webpack/webpack.test.js",
           "clean": "rimraf ./dist/*"
       },
       "name": "cutme",
@@ -79,14 +73,12 @@ npm manifest:
           "lenis": "1.1.13",
           "postcss": "^8.0.0",
           "postcss-cli": "^5.0.0",
-          "prettier-plugin-tailwindcss": "^0.6.9",
+          "postcss-import": "^16.1.0",
           "sass": "^1.45.0",
           "siema": "^1.5.1",
-          "smoothscroll-polyfill": "^0.4.4",
           "tailwindcss": "^3.4.15",
           "terser-webpack-plugin": "^2.3.4",
           "validate.js": "^0.13.1",
-          "webfontloader": "^1.6.28"
       },
       "browserslist": [
           "> 1%",

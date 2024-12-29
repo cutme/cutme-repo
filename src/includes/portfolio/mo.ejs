@@ -1,0 +1,14 @@
+<div class="c-portfolio__item c-portfolio__item--big" onclick="window.open('https://mo-html.cutme.pl', '_blank')">    				
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">Marketing Opanowany</h3>
+        <p itemprop="description" class="~text-sm/base">Cykl konsultacji i&nbsp;szkoleń na żywo. Kompleksowe zlecenie na <strong>zakodowanie projektu graficznego</strong> oraz <strong>wdrożenie do Wordpress</strong>.</p>
+        <button class="o-btn o-btn--primary o-btn--small" type="button">Zobacz online</button>
+	</article>
+	<picture class="relative block">
+        <img itemprop="image" srcset="<%=require("./img/portfolio/mo.webp")%> 1x, 
+            			              <%=require("./img/portfolio/mo@2x.webp")%> 2x" 
+            			              alt="Kodowanie projektu graficznego i implementacja responsywnej strony internetowej w HTML/CSS. Wdrożenie do Wordpress" loading="lazy" width="800" height="480" 
+            			              src=<%=require("./img/portfolio/mo.webp")%> />
+    </picture>
+</div>

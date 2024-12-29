@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    window.anims();
+
     const init = () => {
         //document.documentElement.removeAttribute('style');
         document.documentElement.classList.add('is-loaded');        
-        window.anims();
-
         setTimeout(() => {
-            document.getElementById('cover').remove();
+            //document.getElementById('cover').remove();
             (function() {
         		var wf = document.createElement('script');
         		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +

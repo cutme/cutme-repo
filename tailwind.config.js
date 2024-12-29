@@ -1,9 +1,10 @@
-import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
- 
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
+import plugin from 'tailwindcss/plugin';
+
 const config: Config = {
   content: {
     files: ["./src/**/*.{html,ejs,js,scss}"],
-    extract
+    extract,
   },
   theme: {
     screens,
@@ -15,21 +16,32 @@ const config: Config = {
     // },
     extend: {
       fontFamily: {
-        //apercu: ['ApercuPro', 'sans-serif'],
         mulish: ['Mulish', 'sans-serif'],
         roslindale: ['Roslindale', 'serif'],
       },
       fontSize: {
-        '2x-base': '2rem', 
-        '2xs': '.563rem', 
-        '4xl': ['2.25rem', { lineHeight: '3.25rem' }],
-        '5xl': ['3rem', { lineHeight: '2.5' }],
+        '2x-base': ['2rem',    { lineHeight: '3rem' }], 
+        '2xs':     ['.563rem', { lineHeight: '1rem' }], 
+        '4xl':     ['2.25rem', { lineHeight: '3.25rem' }],
+        '5xl':     ['3rem',    { lineHeight: '4.5rem' }],
       },
       opacity: {
         '3': '.03',
       }
     },
   },
-  plugins: [fluid]
-}
+  plugins: [
+    fluid,
+    plugin(function ({ addBase }) {
+      addBase({
+        body: {
+          '-webkit-font-smoothing': 'antialiased',
+          '-moz-osx-font-smoothing': 'grayscale',
+          'text-rendering': 'optimizeSpeed',
+        },
+      });
+    }),
+  ],
+};
+
 export default config;

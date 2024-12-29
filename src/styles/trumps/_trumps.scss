@@ -1,0 +1,12 @@
+[class^="icon-"], [class*=" icon-"] {
+	@extend %icomoon;
+}
+
+.u-cover {
+    transition: all 250ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}

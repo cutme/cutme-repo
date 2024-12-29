@@ -1,14 +1,14 @@
-<section class="c-portfolio__item c-portfolio__item--big c-portfolio__item--19" onclick="window.open('https://4pharma.cutme.pl', '_blank')"> 
+<div class="4pharma c-portfolio__item c-portfolio__item--big" onclick="window.open('https://4pharma.cutme.pl', '_blank')"> 
     <% include ../corner %>
     <article itemscope itemtype="https://schema.org/Project">
         <h3 itemprop="name">4pharma</h3>
-        <p itemprop="description" class="~text-sm/base">Wdrożenie dla agencji doradztwa cyfrowego dostarczającej rozwiązania dla nowoczesnego rynku farmaceutycznego. Moim zadaniem było zakodowane dynamicznej strony z użyciem efektu parallax na podstawie projektu.</p>
-        <button class="o-btn o-btn--primary o-btn--small">Zobacz online</button>
+        <p itemprop="description" class="~text-sm/base">Wdrożenie dla agencji doradztwa cyfrowego dostarczającej rozwiązania dla nowoczesnego rynku farmaceutycznego. Moim zadaniem było <strong>zakodowane dynamicznej strony</strong> z&nbsp;użyciem efektu parallax na podstawie projektu.</p>
+        <button class="o-btn o-btn--primary o-btn--small" type="button">Zobacz online</button>
 	</article>   
-	<picture class="relative"> 					
+	<picture class="relative block"> 					
     <img itemprop="image" srcset="<%=require("./img/portfolio/4pharma.webp")%> 1x, 
 					              <%=require("./img/portfolio/4pharma@2x.webp")%> 2x" 
-					              alt="4pharma" loading="lazy" width="800" height="480" 
+					              alt="Kodowanie projektu graficznego 4pharma na stronę internetową, responsywność w HTML i CSS" loading="lazy" width="800" height="480" 
 					              src=<%=require("./img/portfolio/4pharma.webp")%> />
     </picture>
-</section>
+</div>
