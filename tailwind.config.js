@@ -15,6 +15,9 @@ const config: Config = {
     //   'lg': '1024px'
     // },
     extend: {
+      borderRadius: {
+        '48px': '48px',
+      },
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
         roslindale: ['Roslindale', 'serif'],

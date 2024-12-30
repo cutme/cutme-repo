@@ -83,29 +83,29 @@ $gap: clamp(32px, toRem(48), toRem(48));
 		width: 100%;
 	}
 
-	&--big {
-		height: 60px;
-		border-radius: 30px;
-		font-size: 18px;
-		padding: 0 48px;
-	}
+	// &--big {
+	// 	height: 60px;
+	// 	border-radius: 30px;
+	// 	font-size: 18px;
+	// 	padding: 0 48px;
+	// }
 
-	&--small {
-		height: 32px;
-		font-size: 12px;
-		padding: 0 12px;
-	}
+	// &--small {
+	// 	height: 32px;
+	// 	font-size: 12px;
+	// 	padding: 0 12px;
+	// }
 
 	&--primary {
-		background-color: $c-violet;
-		border-color: $c-violet;
-		color: white;
+		// background-color: $c-violet;
+		// border-color: $c-violet;
+		// color: white;
 
-		&:hover {
-			background-color: transparent;
-			border-color: white;
-			color: white;
-		}
+		// &:hover {
+		// 	background-color: transparent;
+		// 	border-color: white;
+		// 	color: white;
+		// }
 	}
 
 	&:active {
@@ -198,7 +198,6 @@ $gap: clamp(32px, toRem(48), toRem(48));
 %underline {
 	@extend %rel;
 
-
 	&:after {
 		@extend %anim;
 		@extend %abs-after;
@@ -220,7 +219,8 @@ $gap: clamp(32px, toRem(48), toRem(48));
 
 %ulink {
 	@extend %rel;
-
+	display: inline-block;
+	
 	&:after,
 	&:before {
 		@extend %abs;

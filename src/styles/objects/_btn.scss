@@ -2,6 +2,16 @@
 	@apply relative inline-flex items-center justify-center h-12 pl-8 pr-8 rounded-3xl whitespace-nowrap text-white;
 	transition: all .25s cubic-bezier(.250, .100, .250, 1.000);
 
+	background-color: $c-violet;
+	border-color: $c-violet;
+	color: white;
+
+	&:hover {
+		background-color: transparent;
+		border-color: white;
+		color: white;
+	}
+
 	&:before {
 		@extend %abs-pseudo;
 		z-index: 10;
@@ -9,7 +19,7 @@
 		@extend %anim;
 		width: calc(100% + 10px);
 		height: calc(100% + 10px);
-		border: 1px solid white;
+		border: 1px solid gray;
 		border-radius: 36px;
 		opacity: 0;
 		transition-duration: .5s;
@@ -19,28 +29,47 @@
 		transform: scale3d(1.02, 1.02, 1.02);
 
 		&:before {
-			opacity: .2;
+			//opacity: ;
+		//	border-color: red;
+			opacity: 1;
 
-			animation: {
-				name: pulse;
-				duration: 2s;
-				timing-function: ease-in-out;
-				iteration-count: infinite;
-				play-state: running
-			}
+			// animation: {
+			// 	name: pulse;
+			// 	duration: 2s;
+			// 	timing-function: ease-in-out;
+			// 	iteration-count: infinite;
+			// 	play-state: running
+			// }
 		}
 	}
 
 	&--primary {
-		@extend %btn--primary;
+		//@extend %btn--primary;
+	}
+
+	&--big {
+		@apply text-xl h-16 pl-12 pr-12 rounded-full;		
 	}
 
 	&--small {
-		@extend %btn--small;
 		@apply text-sm h-10 pl-4 pr-4;
 	}
 
 	&:active {
 		transform: scale3d(.95, .95, 1);
+	}
+}
+
+@keyframes pulse {
+	0% {
+			opacity: .2
+	}
+	
+	50% {
+			opacity: .3;
+	}
+	
+	100% {
+			opacity: .2;
 	}
 }

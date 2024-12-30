@@ -10,3 +10,20 @@
         opacity: 0;
     }
 }
+
+.u-link {
+    @extend %anim--medium;
+    @extend %ulink;
+    padding: 6px 12px;
+
+    &:before,
+    &:after {
+        background-color: $c-violet;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: white;
+    }
+}
