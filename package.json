@@ -42,6 +42,7 @@
         "autosize": "^6.0.1",
         "copy-webpack-plugin": "6.2.1",
         "cssnano": "^7.0.6",
+        "dropzone": "^6.0.0-beta.2",
         "ejs-compiled-loader": "^1.1.0",
         "fluid-tailwind": "^1.0.4",
         "form-serialize": "^0.7.2",

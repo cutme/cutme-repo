@@ -27,3 +27,9 @@
         color: white;
     }
 }
+
+.dropzone.dz-clickable {
+  box-shadow: 0 .625rem 1.25rem #0000001a;
+  border-radius: 24px;
+  border: 1px solid rgba(156,163,175, .5);
+}

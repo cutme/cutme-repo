@@ -46,6 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $body .= $v.htmlspecialchars(stripslashes(trim($_POST[$label]))).PHP_EOL;
             }
         }
+
+        // Dodaj nazwy plików, które zostały przesłane
+        if (isset($_FILES['file']) && !empty($_FILES['file']['name'][0])) {
+            $body .= "Załączone pliki:" . PHP_EOL;
+            foreach ($_FILES['file']['name'] as $filename) {
+                $body .= $filename . PHP_EOL;
+            }
+        } else {
+            $body .= "Brak załączonych plików." . PHP_EOL;
+        }
         
         try {
             //Server settings
@@ -72,6 +82,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->Subject = 'Post ze strony cutme.pl';
             $mail->Body    = $body;
         
+            // Dodaj załączniki (pliki)
+            if (isset($_FILES['file'])) {
+                foreach ($_FILES['file']['tmp_name'] as $index => $tmpName) {
+                    $mail->addAttachment($tmpName, $_FILES['file']['name'][$index]);
+                }
+            }
+
             $mail->send();
         
             echo 'Mail sent';
@@ -84,6 +101,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Niepoprawne CAPTCHA, spróbuj ponownie.";
     }
 }
-
 
 ?>

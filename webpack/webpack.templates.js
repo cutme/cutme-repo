@@ -7,6 +7,14 @@ const templateFileMapper = [
     dev: "",
     prod: "",
   },
+  {
+    template: "./src/upload.ejs",
+    file: "upload.html",
+    title: "",
+    og: "og.jpg",
+    dev: "",
+    prod: "",
+  },
 ];
 
 module.exports = templateFileMapper;

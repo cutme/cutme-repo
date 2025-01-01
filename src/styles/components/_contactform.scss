@@ -122,22 +122,6 @@
 		transform: translate3d(-66.6%, 0, 0);
 	}
 
-	&__submit {
-		//@media screen and ( min-width: $smartphone + 1px ) {
-		padding-top: 24px;
-		//}
-
-		.o-cube {
-			float: right;
-			padding: 0;
-
-			@media screen and (min-width: $smartphone + 1px) {
-
-				//width: 220px;
-			}
-		}
-	}
-
 	&__thanks {
 		@extend %anim;
 		padding-top: 0;
