@@ -22,16 +22,17 @@ import "dropzone/dist/dropzone.css";
   const myDropzone = new Dropzone("#my-dropzone", {
     url: "/upload.php", // Ścieżka do skryptu obsługującego przesyłanie plików
     maxFilesize: 10, // Maksymalny rozmiar pliku w MB
-    acceptedFiles: ".jpg,.jpeg,.png,.pdf", // Akceptowane typy plików
+    acceptedFiles: ".jpg,.jpeg,.png,.pdf,.zip,.doc,.docx,.webp", // Akceptowane typy plików
     dictDefaultMessage: "<p class='mb-2 text-xl'>Dodaj pliki projektowe</p> <p class='text-sm text-gray-500'>(np. makiety, grafiki, dokumenty, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>",
     autoProcessQueue: true, // Automatyczne przesyłanie po dodaniu pliku
     addRemoveLinks: true,
     dictRemoveFile: "Usuń",
+    dictCancelUpload: "Anuluj",
     success: function (file, response) {
-      console.log("Plik przesłany pomyślnie:", response);
+      //console.log("Plik przesłany pomyślnie:", response);
     },
     error: function (file, response) {
-      console.error("Błąd przesyłania pliku:", response);
+      //console.error("Błąd przesyłania pliku:", response);
     }
   });
 
@@ -95,10 +96,10 @@ import "dropzone/dist/dropzone.css";
           presence: { allowEmpty: false, message: "Email jest wymagany." },
           email: { message: "Podaj poprawny adres email." }
         },
-        // "g-recaptcha-response": {
-        //     presence: { allowEmpty: false, message: "Pole reCAPTCHA jest wymagane." },
-        //     recaptcha: true,
-        // },
+        "g-recaptcha-response": {
+            presence: { allowEmpty: false, message: "Pole reCAPTCHA jest wymagane." },
+            recaptcha: true,
+        },
       };
 
       var form = document.getElementById('contactForm');
@@ -107,7 +108,18 @@ import "dropzone/dist/dropzone.css";
         ev.preventDefault();
 
         const formData = serialize(form, { hash: true });
-        //formData["g-recaptcha-response"] = grecaptcha.getResponse();
+        formData["g-recaptcha-response"] = grecaptcha.getResponse();
+
+        // Dołącz nazwy plików, które zostały przesłane przez Dropzone
+        const fileNames = myDropzone.getAcceptedFiles().map(file => file.name);
+        formData["file_names"] = fileNames.join(", ");
+
+        // Dodaj pliki z Dropzone do formularza
+        const files = myDropzone.getAcceptedFiles();
+        files.forEach(file => {
+          formData["file[]"] = formData["file[]"] || []; // Zapewnienie tablicy
+          formData["file[]"].push(file);
+        });
 
         var errors = validate(formData, constraints);
 
@@ -118,15 +130,15 @@ import "dropzone/dist/dropzone.css";
           formData["file_names"] = fileNames.join(", "); // Dołącz nazwy plików
 
           // Jeśli pliki zostały dodane do Dropzone, procesuj je.
-          if (myDropzone.getQueuedFiles().length > 0) {
-              // Pliki są już przesyłane automatycznie przez Dropzone
-              myDropzone.processQueue();
-          } else {
-              // Wyślij tylko dane formularza (bez plików)
-              sendData(formData);
-          }
+          // if (myDropzone.getQueuedFiles().length > 0) {
+          //     // Pliki są już przesyłane automatycznie przez Dropzone
+          //     myDropzone.processQueue();
+          // } else {
+          //     // Wyślij tylko dane formularza (bez plików)
+          //     sendData(formData);
+          // }
           
-          //sendData(formData);
+          sendData(formData);
         }
       });
     };

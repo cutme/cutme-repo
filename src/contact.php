@@ -12,7 +12,8 @@ $body .= 'Wiadomość ze strony:'.PHP_EOL;
 $inputs = [
     'name' => 'Imię i nazwisko: ',
     'message' => 'Wiadomość: ',
-    'email' => 'E-mail: '
+    'email' => 'E-mail: ',
+    'file_names' => 'Załączone pliki: '
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -48,14 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Dodaj nazwy plików, które zostały przesłane
-        if (isset($_FILES['file']) && !empty($_FILES['file']['name'][0])) {
-            $body .= "Załączone pliki:" . PHP_EOL;
-            foreach ($_FILES['file']['name'] as $filename) {
-                $body .= $filename . PHP_EOL;
-            }
-        } else {
-            $body .= "Brak załączonych plików." . PHP_EOL;
-        }
+        // if (isset($_FILES['file']) && !empty($_FILES['file']['name'][0])) {
+        //     $body .= "Załączone pliki:" . PHP_EOL;
+        //     foreach ($_FILES['file']['name'] as $filename) {
+        //         $body .= $filename . PHP_EOL;
+        //     }
+        // } else {
+        //     $body .= "Brak załączonych plików." . PHP_EOL;
+        // }
         
         try {
             //Server settings

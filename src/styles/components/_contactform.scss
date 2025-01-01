@@ -136,16 +136,6 @@
 		&.is-visible {
 			animation: fadeIn 500ms forwards ease-out;
 		}
-
-		h4 {
-			font-size: clamp(24px, toRem(30), toRem(30));
-			margin-bottom: 24px;
-		}
-
-		p {
-			line-height: 1.4em;
-			font-size: clamp(16px, toRem(20), toRem(20));
-		}
 	}
 
 	.is-hidden {
@@ -153,7 +143,7 @@
 	}
 
 	#recaptcha {
-		margin-top: 48px;
+		//margin-top: 48px;
 
 		div {
 			iframe {
