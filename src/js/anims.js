@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(".c-welcome h2").style.visibility = 'visible';
             document.querySelector(".c-welcome__skills").style.visibility = 'visible';
             document.querySelector(".c-welcome .o-more").classList.remove("opacity-0");
-            document.querySelector(".c-welcome__icons").classList.remove("opacity-0");
+            document.querySelector(".c-welcome .nav").classList.remove("opacity-0");
             document.querySelector(".c-welcome .logo").style.visibility = 'visible';
 
             // textWrapper1.style.visibility = 'visible';
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ease: 'elastic.out(1, .8)',
                 }, '-=1.8')
 
-                .from(document.querySelector(".c-welcome__icons"), {
+                .from(document.querySelector(".c-welcome .nav"), {
                     duration: 1.6,
                     //                y: 40,
                     autoAlpha: 0,

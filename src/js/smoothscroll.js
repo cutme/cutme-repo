@@ -3,10 +3,11 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 document.addEventListener('DOMContentLoaded', ()=> {
     gsap.registerPlugin(ScrollToPlugin)
-    window.runScroll = function(el, o) {
+    window.runScroll = function(el, o, speed) {
         let offsetTop = document.querySelector(el).offsetTop;
         o === undefined ? o = 0 : false;
-        gsap.to(window, { duration: 1.3, scrollTo: el, ease: 'elastic.out(1, .8)' });
+        speed === undefined ? speed = 1.3 : false;
+        gsap.to(window, { duration: speed, scrollTo: el, ease: 'elastic.out(1, .8)' });
     };
 
     const gtt = document.querySelectorAll("[data-target]");
@@ -14,8 +15,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const action = function(e) {
         	e.preventDefault() ? e.preventDefault() : e.preventDefault = false;  
             let target = e.currentTarget.dataset.target,
-                offset = e.currentTarget.dataset.offset;            
-            document.getElementById(target.slice(1, target.length)) ? window.runScroll(target, offset) :
+                offset = e.currentTarget.dataset.offset,
+                speed = e.currentTarget.dataset.speed;            
+            document.getElementById(target.slice(1, target.length)) ? window.runScroll(target, offset, speed) :
                 window.open(window.location.origin + target, '_self');
         };
 

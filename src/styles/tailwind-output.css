@@ -876,6 +876,12 @@ body {
   gap: 0.5rem;
 }
 
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1007,12 +1013,20 @@ body {
   text-transform: uppercase;
 }
 
+.leading-loose {
+  line-height: 2;
+}
+
 .-tracking-wide {
   letter-spacing: -0.025em;
 }
 
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-gray-200 {
@@ -1274,9 +1288,17 @@ body {
   opacity: 0.5;
 }
 
+.hover\:opacity-70:hover {
+  opacity: 0.7;
+}
+
 @media (min-width: 40rem) {
   .sm\:left-12 {
     left: 3rem;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:transform-none {
