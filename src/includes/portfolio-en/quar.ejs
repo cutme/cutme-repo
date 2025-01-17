@@ -1,0 +1,14 @@
+<div class="c-portfolio__item c-portfolio__item--08 c-portfolio__item--big" onclick="window.open('https://quar.studio/', '_blank')">    				
+    <% include ../corner %>
+	<article itemscope itemtype="https://schema.org/Project">
+        <h3 itemprop="name">Quar Studio</h3>
+        <p itemprop="description" class="~text-sm/base">My task was to <strong>code</strong> and <strong>implement</strong> a graphic design to the Wordpress CMS - designer portfolio, UX/UI graphics.</p>
+        <button class="o-btn o-btn--primary o-btn--small" type="button">See online</button>
+	</article>
+	<picture class="relative block">
+        <img itemprop="image" srcset="<%=require("../img/portfolio/qua.webp")%> 1x, 
+    					              <%=require("../img/portfolio/qua@2x.webp")%> 2x" 
+    					              alt="Quar" loading="lazy" width="800" height="480" 
+    					              src=<%=require("../img/portfolio/qua.webp")%> />
+    </picture>
+</div>

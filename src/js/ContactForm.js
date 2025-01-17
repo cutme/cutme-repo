@@ -19,15 +19,28 @@ import "dropzone/dist/dropzone.css";
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
   }
 
+  let dictDefaultMessageText, dictRemoveFileText, dictCancelUploadText;
+
+  const language = document.documentElement.lang;
+  if (language === 'pl-PL') {
+    dictDefaultMessageText = "<p class='mb-2 text-xl'>Dodaj pliki projektowe</p> <p class='text-sm text-gray-500'>(np. makiety, grafiki, dokumenty, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
+    dictRemoveFileText = "Usuń";
+    dictCancelUploadText = "Anuluj"
+
+  } else if (language === 'en-US') {
+    dictDefaultMessageText = "<p class='mb-2 text-xl'>Add design files</p> <p class='text-sm text-gray-500'>(e.g. mockups, graphics, documents, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
+    dictRemoveFileText = 'Delete';
+    dictCancelUploadText = 'Cancel'
+  }
   const myDropzone = new Dropzone("#my-dropzone", {
     url: "/upload.php", // Ścieżka do skryptu obsługującego przesyłanie plików
     maxFilesize: 10, // Maksymalny rozmiar pliku w MB
     acceptedFiles: ".jpg,.jpeg,.png,.pdf,.zip,.doc,.docx,.webp", // Akceptowane typy plików
-    dictDefaultMessage: "<p class='mb-2 text-xl'>Dodaj pliki projektowe</p> <p class='text-sm text-gray-500'>(np. makiety, grafiki, dokumenty, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>",
+    dictDefaultMessage: dictDefaultMessageText,
     autoProcessQueue: true, // Automatyczne przesyłanie po dodaniu pliku
     addRemoveLinks: true,
-    dictRemoveFile: "Usuń",
-    dictCancelUpload: "Anuluj",
+    dictRemoveFile: dictRemoveFileText,
+    dictCancelUpload: dictCancelUploadText,
     success: function (file, response) {
       //console.log("Plik przesłany pomyślnie:", response);
     },
@@ -97,8 +110,8 @@ import "dropzone/dist/dropzone.css";
           email: { message: "Podaj poprawny adres email." }
         },
         "g-recaptcha-response": {
-            presence: { allowEmpty: false, message: "Pole reCAPTCHA jest wymagane." },
-            recaptcha: true,
+          presence: { allowEmpty: false, message: "Pole reCAPTCHA jest wymagane." },
+          recaptcha: true,
         },
       };
 
@@ -137,7 +150,7 @@ import "dropzone/dist/dropzone.css";
           //     // Wyślij tylko dane formularza (bez plików)
           //     sendData(formData);
           // }
-          
+
           sendData(formData);
         }
       });

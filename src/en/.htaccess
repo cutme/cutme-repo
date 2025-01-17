@@ -1,0 +1,3 @@
+RewriteEngine On
+# Ustawienie index.html jako domyślnego pliku
+DirectoryIndex index.html

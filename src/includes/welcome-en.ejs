@@ -1,0 +1,53 @@
+<section
+         class="flex ~pl-6/24 ~pr-6/24 flex-col items-center justify-center text-white c-welcome h-lvh after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax">
+  <img style="visibility: hidden" itemprop="logo" src=<%= require("../img/assets/logo-white.svg") %>
+				 loading="lazy" width="145" height="28" alt="cutme" class="absolute logo ~left-6/12 top-12 opacity-30" />
+
+  <div class="flex flex-col max-w-3xl">
+    <h1 class="max-w-xl lg:max-w-screen-md mb-6 ~text-3xl/5xl order-2 font-roslindale !leading-snug opacity-0">
+      <span class="char1">Design to code</span>
+      <span class="char2">&amp;&nbsp;WordPress implementation</span>
+    </h1>
+
+    <h2 class="tracking-wide mb-4 ~text-xs/base opacity-30 font-light order-1"
+        style="visibility: hidden">Bartosz Mediger, front-end developer</h2>
+
+    <div class="c-welcome__skills max-w-xl ~mb-10/14 order-3 font-normal ~text-2xs/xs uppercase opacity-60"
+         style="visibility: hidden">
+      <span>Responsive Design</span>
+      <span>Interactive animations</span>
+      <span>Semantic code</span>
+      <span>SEO friendly</span>
+      <span>Pixel Perfect</span>
+    </div>
+
+    <nav class="absolute top-12 ~right-6/12 items-center nav flex opacity-0 text-sm tracking-wider ">
+      <button type="button"
+              class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
+              data-target="#portfolio">portfolio</button>
+      <button type="button"
+              class="hidden mr-6 text-sm uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
+              data-target="#faq">faq</button>
+      <button type="button"
+              class="hidden mr-6 uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
+              data-target="#contact"
+              data-speed="2">contact</button>
+
+      <span class="pl-6 border-l border-l-gray-800">
+        <a href="/"
+           class="hidden mr-6 text-sm uppercase duration-150 opacity-30 hover:opacity-70 sm:block">PL</a>
+      </span>
+
+      <a href="https://github.com/cutme?tab=repositories"
+         target="_blank"
+         class="block ml-12 text-2xl icon-github opacity-30 hover:opacity-50"
+         aria-label="View GitHub repositories"></a>
+    </nav>
+
+    <div class="order-4 opacity-0 o-more">
+      <button class="o-btn o-btn--oval o-btn--primary"
+              data-target="#portfolio"
+              data-speed=".5">See the projects</button>
+    </div>
+  </div>
+</section>

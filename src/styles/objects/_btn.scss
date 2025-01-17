@@ -1,5 +1,5 @@
 .o-btn {
-	@apply relative inline-flex items-center justify-center h-12 pl-8 pr-8 rounded-3xl whitespace-nowrap text-white;
+	@apply relative inline-flex items-center justify-center ~h-12/14 pl-6 pr-6 rounded-full whitespace-nowrap text-white;
 	transition: all .25s cubic-bezier(.250, .100, .250, 1.000);
 
 	background-color: $c-violet;

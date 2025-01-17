@@ -7,6 +7,7 @@ const htmlPlugins = () => {
       template: entry.template,
       filename: entry.file,
       minify: {
+        collapseWhitespace: process.env.NODE_ENV === "production",
         removeScriptTypeAttributes: true,
       },
     };

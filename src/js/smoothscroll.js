@@ -1,4 +1,4 @@
-import { gsap, elastic } from "gsap";
+import { gsap, Power1 } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 document.addEventListener('DOMContentLoaded', ()=> {
@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.runScroll = function(el, o, speed) {
         let offsetTop = document.querySelector(el).offsetTop;
         o === undefined ? o = 0 : false;
-        speed === undefined ? speed = 1.3 : false;
-        gsap.to(window, { duration: speed, scrollTo: el, ease: 'elastic.out(1, .8)' });
+        speed === undefined ? speed = 1 : false;
+        gsap.to(window, { duration: speed, scrollTo: el, ease: Power1.easeInOut });
     };
 
     const gtt = document.querySelectorAll("[data-target]");

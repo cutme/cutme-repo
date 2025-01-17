@@ -18,6 +18,9 @@ const config: Config = {
       borderRadius: {
         '48px': '48px',
       },
+      colors: {
+        violet: '#6663ff',
+      },
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
         roslindale: ['Roslindale', 'serif'],

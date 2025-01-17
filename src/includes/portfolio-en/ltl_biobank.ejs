@@ -1,0 +1,30 @@
+<div class="c-portfolio__item c-portfolio__item--double c-portfolio__item--narrow c-portfolio__item--11">
+	<div class="relative overflow-hidden" onclick="window.open('https://ltl.cutme.pl/', '_blank')">
+		<% include ../corner %>
+		<article itemscope itemtype="https://schema.org/Project">
+            <h3 itemprop="name">LTL</h3>
+            <p itemprop="description" class="~text-sm/base"><strong>Pocięcie projektu graficznego</strong> oraz &nbsp;<strong>wdrożenie do&nbsp;Wordpress</strong>.</p>
+            <button class="o-btn o-btn--primary o-btn--small" type="button">Zobacz online</button>
+		</article>
+		<picture class="relative block">
+				<img itemprop="image" srcset="<%=require("../img/portfolio/ltl.webp")%> 1x, 
+															<%=require("../img/portfolio/ltl@2x.webp")%> 2x" 
+															alt="Integracja projektu graficznego z systemem zarządzania treścią WordPress - LTL" class="small" loading="lazy" width="480" height="240" 
+															src=<%=require("../img/portfolio/ltl.webp")%> />
+		</picture>
+	</div>
+	<div class="relative overflow-hidden" onclick="window.open('https://bio.cutme.pl/', '_blank')">
+		<% include ../corner %>
+		<article itemscope itemtype="https://schema.org/Project">
+            <h3 itemprop="name">Biobank</h3>
+            <p itemprop="description" class="~text-sm/base"><strong>HTML template coding</strong>, animations.</p>
+            <button class="o-btn o-btn--primary o-btn--small">See online</button>
+		</article>
+		<picture class="relative block">
+				<img itemprop="image" srcset="<%=require("../img/portfolio/bio.webp")%> 1x, 
+														<%=require("../img/portfolio/bio@2x.webp")%> 2x" 
+														alt="Converting a graphic design to WordPress with full responsiveness Biobank" class="small" loading="lazy" width="480" height="240" 
+														src=<%=require("../img/portfolio/bio.webp")%> />
+		</picture>
+	</div>
+</div>
