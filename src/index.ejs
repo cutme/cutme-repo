@@ -3,11 +3,17 @@
 <body class="font-mulish" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 <% include ./src/includes/head-gtm--noscript %>
 
+  <div class="fixed z-20 p-2 transition-opacity ease-out rounded-full opacity-0 pointer-events-none contact-button bg-white/10 ~right-2/4 ~top-2/4 backdrop-blur-sm duration-400">
+    <button class="o-btn ~px-4/8 ~py-2/4 max-sm:text-sm hover:text-gray-500"
+            data-target="#contact"
+            data-speed="1">Kontakt</button>
+  </div>
+  
 	<main itemprop="mainContentOfPage" id="welcome">
     <% include ./src/includes/welcome %>
     <% include ./src/includes/portfolio/index %>        
     <% include ./src/includes/opinions %>
-    <% include ./src/includes/faq/index %>
+    <% //include ./src/includes/faq/index %>
     <% include ./src/includes/contact %>
 	</main>
 

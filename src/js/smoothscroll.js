@@ -1,4 +1,4 @@
-import { gsap, Power1 } from "gsap";
+import { gsap, Power2 } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 document.addEventListener('DOMContentLoaded', ()=> {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         let offsetTop = document.querySelector(el).offsetTop;
         o === undefined ? o = 0 : false;
         speed === undefined ? speed = 1 : false;
-        gsap.to(window, { duration: speed, scrollTo: el, ease: Power1.easeInOut });
+        gsap.to(window, { duration: speed, scrollTo: el, ease: Power2.easeOut });
     };
 
     const gtt = document.querySelectorAll("[data-target]");

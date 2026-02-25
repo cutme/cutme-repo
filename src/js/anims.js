@@ -6,18 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
   window.gsap_parallax = () => {
-    gsap.utils.toArray(".gs-parallax").forEach(function (section) {
-      gsap.to(".gs-parallax", {
-        yPercent: 40,
-        opacity: .1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".gs-parallax",
-          scrub: 0,
-          start: 'top top',
-        },
-      });
-    });
+    ScrollTrigger.matchMedia({
+      "(min-width: 641px)": () => {
+        gsap.utils.toArray(".gs-parallax").forEach(function (section) {
+          gsap.to(".gs-parallax", {
+            yPercent: 40,
+            opacity: .1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".gs-parallax",
+              scrub: 0,
+              start: 'top top',
+            },
+          });
+        });
+      }
+    })
   };
 
   window.anims = () => {
@@ -36,7 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const lenis = new Lenis();
-    lenis.on('scroll', ScrollTrigger.update)
+    //lenis.on('scroll', ScrollTrigger.update)
+
+
+    const portfolio = document.querySelector('#portfolio');
+    const button = document.querySelector('.contact-button');
+
+    lenis.on('scroll', () => {
+      //ScrollTrigger.update();
+      const rect = portfolio.getBoundingClientRect();
+      
+
+      if (rect.top <= 0) {
+        button.classList.remove('opacity-0', 'pointer-events-none');
+        button.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        button.classList.remove('opacity-100', 'pointer-events-auto');
+        button.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
 
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000)
@@ -66,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText2 = textWrapper2.textContent; // Zapisanie oryginalnego tekstu
       const tl = gsap.timeline();
       let starttime = '-=2';
-     
+
       let mediaQuery = '(min-width: 768px)',
         mediaQueryList = window.matchMedia(mediaQuery);
 
       function applyEffects() {
         document.querySelector(".c-welcome h1").classList.remove("opacity-0");
-        
+
         if (mediaQueryList.matches) {
           // Efekt pojawiania się liter dla dużych ekranów
           if (!textWrapper1.querySelector('.char')) {
@@ -108,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           starttime = '0';
-          
+
           tl.from(document.querySelector(".c-welcome h1"), {
             duration: 1.6,
             y: 40,
@@ -116,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'elastic.out(1, .8)',
           }, starttime);
 
-          
+
         }
       }
 
@@ -130,10 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Pozostałe animacje (dla wszystkich rozdzielczości)
       document.querySelector(".c-welcome h2").style.visibility = 'visible';
+      document.querySelector(".c-welcome .gsap-three").style.visibility = 'visible';
       document.querySelector(".c-welcome__skills").style.visibility = 'visible';
       document.querySelector(".c-welcome .o-more").classList.remove("opacity-0");
       document.querySelector(".c-welcome .nav").classList.remove("opacity-0");
       document.querySelector(".c-welcome .logo").style.visibility = 'visible';
+
+      document.querySelector(".c-welcome .arrow-skills").style.visibility = 'visible';
+      document.querySelector(".c-welcome .arrow-portfolio").style.visibility = 'visible';
 
 
 
@@ -143,12 +169,18 @@ document.addEventListener('DOMContentLoaded', () => {
         autoAlpha: 0,
         ease: 'elastic.out(1, .8)',
       }, starttime)
-        .from(document.querySelector(".c-welcome__skills"), {
+        .from(document.querySelector(".c-welcome .logo"), {
+          duration: 1.5,
+          autoAlpha: 0,
+          ease: 'elastic.out(1, .8)',
+        }, '-=1')
+        .from(document.querySelector(".gsap-three"), {
           duration: 1.6,
           y: 40,
           autoAlpha: 0,
           ease: 'elastic.out(1, .8)',
-        }, '-=1.4')
+        }, '-=1')
+
         .from(document.querySelectorAll(".c-welcome__skills span"), {
           duration: 1.2,
           x: 40,
@@ -156,17 +188,25 @@ document.addEventListener('DOMContentLoaded', () => {
           ease: 'elastic.out(1, .8)',
           stagger: 0.1,
         }, '-=2')
-        .from(document.querySelector(".c-welcome .logo"), {
-          duration: 1.5,
-          autoAlpha: 0,
-          ease: 'elastic.out(1, .8)',
-        }, '-=1')
+
         .from(document.querySelector(".c-welcome .o-more"), {
           duration: 1.6,
           y: 40,
           autoAlpha: 0,
           ease: 'elastic.out(1, .8)',
         }, '-=1.8')
+        .from(document.querySelector(".c-welcome .arrow-skills"), {
+          duration: 1.6,
+          x: 40,
+          autoAlpha: 0,
+          ease: 'elastic.out(1, .8)',
+        }, '-=1.4')
+        .from(document.querySelector(".c-welcome .arrow-portfolio"), {
+          duration: 1.6,
+          y: -100,
+          autoAlpha: 0,
+          ease: 'elastic.out(1, .8)',
+        }, '-=1.2')
         .from(document.querySelector(".c-welcome .nav"), {
           duration: 1.6,
           autoAlpha: 0,

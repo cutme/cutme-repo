@@ -1,29 +1,51 @@
-<section
-         class="flex ~pl-6/24 ~pr-6/24 flex-col items-center justify-center text-white c-welcome h-lvh after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax">
+<div class="relative z-10 flex ~px-6/24 flex-col items-center justify-center text-white c-welcome  after:absolute after:opacity-3 after:pointer-events-none after:size-full after:bg-[24px_24px] after:[background-size:25px_25px] gs-parallax
+         lg:h-lvh
+         max-lg:py-32">
   <img style="visibility: hidden" itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %>
 				 loading="lazy" width="145" height="28" alt="cutme" class="absolute logo ~left-6/12 top-12 opacity-30" />
 
+
   <div class="flex flex-col max-w-3xl">
-    <h1 class="max-w-xl lg:max-w-screen-md mb-6 ~text-3xl/5xl order-2 font-roslindale !leading-snug opacity-0">
-      <span class="char1">Kodowanie projektów graficznych</span>
-      <span class="char2">i&nbsp;wdrażanie do WordPress.</span>
+    <h1 class="max-w-xl lg:max-w-screen-md mb-4 ~text-3xl/5xl order-2 font-roslindale !leading-snug opacity-0">
+      <span class="char1 md:text-nowrap">Potrzebujesz wsparcia przy wdrożeniu</span>
+      <span class="char2 md:text-nowrap">lub kodowaniu projektu?</span>
     </h1>
 
-    <h2 class="tracking-wide mb-4 ~text-xs/base opacity-30 font-light order-1"
+    <h2 class="tracking-wide mb-4 ~text-xs/base opacity-50 font-light order-1"
         style="visibility: hidden">Bartosz Mediger, front-end developer</h2>
 
-    <div class="c-welcome__skills max-w-xl ~mb-10/14 order-3 font-normal ~text-2xs/xs uppercase opacity-60"
+    <p class="text-balance order-3 max-w-2xl mb-10 ~text-base/xl font-light tracking-wide gsap-three js-nowidows"
+       style="visibility: hidden;">
+
+      Wspieram agencje i firmy w kodowaniu front-end oraz wdrażaniu projektów do WordPress. Tworzę semantyczny kod
+      zoptymalizowany pod SEO i WCAG. Terminowo, bez niespodzianek.</p>
+
+    <div class="relative c-welcome__skills max-w-2xl ~mb-10/14 order-3 font-normal ~text-2xs/xs uppercase opacity-60"
          style="visibility: hidden">
+
+      <div class="arrow-skills absolute -translate-x-[80%] opacity-50 rotate-[41deg] scale-[0.6] bottom-[50%] max-lg:hidden"
+           style="visibility: hidden">
+        <img src="<%= require("./img/assets/arrow-03.svg") %>" alt=""/>
+        <p
+           class="absolute top-0 tracking-wider left-0 font-light text-3xl text-white normal-case -translate-x-1/2 -translate-y-[150%]">
+          skills</p>
+      </div>
+
       <span>ACF</span>
+      <span>Adobe XD</span>
+      <span>Figma</span>
+      <span>Git</span>
       <span>Interactive GSAP animations</span>
       <span>JavaScript</span>
       <span>Pixel Perfect</span>
       <span>RWD</span>
       <span>Semantic code</span>
-      <span>SEO friendly</span>
+      <span>SEO</span>
       <span>Tailwind CSS</span>
-      <span>VueJS</span>
+      <span>Vite</span>
+      <span>Vue.JS</span>
       <span>WCAG</span>
+      <span>Webpack</span>
       <span>Web Development</span>
       <span>Wordpress</span>
     </div>
@@ -32,9 +54,9 @@
       <button type="button"
               class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
               data-target="#portfolio">portfolio</button>
-      <button type="button"
+      <!-- <button type="button"
               class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
-              data-target="#faq">faq</button>
+              data-target="#faq">faq</button> -->
       <button type="button"
               class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
               data-target="#contact"
@@ -50,9 +72,25 @@
     </nav>
 
     <div class="order-4 opacity-0 o-more">
-      <button class="o-btn o-btn--oval o-btn--primary"
+      <button class="o-btn md:text-xl ~px-6/10 ~py-4/5"
               data-target="#portfolio"
-              data-speed=".5">Zobacz realizacje</button>
+              data-speed="1">Zobacz więcej</button>
+
+      <!-- <button class="o-btn o-btn--oval o-btn--primary"
+              data-target="#portfolio"
+              data-speed=".5">Zobacz realizacje</button> -->
     </div>
   </div>
-</section>
+  <!-- 
+  <img src="<%= require("./img/assets/arrow-02.svg") %>" alt=""
+  class="absolute bottom-0 right-0" /> -->
+
+
+  <div class="absolute bottom-0 scale-75 opacity-30 right-10 arrow-portfolio max-lg:hidden"
+       style="visibility: hidden">
+    <img src="<%= require("./img/assets/arrow-02.svg") %>" alt=""/>
+    <p
+       class="absolute top-0 transform -rotate-6 tracking-wider right-1 text-xl text-white normal-case font-light -translate-y-[130%]">
+      portfolio</p>
+  </div>
+</div>

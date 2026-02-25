@@ -23,12 +23,12 @@ import "dropzone/dist/dropzone.css";
 
   const language = document.documentElement.lang;
   if (language === 'pl-PL') {
-    dictDefaultMessageText = "<p class='mb-2 text-xl'>Dodaj pliki projektowe</p> <p class='text-sm text-gray-500'>(np. makiety, grafiki, dokumenty, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
+    dictDefaultMessageText = "<p class='mb-2 text-xl'>Jeśli masz, dodaj projekt</p> <p class='text-sm text-gray-500'>(np. makiety, grafiki, dokumenty, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
     dictRemoveFileText = "Usuń";
     dictCancelUploadText = "Anuluj"
 
   } else if (language === 'en-US') {
-    dictDefaultMessageText = "<p class='mb-2 text-xl'>Add design files</p> <p class='text-sm text-gray-500'>(e.g. mockups, graphics, documents, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
+    dictDefaultMessageText = "<p class='mb-2 text-xl'>If you have, add project</p> <p class='text-sm text-gray-500'>(e.g. mockups, graphics, documents, <span class='whitespace-nowrap'>max. 10 MB</span>)</p>";
     dictRemoveFileText = 'Delete';
     dictCancelUploadText = 'Cancel'
   }
