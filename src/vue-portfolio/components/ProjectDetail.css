@@ -1,0 +1,46 @@
+@reference "../../styles/styles.css";
+.pd {
+  @apply flex flex-col gap-8 text-white;
+}
+.pd__hero img {
+  @apply w-full rounded-2xl;
+}
+.pd__skills {
+  @apply flex flex-wrap gap-1.5 opacity-60 clamp-[pl,0,6];
+}
+.pd__header {
+  @apply max-w-2xl clamp-[pl,0,6];
+}
+.pd__header h2 {
+  @apply font-serif mb-2 clamp-[text,3xl,4xl];
+}
+.pd__header h3 {
+  @apply font-light clamp-[text,base,xl];
+}
+.pd__section {
+  @apply flex flex-col gap-4 max-w-2xl clamp-[pl,0,6];
+}
+.pd__section h4 {
+  @apply font-serif text-2xl;  
+}
+.pd__section p {
+  @apply font-light clamp-[text,base,lg];
+}
+.pd__ticks {
+  @apply flex flex-col gap-2;
+}
+.pd__ticks li {
+  @apply relative pl-6 font-light clamp-[text,base,lg];
+}
+.pd__ticks li::before {
+  @apply absolute left-0 text-primary content-["✓"];
+}
+.pd__footer {
+  @apply flex flex-wrap pt-4 items-center gap-4 border-t border-t-white/10 clamp-[pl,0,6];
+}
+.pd__close-btn {
+  @apply text-white/50 text-sm transition-colors duration-200 cursor-pointer hover:text-white;
+}
+.pd__see-more {
+  @apply px-4 py-2 text-sm;
+}

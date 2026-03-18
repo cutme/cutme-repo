@@ -1,0 +1,33 @@
+<div class="relative clamp-[pl,6,24] clamp-[pr,6,24] bg-white c-contact"
+     id="faq">
+  <div class="clamp-[pt,16,40] o-wrap js-fadeInChildren">
+    <div class="lg:grid lg:grid-cols-2">
+      <section class="pr-12 mb-16 js-sticky self-baseline">
+        <h2 class="md:max-w-[90%] clamp-[mb,10,20] clamp-[text,2.25rem,4.5rem] font-light -tracking-wide">Have any questions?</h2>
+        <p class="max-w-md text-2xl">Check out the FAQs – you might find the answer there. If not, contact me at:
+          <script>
+            var part1 = "info";
+            var part2 = Math.pow(2, 6);
+            var part3 = String.fromCharCode(part2);
+            var part4 = 'cutme.pl';
+            var part5 = part1 + String.fromCharCode(part2) + part4;
+            document.write("<a class='-ml-3 -mr-3 font-semibold u-link hover:ml-0 text-nowrap hover:mr-0' itemprop='email' href=" + "mai" + "lto" + ":"
+              + part5 + ">" + part1 + part3 + part4 + "</a>");
+          </script>
+        </p>
+      </section>
+      <div class="border-t border-gray-300 max-w-3xl_ c-accordion">
+        <%- include('01.ejs') %>
+        <%- include('02.ejs') %>
+        <%- include('03.ejs') %>
+        <%- include('04.ejs') %>
+        <%- include('05.ejs') %>
+        <%- include('06.ejs') %>
+        <%- include('07.ejs') %>
+        <%- include('08.ejs') %>
+        <%- include('09.ejs') %>
+        <%- include('10.ejs') %>
+      </div>
+    </div>
+  </div>
+</div>

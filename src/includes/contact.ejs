@@ -1,17 +1,17 @@
-<div class="relative z-30 ~pl-6/24 ~pr-6/24 bg-white c-contact"
+<div class="relative z-30 clamp-[px,6,24] bg-white c-contact"
 		 id="contact">
-	<div class="~pt-16/40 o-wrap js-fadeInChildren">
-		<p class="md:max-w-[90%] ~mb-14/32 ~text-2xl/4xl">Chcesz, aby Twój projekt graficzny został wdrożony zgodnie
-			z&nbsp;najlepszymi praktykami, był w&nbsp;pełni responsywny, dopracowany w&nbsp;każdym detalu i&nbsp;robił
-			świetne wrażenie? Dobrze trafiłeś!</p>
+	<div class="clamp-[pt,16,40] o-wrap js-fadeInChildren js-nowidows">
+		<h2 class="sr-only">Zlecenie kodowania front-end i wdrożenia WordPress</h2>
+		<p class="md:max-w-[90%] clamp-[mb,14,32] clamp-[text,xl,2.25rem]">Masz projekt z Figma lub PSD i szukasz front-end developera, który wdroży go jako responsywną stronę WordPress? Pixel Perfect, semantyczny kod, WCAG i&nbsp;terminowość – to mój standard. Napisz, chętnie wycenię Twoje zlecenie.</p>
 
-		<div class="relative lg:flex lg:justify-between ~pb-16/40">
-			<% include contact/social %>
-      <% include contact/contactform %>
+		<div class="relative lg:flex lg:justify-between clamp-[pb,16,40]">
+			<%- include('contact/social.ejs') %>
+      <%- include('contact/contactform.ejs') %>
 
 			<p class="absolute text-sm duration-150 lg:right-0 bottom-12 opacity-30 hover:opacity-50">&copy; <a
 					 href="https://mediger.net"
-					 target="_blank">mediger.net</a></p>
+					 target="_blank"
+					 rel="noopener noreferrer">mediger.net</a></p>
 		</div>
 	</div>
 </div>

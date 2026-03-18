@@ -1,0 +1,63 @@
+<%- include('includes/head.ejs') %>
+
+<body class="font-sans" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+  <script type="module" src="/app.js"></script>
+
+  <div class="fixed left-1 md:left-1/2 max-md:right-1 top-1 md:top-2 md:w-2xl rounded-full md:-translate-x-1/2 z-40 
+              flex pl-4 pr-2 py-2 flex items-center bg-black/70 duration-500 hidden js-topbar-scroll-handler">
+      <img itemprop="logo" src="./img/assets/logo-white.svg"
+			     loading="lazy" 
+           width="145" 
+           height="28" 
+           alt="cutme - front-end developer WordPress" 
+           data-target="body"
+           class="w-24 opacity-70 cursor-pointer">
+
+      <nav class="items-center flex gap-4 mr-0 ml-auto text-gray-200" aria-label="Nawigacja główna">
+        <button type="button"
+                class="text-sm cursor-pointer tracking-wider duration-150 uppercase hover:text-primary max-sm:hidden"
+                data-target="#portfolio"
+                aria-label="Przejdź do portfolio">Portfolio</button>
+        <button type="button"
+                class="text-sm cursor-pointer tracking-wider duration-150 uppercase hover:text-primary max-sm:hidden"
+                data-target="#opinions"
+                aria-label="Przejdź do opinii">Opinie</button>
+        <span class="pl-6 sm:border-l sm:border-l-gray-400">
+          <a href="/en"
+              hreflang="en"
+              class="text-sm uppercase duration-150 hover:text-primary "
+              aria-label="Switch to English version">en</a>
+        </span>
+        
+        <button class="button mr-0 ml-auto px-4 py-2 hover:white text-sm sm:text-base"
+              data-target="#contact"
+              data-speed="1"
+              aria-label="Przejdź do kontaktu">Kontakt</button>
+      </nav>
+  </div>
+
+  <!-- <div class="fixed z-20 p-2 transition-opacity ease-out rounded-full opacity-0 pointer-events-none contact-button bg-white/10 clamp-[right,2,4] clamp-[top,2,4] backdrop-blur-sm duration-400">
+    <button class="button clamp-[px,4,8] clamp-[py,2,4] max-sm:text-sm hover:text-gray-500"
+            data-target="#contact"
+            data-speed="1">Kontakt</button>
+  </div> -->
+  
+	<main itemprop="mainContentOfPage" id="welcome">
+
+
+    <%- include('includes/welcome.ejs') %>
+    
+    
+
+    <div id="portfolio-app"></div>
+    <%- include('includes/opinions.ejs') %>
+    <% //include ./src/includes/faq/index %>
+    <%- include('includes/contact.ejs') %>
+	</main>
+
+  <%- include('includes/footer.ejs') %>
+
+</body>
+</html>
+
+

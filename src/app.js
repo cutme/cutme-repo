@@ -1,10 +1,14 @@
-import './styles/styles.scss';
-import './styles/tailwind-output.css';
+//import './styles/tailwind.css';
+import './styles/styles.css';
 
-require('./js/anims.js');
-require('./js/smoothscroll.js');
-require('./js/init.js');
-require('./js/contactform.js');
-require('./js/carousel.js');
-require('./js/nowidows.js');
-require('./js/stickybits.js');
+import './js/anims';
+import './js/smoothscroll';
+import './js/init';
+import './js/contactform';
+import './js/nowidows';
+import './js/stickybits';
+import './js/text-roller';
+import './js/topbar-scroll-handler';
+
+import './vue-portfolio/main';
+import './vue-opinions/main';

@@ -1,4 +1,4 @@
-import { gsap, elastic } from "gsap";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from 'lenis';
 
@@ -6,63 +6,61 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
   window.gsap_parallax = () => {
-    ScrollTrigger.matchMedia({
-      "(min-width: 641px)": () => {
-        gsap.utils.toArray(".gs-parallax").forEach(function (section) {
-          gsap.to(".gs-parallax", {
-            yPercent: 40,
-            opacity: .1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".gs-parallax",
-              scrub: 0,
-              start: 'top top',
-            },
-          });
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 641px)", () => {
+      gsap.utils.toArray(".gs-parallax").forEach(function (section) {
+        gsap.to(".gs-parallax", {
+          yPercent: 40,
+          opacity: .1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".gs-parallax",
+            scrub: 0,
+            start: 'top top',
+          },
         });
-      }
+      });
     })
   };
 
   window.anims = () => {
     gsap_parallax();
 
-    ScrollTrigger.batch(".c-portfolio__box", {
-      onEnter: elements => {
-        gsap.from(elements, {
-          autoAlpha: 0,
-          x: 60,
-          stagger: 0.15,
-          ease: 'elastic.out(1, .8)',
-          duration: 2
-        });
-      },
-    });
+    // Portfolio animacje są teraz zarządzane przez Vue mini-app (src/vue-portfolio/)
 
-    const lenis = new Lenis();
-    //lenis.on('scroll', ScrollTrigger.update)
+    // const lenis = new Lenis();
+    // lenis.on('scroll', ScrollTrigger.update)
 
 
-    const portfolio = document.querySelector('#portfolio');
-    const button = document.querySelector('.contact-button');
+//     const portfolio = document.querySelector('#portfolio');
+//     const button = document.querySelector('.contact-button');
+//     const rect = portfolio.getBoundingClientRect();
+    
+// if (rect.top <= 0) {
+//         button.classList.remove('opacity-0', 'pointer-events-none');
+//         button.classList.add('opacity-100', 'pointer-events-auto');
+//       } else {
+//         button.classList.remove('opacity-100', 'pointer-events-auto');
+//         button.classList.add('opacity-0', 'pointer-events-none');
+//       }
 
-    lenis.on('scroll', () => {
-      //ScrollTrigger.update();
-      const rect = portfolio.getBoundingClientRect();
+    // lenis.on('scroll', () => {
+    //   //ScrollTrigger.update();
+    //   const rect = portfolio.getBoundingClientRect();
       
 
-      if (rect.top <= 0) {
-        button.classList.remove('opacity-0', 'pointer-events-none');
-        button.classList.add('opacity-100', 'pointer-events-auto');
-      } else {
-        button.classList.remove('opacity-100', 'pointer-events-auto');
-        button.classList.add('opacity-0', 'pointer-events-none');
-      }
-    });
+    //   if (rect.top <= 0) {
+    //     button.classList.remove('opacity-0', 'pointer-events-none');
+    //     button.classList.add('opacity-100', 'pointer-events-auto');
+    //   } else {
+    //     button.classList.remove('opacity-100', 'pointer-events-auto');
+    //     button.classList.add('opacity-0', 'pointer-events-none');
+    //   }
+    // });
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
+    // gsap.ticker.add((time) => {
+    //   lenis.raf(time * 1000)
+    // })
 
     gsap.ticker.lagSmoothing(0);
 

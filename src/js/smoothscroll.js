@@ -1,28 +1,64 @@
 import { gsap, Power2 } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    gsap.registerPlugin(ScrollToPlugin)
-    window.runScroll = function(el, o, speed) {
-        let offsetTop = document.querySelector(el).offsetTop;
-        o === undefined ? o = 0 : false;
-        speed === undefined ? speed = 1 : false;
-        gsap.to(window, { duration: speed, scrollTo: el, ease: Power2.easeOut });
+document.addEventListener('DOMContentLoaded', () => {
+
+    gsap.registerPlugin(ScrollToPlugin);
+
+    /**
+     * Scrolluje do elementu lub na górę strony.
+     *
+     * Zamiast przekazywać element bezpośrednio do GSAP ScrollToPlugin
+     * (który oblicza offsetTop raz na starcie i może dostać błędną wartość,
+     * gdy layout zmienia się po wyrenderowaniu Vue / lazy-loaded contentu),
+     * obliczamy aktualną pozycję przez getBoundingClientRect() w momencie
+     * wywołania — to gwarantuje poprawną wartość niezależnie od stanu layoutu.
+     */
+    window.runScroll = function(el, o = 0, speed = 1) {
+
+        if (el === "body") {
+            gsap.to(window, { duration: +speed || 1, scrollTo: 0, ease: Power2.easeOut });
+            return;
+        }
+
+        const targetEl = document.querySelector(el);
+        if (!targetEl) return;
+
+        const offset = +o || 0;
+        const rect = targetEl.getBoundingClientRect();
+        const targetY = window.scrollY + rect.top - offset;
+
+        gsap.to(window, {
+            duration: +speed || 1,
+            scrollTo: { y: targetY },
+            ease: Power2.easeOut
+        });
     };
 
     const gtt = document.querySelectorAll("[data-target]");
+
     if (gtt.length > 0) {
+
         const action = function(e) {
-        	e.preventDefault() ? e.preventDefault() : e.preventDefault = false;  
-            let target = e.currentTarget.dataset.target,
-                offset = e.currentTarget.dataset.offset,
-                speed = e.currentTarget.dataset.speed;            
-            document.getElementById(target.slice(1, target.length)) ? window.runScroll(target, offset, speed) :
+            e.preventDefault();
+
+            const target = e.currentTarget.dataset.target;
+            const offset = e.currentTarget.dataset.offset;
+            const speed  = e.currentTarget.dataset.speed;
+
+            if (target === "body") {
+                window.runScroll("body", offset, speed);
+                return;
+            }
+
+            if (document.querySelector(target)) {
+                window.runScroll(target, offset, speed);
+            } else {
                 window.open(window.location.origin + target, '_self');
+            }
         };
 
-        for (let i = 0; i < gtt.length; i++) {
-            gtt[i].addEventListener('click', action);
-        }
+        gtt.forEach(el => el.addEventListener('click', action));
     }
+
 }, false);

@@ -1,15 +1,17 @@
-<div class="relative z-30 ~pl-6/24 ~pr-6/24 bg-white c-contact"
+<div class="relative z-30 clamp-[px,6,24] bg-white c-contact"
 		 id="contact">
-	<div class="~pt-16/40 o-wrap js-fadeInChildren">
-		<p class="md:max-w-[90%] ~mb-14/32 ~text-2xl/4xl">Do you want your graphic design to be implemented in accordance with best practices, be fully responsive, refined in every detail and make a great impression? You've come to the right place!</p>
+	<div class="clamp-[pt,16,40] o-wrap js-fadeInChildren js-nowidows">
+		<h2 class="sr-only">Hire a WordPress front-end developer</h2>
+		<p class="md:max-w-[90%] clamp-[mb,14,32] clamp-[text,xl,2.25rem]">Do you have a Figma or PSD project and need a front-end developer to implement it as a responsive WordPress website? Pixel Perfect, semantic code, WCAG compliance and on-time delivery – that's my standard. Get in touch, I'll be happy to quote your project.</p>
 
-		<div class="relative lg:flex lg:justify-between ~pb-16/40">
-			<% include social %>
-      <% include contactform %>
+		<div class="relative lg:flex lg:justify-between clamp-[pb,16,40]">
+			<%- include('social.ejs') %>
+      <%- include('contactform.ejs') %>
 
 			<p class="absolute text-sm duration-150 lg:right-0 bottom-12 opacity-30 hover:opacity-50">&copy; <a
 					 href="https://mediger.net"
-					 target="_blank">mediger.net</a></p>
+					 target="_blank"
+					 rel="noopener noreferrer">mediger.net</a></p>
 		</div>
 	</div>
 </div>

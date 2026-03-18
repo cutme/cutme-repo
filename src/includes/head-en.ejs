@@ -4,17 +4,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <% include ../includes/head-meta-en %>
+  <%- include('../includes/head-meta-en.ejs') %>
    
 <% if (process.env.NODE_ENV === 'production') { %> 
-  <% include ../includes/head-gtm %> 
+  <%- include('../includes/head-gtm.ejs') %> 
 <% } else { %>
   <meta name="robots" content="noindex, nofollow">
 <% } %>    
 
-  <title>Design to code | Pixel Perfect, WordPress</title>
+  <title>WordPress Front-end Developer | Figma &amp; PSD to HTML – cutme.pl</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bartosz Mediger",
+    "jobTitle": "WordPress Front-end Developer",
+    "url": "https://cutme.pl",
+    "sameAs": [
+      "https://www.facebook.com/cutmepl",
+      "https://github.com/cutme"
+    ],
+    "knowsAbout": ["WordPress", "Front-end development", "Pixel Perfect", "GSAP", "WCAG", "HTML", "CSS", "JavaScript", "Figma", "PSD to HTML"]
+  }
+  </script>
   <script>
       document.documentElement.className = document.documentElement.className.replace("no-js","js");
   </script>

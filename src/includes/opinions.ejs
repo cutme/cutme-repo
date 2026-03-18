@@ -1,147 +1,27 @@
-<div class="relative text-gray-200 bg-cover c-opinions">
-	<!-- <div itemscope
-			 itemtype="http://schema.org/Organization"
-			 class="c-logo">
-		<a itemprop="url"
-			 href="https://cutme.pl"
-			 class="c-logo__img"
-			 title="cutme.pl"
-			 data-target="">
-			<img itemprop="logo" src=<%= require("./img/assets/logo-white.svg") %> width="145" height="28" alt="cutme">
-		</a>
-	</div> -->
+<div class="overflow-hidden clamp-[py,16,40] text-white text-center" id="opinions">
+  <h2 class="clamp-[mb,8,16] clamp-[text,3xl,5xl] font-serif">Opinie Klientów</h2>
 
-	<div class="~pt-16/40 ~pb-16/40">
-		<div class="~mb-12/24 text-center">
-			<div class="js-fadeInChildren">
-				<div class="siema"
-						 id="opinions">
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">cutme impressed us with their efficient and <br>
-								professional manner - an approach that not only <br>
-								inspired confidence, but generated the results we <br>
-								were looking for.</p>
+  <div lang=" flex flex-col justify-center">
+    <div class="clamp-[mb,6,24]">
+      <div id="opinions-app" data-lang="pl"></div>
+    </div>
 
-							<p class="text-sm text-gray-300">— Ahane Kmiecik, Veritas Wave</p>
-						</blockquote>
-					</div>
-
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">
-								Jestem pod wrażeniem profesjonalności – słowność,<br>
-								terminowość, świetny kontakt i&nbsp;bardzo wysoka jakość kodu.<br>
-								Mogę śmiało powiedzieć, że&nbsp;to jeden z&nbsp;moich najlepszych współpracowników.</p>
-
-							<p class="text-sm text-gray-300">— Marcin Kapiński, CEO Inbudo.pl</p>
-						</blockquote>
-					</div>
-
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">
-								Bardzo terminowo, sumiennie i&nbsp;rzetelnie.<br>
-								Polecam współpracę z&nbsp;cutme!</p>
-
-							<p class="text-sm text-gray-300">— Jakub Zajdel, Consulting &amp; More</p>
-						</blockquote>
-					</div>
-
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">
-								Lubię współpracę z&nbsp;cutme, gdyż cechuję ją minimum słów<br>
-								a&nbsp;maksimum otrzymywanego konkretu</p>
-
-							<p class="text-sm text-gray-300">— Adam Pioch, Toastmasters International</p>
-						</blockquote>
-					</div>
-
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">
-								Zleciłem pocięcie projektu od grafika do postaci<br>
-								skórki dla platformy Wordpress. Dostałem działającą skórkę w&nbsp;3&nbsp;dni.<br>
-								Zdecydowanie polecam i&nbsp;zdecydowanie robota warta swojej ceny.</p>
-
-							<p class="text-sm text-gray-300">— Paweł Jóźwik, traffictrends.pl</p>
-						</blockquote>
-					</div>
-
-					<div class="slide">
-						<blockquote>
-							<p itemprop="text"
-								 class="font-roslindale mb-8 ~text-2xl/4xl">
-								Bardzo dobry kontakt z&nbsp;możliwością dopracowania szczegółów<br>
-								i&nbsp;wartościowymi sugestiami ze swojej strony.<br>
-								Dodatkowym atutem jest także przystępna cena i&nbsp;znajomość<br>
-								najnowszych standardów. Pełne zadowolenie. Polecam.
-							</p>
-
-							<p class="text-sm text-gray-300">— Damian Zbrożek</p>
-						</blockquote>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="o-wrap ~pl-6/24 ~pr-6/24">
-			<div class="flex flex-wrap justify-center gap-2 mb-24 c-clients opacity-30 ">
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/asap.svg") %> alt="asap" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/frogriot.svg") %> alt="frogriot" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/logo-gophery.svg") %> alt="gophery" width="120">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/pragmatists.svg") %> alt="pragmatists" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/trec.svg") %> alt="trec" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/tt.png") %> alt="tt" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/consult.png") %> alt="consult" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/petra.png") %> alt="petra" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/projekt.svg") %> alt="projekt" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/roxx.svg") %> alt="roxx" width="300" height="80">
-				</div>
-
-				<div class="c-clients__item ">
-					<img src=<%= require("./img/clients/extradom.svg") %> alt="extradom" width="300" height="80">
-				</div>
-			</div>
-
-      <!-- <div class="flex justify-center">
-        <button class="o-btn o-btn--oval o-btn--primary"
-                data-target="#contact">Dołącz do zadowolonych Klientów</button>
-      </div> -->
-		</div>
-	</div>
+    <div class="text-roller whitespace-nowrap opacity-30 js-text-roller"
+        data-speed="100"
+        id="text-roller">
+      <span>
+        <b><img src="./img/clients/asap.svg" alt="asap" height="20"></b>
+        <b><img src="./img/clients/frogriot.svg" alt="frogriot" width="300" height="80"></b>
+        <b><img src="./img/clients/logo-gophery.svg" alt="gophery" width="120"></b>
+        <b><img src="./img/clients/pragmatists.svg" alt="pragmatists" width="300" height="80"></b>
+        <b><img src="./img/clients/trec.svg" alt="trec" width="300" height="80"></b>
+        <b><img src="./img/clients/tt.png" alt="tt" width="300" height="80"></b>
+        <b><img src="./img/clients/consult.png" alt="consult" width="300" height="80"></b>
+        <b><img src="./img/clients/petra.png" alt="petra" width="300" height="80"></b>
+        <b><img src="./img/clients/projekt.svg" alt="projekt" width="300" height="80"></b>
+        <b><img src="./img/clients/roxx.svg" alt="roxx" width="300" height="80"></b>
+        <b><img src="./img/clients/extradom.svg" alt="extradom" width="300" height="80"></b>
+      </span>
+    </div>
+  </div>
 </div>

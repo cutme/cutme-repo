@@ -1,0 +1,25 @@
+<%- include('includes/head-en.ejs') %>
+
+<body class="font-sans" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<%- include('includes/head-gtm--noscript.ejs') %>
+
+  <div class="fixed z-20 p-2 transition-opacity ease-out rounded-full opacity-0 pointer-events-none contact-button bg-white/10 clamp-[right,2,4] clamp-[top,2,4] backdrop-blur-sm duration-400">
+    <button class="button clamp-[px,4,8] clamp-[py,2,4] max-sm:text-sm hover:text-gray-500"
+            data-target="#contact"
+            data-speed="1">Contact</button>
+  </div>
+
+	<main itemprop="mainContentOfPage" id="welcome">
+    <%- include('includes/welcome-en.ejs') %>
+    <%- include('includes/portfolio-en/index.ejs') %>
+    <%- include('includes/opinions-en.ejs') %>
+    <% //include ./src/includes/faq-en/index %>
+    <%- include('includes/contact-en/index.ejs') %>
+	</main>
+
+  <%- include('includes/footer.ejs') %>
+
+</body>
+</html>
+
+

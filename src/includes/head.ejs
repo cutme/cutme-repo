@@ -4,18 +4,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <% include head-meta %>
-  <% include head-fav %>
+  <%- include('head-meta.ejs') %>
+  <%- include('head-fav.ejs') %>
     
 <% if (process.env.NODE_ENV === 'production') { %> 
-  <% include head-gtm %> 
+  <%- include('head-gtm.ejs') %> 
 <% } else { %>
   <meta name="robots" content="noindex, nofollow">
 <% } %>
     
-  <title>Kodowanie projektów graficznych | Pixel Perfect, WordPress</title>
+  <title>Front-end Developer WordPress | Kodowanie Figma i PSD – cutme.pl</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bartosz Mediger",
+    "jobTitle": "Front-end Developer & WordPress Specialist",
+    "url": "https://cutme.pl",
+    "sameAs": [
+      "https://www.facebook.com/cutmepl",
+      "https://github.com/cutme"
+    ],
+    "knowsAbout": ["WordPress", "Front-end development", "Pixel Perfect", "GSAP", "WCAG", "HTML", "CSS", "JavaScript", "Figma", "PSD to HTML"]
+  }
+  </script>
   <script>
       document.documentElement.className = document.documentElement.className.replace("no-js","js");
   </script>
