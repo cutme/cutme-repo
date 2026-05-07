@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
       // Pozostałe animacje (dla wszystkich rozdzielczości)
-      document.querySelector(".c-welcome h2").style.visibility = 'visible';
+      document.querySelector(".c-welcome .author").style.visibility = 'visible';
       document.querySelector(".c-welcome .gsap-three").style.visibility = 'visible';
       document.querySelector(".c-welcome__skills").style.visibility = 'visible';
       document.querySelector(".c-welcome .o-more").classList.remove("opacity-0");
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-      tl.from(document.querySelector(".c-welcome h2"), {
+      tl.from(document.querySelector(".c-welcome .author"), {
         duration: 1.6,
         y: 40,
         autoAlpha: 0,
