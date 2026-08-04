@@ -1,12 +1,17 @@
 <%- include('includes/head.ejs') %>
 
 <body class="font-sans" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSWJ5JLZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 
   <script type="module" src="/app.js"></script>
 
   <div class="fixed left-1 md:left-1/2 max-md:right-1 top-1 md:top-2 md:w-2xl rounded-full md:-translate-x-1/2 z-40 
               flex pl-4 pr-2 py-2 flex items-center bg-black/70 duration-500 hidden js-topbar-scroll-handler">
       <img itemprop="logo" src="./img/assets/logo-white.svg"
-			     loading="lazy" 
+           loading="lazy" 
            width="145" 
            height="28" 
            alt="cutme - front-end developer WordPress" 
@@ -15,11 +20,15 @@
 
       <nav class="items-center flex gap-4 mr-0 ml-auto text-gray-200" aria-label="Nawigacja główna">
         <button type="button"
-                class="text-sm cursor-pointer tracking-wider duration-150 uppercase hover:text-primary max-sm:hidden"
+                class="text-sm cursor-pointer tracking-wider duration-150 hover:text-primary max-sm:hidden"
                 data-target="#portfolio"
                 aria-label="Przejdź do portfolio">Portfolio</button>
         <button type="button"
-                class="text-sm cursor-pointer tracking-wider duration-150 uppercase hover:text-primary max-sm:hidden"
+                class="text-sm cursor-pointer tracking-wider duration-150 hover:text-primary max-sm:hidden"
+                data-target="#faq"
+                aria-label="Przejdź do FAQ">FAQ</button>
+        <button type="button"
+                class="text-sm cursor-pointer tracking-wider duration-150 hover:text-primary max-sm:hidden"
                 data-target="#opinions"
                 aria-label="Przejdź do opinii">Opinie</button>
         <span class="pl-6 sm:border-l sm:border-l-gray-400">
@@ -29,7 +38,32 @@
               aria-label="Switch to English version">en</a>
         </span>
         
-        <button class="button mr-0 ml-auto px-4 py-2 hover:white text-sm sm:text-base"
+        <button class="mr-0 ml-auto px-4 py-2 text-sm sm:text-base
+                       relative box-border touch-manipulation rounded-full transition-colors ease-out 
+                     focus-visible:outline-none focus-visible:shadow-focus cursor-pointer
+                     isolate text-white border-[1px]
+
+                     border-accent-hover 
+                     bg-accent-gradient 
+                     shadow-accent-gradient 
+
+                     before:content-[''] 
+                     before:absolute 
+                     before:inset-0 
+                     before:-z-10 
+                     before:rounded-full 
+                     before:pointer-events-none 
+                     before:bg-accent-gradient-hover 
+      
+                     before:shadow-accent-gradient-inner 
+                     before:opacity-0 
+                     before:transition-opacity 
+                     before:duration-200 
+      
+                     hover:before:opacity-100 
+                     active:before:opacity-0 
+                     active:before:duration-0
+        "
               data-target="#contact"
               data-speed="1"
               aria-label="Przejdź do kontaktu">Kontakt</button>
@@ -42,22 +76,128 @@
             data-speed="1">Kontakt</button>
   </div> -->
   
-	<main itemprop="mainContentOfPage" id="welcome">
-
+  <main itemprop="mainContentOfPage" id="welcome">
 
     <%- include('includes/welcome.ejs') %>
-    
-    
 
-    <div id="portfolio-app"></div>
-    <%- include('includes/opinions.ejs') %>
+    <!-- #portfolio-app: prerendered HTML dla Googlebot, Vue montuje interaktywną wersję po załadowaniu JS -->
+    <div id="portfolio-app">
+      <section id="portfolio"
+               class="relative z-10 clamp-[pt,8,40] bg-black/40"
+               aria-label="Portfolio projektów front-end i WordPress"
+               itemscope itemtype="https://schema.org/ItemList">
+
+        <header class="text-center clamp-[mb,6,16] flex flex-col clamp-[gap,1,2]">
+          <h2 class="clamp-[text,3xl,7xl] font-serif text-white">Portfolio</h2>
+          <p class="text-white clamp-[text,base,xl] opacity-30">Front-end &amp; WordPress</p>
+        </header>
+
+        <%
+          /* Statyczny SEO listing: pełne opisy projektów indeksowane przez Googlebot.
+             Vue zastępuje tę sekcję interaktywną wersją po załadowaniu JS.
+             Dane pochodzą wyłącznie z plików Vue — brak duplikacji. */
+        %>
+        <div class="sr-only" aria-label="Lista projektów portfolio – pełne opisy" role="list">
+          <% projects.forEach(function(p, i) { %>
+          <article role="listitem"
+                   itemprop="itemListElement"
+                   itemscope
+                   itemtype="https://schema.org/CreativeWork">
+            <meta itemprop="position" content="<%= i + 1 %>">
+            <h3 itemprop="name"><%= p.title %></h3>
+            <p itemprop="description"><%- p.shortDesc.pl.replace(/<[^>]+>/g, '') %></p>
+            <% if (p.skills && p.skills.length) { %>
+            <p>Technologie: <%= p.skills.join(', ') %></p>
+            <% } %>
+            <a itemprop="url" href="<%= p.url %>" target="_blank" rel="noopener noreferrer"><%= p.url %></a>
+            <% if (projectsSeoContent[p.id] && projectsSeoContent[p.id].pl) { %>
+            <div itemprop="about" lang="pl">
+              <%- projectsSeoContent[p.id].pl %>
+            </div>
+            <% } %>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+    </div>
+
+    <div class="clamp-[py,16,40] text-white text-center bg-black js-fadeInChildren" id="likeit">
+      <h2 class="clamp-[mb,8,16] clamp-[text,3xl,5xl] font-serif px-4">Podoba Ci się jakość realizacji?</h2>
+
+      <button class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]
+                     border-accent-hover 
+                     bg-accent-gradient 
+                     shadow-accent-gradient 
+                     before:bg-accent-gradient-hover 
+                     before:shadow-accent-gradient-inner"
+              data-target="#contact"
+              data-speed="1"
+              aria-label="Przejdź do sekcji kontakt – wyceń projekt">Darmowa wycena</button>
+    </div>
+
+    <!-- #opinions-app: prerendered HTML dla Googlebot, Vue montuje karuzelę po załadowaniu JS -->
+    <div class="overflow-hidden clamp-[py,16,40] text-white text-center js-fadeInChildren" id="opinions">
+      <h2 class="clamp-[mb,8,16] clamp-[text,4xl,7xl] font-serif">Opinie Klientów</h2>
+
+      <div class="flex flex-col justify-center">
+        <div class="clamp-[mb,6,24]">
+          <div id="opinions-app" data-lang="pl">
+            <% opinions.forEach(function(o) { %>
+            <div itemscope itemtype="https://schema.org/Review">
+              <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+                <meta itemprop="name" content="cutme.pl – Front-end Developer WordPress">
+                <meta itemprop="url" content="https://cutme.pl">
+              </span>
+              <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+              </div>
+              <blockquote class="max-w-5xl mx-auto clamp-[px,6,24]">
+                <p itemprop="reviewBody" class="font-serif mb-8 clamp-[text,xl,2.25rem]"><%= o.pl %></p>
+                <p class="text-sm text-gray-300">— <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><%= o.author %></span></span></p>
+              </blockquote>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+
+        <div class="text-roller whitespace-nowrap opacity-30 js-text-roller"
+            data-speed="100"
+            id="text-roller">
+          <span>
+            <b><img src="./img/clients/asap.svg" alt="asap" height="20"></b>
+            <b><img src="./img/clients/frogriot.svg" alt="frogriot" width="300" height="80"></b>
+            <b><img src="./img/clients/logo-gophery.svg" alt="gophery" width="120"></b>
+            <b><img src="./img/clients/pragmatists.svg" alt="pragmatists" width="300" height="80"></b>
+            <b><img src="./img/clients/trec.svg" alt="trec" width="300" height="80"></b>
+            <b><img src="./img/clients/tt.png" alt="tt" width="300" height="80"></b>
+            <b><img src="./img/clients/consult.png" alt="consult" width="300" height="80"></b>
+            <b><img src="./img/clients/petra.png" alt="petra" width="300" height="80"></b>
+            <b><img src="./img/clients/projekt.svg" alt="projekt" width="300" height="80"></b>
+            <b><img src="./img/clients/roxx.svg" alt="roxx" width="300" height="80"></b>
+            <b><img src="./img/clients/extradom.svg" alt="extradom" width="300" height="80"></b>
+          </span>
+        </div>
+      </div>
+    </div>
+
     <%- include('includes/faq/index.ejs') %>
     <%- include('includes/contact.ejs') %>
-	</main>
+  </main>
 
   <%- include('includes/footer.ejs') %>
 
+  <button class="button px-4 py-2 hover:white text-base fixed right-6 top-4 z-40 max-lg:hidden
+                 border-accent-hover 
+                 bg-accent-gradient 
+                 shadow-accent-gradient 
+                 before:bg-accent-gradient-hover 
+                 before:shadow-accent-gradient-inner"
+          data-target="#contact"
+          data-speed="1"
+          id="darmowa-wycena"
+          aria-label="Przejdź do sekcji kontakt – zapytaj o wycenę">Darmowa wycena</button>
+
 </body>
 </html>
-
-

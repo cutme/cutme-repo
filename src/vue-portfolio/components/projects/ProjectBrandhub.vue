@@ -1,19 +1,6 @@
 <template>
   <article class="pd">
-    <div class="pd__hero">
-      <img
-        :src="project.image"
-        :srcset="
-          project.image2x
-            ? `${project.image} 1x, ${project.image2x} 2x`
-            : undefined
-        "
-        :alt="project.imageAlt"
-        loading="lazy"
-        width="800"
-        height="480"
-      >
-    </div>
+    <PdHero :project="project" />
     <div v-if="project.skills?.length" class="pd__skills">
       <span v-for="skill in project.skills" :key="skill" class="skill">{{
         skill
@@ -80,6 +67,7 @@
   </article>
 </template>
 <script setup>
+import PdHero from '../PdHero.vue';
 defineProps({ project: { type: Object, required: true } });
 defineEmits(["close"]);
 </script>

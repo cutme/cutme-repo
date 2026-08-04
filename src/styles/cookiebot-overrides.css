@@ -1,0 +1,51 @@
+/* ============================================================
+   COOKIEBOT — NADPISANIE WYGLĄDU (bez ingerencji w JS/logikę)
+   Spójne z design systemem cutme.pl:
+   - tło: ciemny gradient jak na stronie
+   - akcent: fiolet #6663ff / gradient CTA #8556ff→#6b3eff
+   - font: Mulish (tekst), Roslindale (nagłówek)
+   - promień: 16px, pigułkowe przyciski jak .button na stronie
+   ============================================================ */
+
+:root {
+  --cb-bg: #17181d;
+  --cb-bg-soft: #1f2027;
+  --cb-border: rgba(255, 255, 255, 0.08);
+  --cb-text: #ffffff;
+  --cb-text-muted: rgba(255, 255, 255, 0.6);
+  --cb-accent: #6663ff;
+  --cb-accent-grad: radial-gradient(at 0 0, #8556ff, #6b3eff 60%);
+  --cb-accent-grad-hover: radial-gradient(at 0 0, #9690f8, #7c70fa 60%);
+  --cb-accent-border: #7c70fa;
+  --cb-accent-shadow: 0 3px 3px rgba(18, 25, 217, 0.3), inset 0 -3px 4px rgba(91, 18, 217, 0.3);
+  --cb-radius: 16px;
+  --cb-radius-sm: 10px;
+  --cb-font: "Mulish", sans-serif;
+  --cb-font-heading: "Roslindale", serif;
+}
+
+.cky-consent-container .cky-consent-bar {
+  background: var(--cb-bg) !important;
+  box-shadow: unset !important;
+}
+
+.cky-consent-container .cky-consent-bar > div:last-of-type,
+.cky-footer-wrapper > div:last-of-type {
+  display: none !important;
+}
+
+.cky-btn {
+  border: unset !important;
+  background-color: unset !important;
+  background-image: var(--cb-accent-grad) !important;
+  border-radius: 3.40282e38px !important;
+}
+
+.cky-consent-bar .cky-notice-content-wrapper {
+  padding: 1.5rem !important;
+}
+
+.cky-btn-revisit-wrapper {
+  background-color: var(--cb-bg) !important;
+  opacity: .5 !important;
+}

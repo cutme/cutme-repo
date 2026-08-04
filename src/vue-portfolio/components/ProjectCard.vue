@@ -165,6 +165,8 @@ function handleOpen() {
   display: block;
   width: 100%;
   height: auto;
+    aspect-ratio: attr(width) / attr(height); /* NIE WSZĘDZIE wspierane */
+
   object-fit: cover;
   transition:
     opacity 1s,

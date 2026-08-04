@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── Strony główne ── -->
+
+  <url>
+    <loc>https://cutme.pl/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/"/>
+  </url>
+
+  <url>
+    <loc>https://cutme.pl/en/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/"/>
+  </url>
+
+  <!-- ── Strony projektów ── -->
+
+  <!-- Let's Grow Gdańsk -->
+  <url>
+    <loc>https://cutme.pl/portfolio/lets-grow-gdansk/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/lets-grow-gdansk/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/lets-grow-gdansk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/lets-grow-gdansk/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/lets-grow-gdansk/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/lets-grow-gdansk/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/lets-grow-gdansk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/lets-grow-gdansk/"/>
+  </url>
+
+  <!-- Marketing Opanowany -->
+  <url>
+    <loc>https://cutme.pl/portfolio/marketing-opanowany/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/marketing-opanowany/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/marketing-opanowany/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/marketing-opanowany/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/marketing-opanowany/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/marketing-opanowany/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/marketing-opanowany/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/marketing-opanowany/"/>
+  </url>
+
+  <!-- DomLux -->
+  <url>
+    <loc>https://cutme.pl/portfolio/domlux/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/domlux/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/domlux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/domlux/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/domlux/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/domlux/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/domlux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/domlux/"/>
+  </url>
+
+  <!-- Karlex -->
+  <url>
+    <loc>https://cutme.pl/portfolio/karlex/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/karlex/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/karlex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/karlex/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/karlex/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/karlex/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/karlex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/karlex/"/>
+  </url>
+
+  <!-- 4pharma -->
+  <url>
+    <loc>https://cutme.pl/portfolio/4pharma/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/4pharma/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/4pharma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/4pharma/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/4pharma/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/4pharma/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/4pharma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/4pharma/"/>
+  </url>
+
+  <!-- MFD -->
+  <url>
+    <loc>https://cutme.pl/portfolio/mfd/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/mfd/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/mfd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/mfd/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/mfd/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/mfd/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/mfd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/mfd/"/>
+  </url>
+
+  <!-- FlowAir -->
+  <url>
+    <loc>https://cutme.pl/portfolio/flowair/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/flowair/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/flowair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/flowair/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/flowair/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/flowair/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/flowair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/flowair/"/>
+  </url>
+
+  <!-- Leasingujesz -->
+  <url>
+    <loc>https://cutme.pl/portfolio/leasingujesz/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/leasingujesz/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/leasingujesz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/leasingujesz/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/leasingujesz/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/leasingujesz/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/leasingujesz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/leasingujesz/"/>
+  </url>
+
+  <!-- FT Fund -->
+  <url>
+    <loc>https://cutme.pl/portfolio/ft-fund/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/ft-fund/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/ft-fund/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/ft-fund/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/ft-fund/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/ft-fund/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/ft-fund/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/ft-fund/"/>
+  </url>
+
+  <!-- 126 marek -->
+  <url>
+    <loc>https://cutme.pl/portfolio/126-marek/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/126-marek/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/126-marek/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/126-marek/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/126-marek/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/126-marek/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/126-marek/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/126-marek/"/>
+  </url>
+
+  <!-- Metoda Tęczówki -->
+  <url>
+    <loc>https://cutme.pl/portfolio/metoda-teczowki/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/metoda-teczowki/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/metoda-teczowki/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/metoda-teczowki/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/metoda-teczowki/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/metoda-teczowki/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/metoda-teczowki/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/metoda-teczowki/"/>
+  </url>
+
+  <!-- LTL Biobank -->
+  <url>
+    <loc>https://cutme.pl/portfolio/ltl-biobank/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/ltl-biobank/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/ltl-biobank/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/ltl-biobank/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/ltl-biobank/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/ltl-biobank/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/ltl-biobank/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/ltl-biobank/"/>
+  </url>
+
+  <!-- Quar Studio -->
+  <url>
+    <loc>https://cutme.pl/portfolio/quar-studio/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/quar-studio/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/quar-studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/quar-studio/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/quar-studio/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/quar-studio/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/quar-studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/quar-studio/"/>
+  </url>
+
+  <!-- BrandHub -->
+  <url>
+    <loc>https://cutme.pl/portfolio/brandhub/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/brandhub/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/brandhub/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/brandhub/"/>
+  </url>
+  <url>
+    <loc>https://cutme.pl/en/portfolio/brandhub/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pl"        href="https://cutme.pl/portfolio/brandhub/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://cutme.pl/en/portfolio/brandhub/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cutme.pl/portfolio/brandhub/"/>
+  </url>
+
+</urlset>

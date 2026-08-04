@@ -108,18 +108,35 @@ html {
 
 @layer components {
   .button {
-    @apply relative inline-flex items-center justify-center 
-           font-semibold text-white cursor-pointer rounded-full whitespace-nowrap
-           border border-transparent duration-150;
+    @apply box-border touch-manipulation rounded-full transition-colors ease-out 
+                     focus-visible:outline-none  cursor-pointer
+                      isolate text-white border-[1px]
 
-    background-color: var(--primary-color);
-    @apply hover:bg-transparent hover:before:opacity-100 active:scale-95;
+                      before:content-[''] 
+                     before:absolute 
+                     before:inset-0 
+                     before:-z-10 
+                     before:rounded-full 
+                      before:pointer-events-none 
+                      before:opacity-0 
+                     before:transition-opacity 
+                     before:duration-200 
+                     hover:before:opacity-100 
+                     active:before:opacity-0 
+                     active:before:duration-0;
+
+    /*@apply relative inline-flex items-center justify-center 
+           font-semibold text-white cursor-pointer rounded-full whitespace-nowrap
+           border border-transparent duration-150; */
+
+    /* background-color: var(--primary-color);
+    @apply hover:bg-transparent hover:before:opacity-100 active:scale-95; */
   }
 
-  .button:before {
+  /* .button:before {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block duration-500 opacity-0 content-[''] 
            border border-gray-500 w-[calc(100%+10px)] h-[calc(100%+10px)] rounded-full;
-  }
+  } */
 }
 
 /* ============================================
@@ -351,10 +368,10 @@ html {
 .c-contact__question .o-corner:before {
   box-shadow: 5px 5px 0 0 white;
 }
-
+/* 
 .c-contact .button:hover span {
   color: var(--c-black);
-}
+} */
 
 /* ============================================
    COMPONENTS — CONTACT FORM
@@ -517,7 +534,7 @@ html {
 /* ============================================
    COMPONENTS — COVER
    ============================================ */
-
+/* 
 .c-cover {
   transition-property: all;
   transition-timing-function: var(--anim-easing);
@@ -527,7 +544,7 @@ html {
 
 .pace-done .c-cover {
   opacity: 0;
-}
+} */
 
 /* ============================================
    COMPONENTS — OPINIONS
@@ -1120,3 +1137,42 @@ html {
 .ch2-theme-simple .ch2-dialog {
   @apply !w-auto !relative;
 } */
+
+
+#darmowa-wycena {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+}
+
+#darmowa-wycena.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#darmowa-wycena.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.before\:bg-accent-gradient-hover:before {
+  background-image: radial-gradient(at 0 0,#9690f8,#7c70fa 60%)
+}
+
+.bg-accent-gradient {
+  background-image: radial-gradient(at 0 0, #8556ff, #6b3eff 60%);
+}
+
+.border-accent-hover {
+  border-color: #7c70fa;
+}
+
+.shadow-accent-gradient {
+  box-shadow: 0 3px 3px #1219d94d, inset 0 -3px 4px #5b12d94d;
+}
+
+.before\:shadow-accent-gradient-inner:before {
+  box-shadow: inset 0 -3px 4px #5b12d94d;
+}

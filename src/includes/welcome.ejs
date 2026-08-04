@@ -26,7 +26,7 @@
 
       Kodowanie Pixel Perfect, animacje GSAP, semantyczny kod zgodny z WCAG i SEO. Wdrażam pod WordPress. Terminowo, bez niespodzianek.</h2>
 
-    <div class="relative c-welcome__skills flex gap-1.5 flex-wrap clamp-[mb,10,14] order-3 opacity-50 sm:max-w-2xl justify-center mx-auto"
+    <div class="relative c-welcome__skills flex gap-1.5 flex-wrap clamp-[mb,10,14] order-3 opacity-50 sm:max-w-2xl justify-center mx-auto max-md:hidden"
          style="visibility: hidden">
 
       <div class="arrow-skills absolute left-0 -translate-x-[80%] opacity-80 rotate-[41deg] scale-[0.6] bottom-[50%] max-lg:hidden"
@@ -57,22 +57,26 @@
 
     <nav class="absolute clamp-[top,6,12] clamp-[right,1.5rem,3rem] items-center nav flex opacity-0" aria-label="Nawigacja główna">
       <button type="button"
-              class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+              class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
               data-target="#portfolio"
-              aria-label="Przejdź do portfolio">portfolio</button>
+              aria-label="Przejdź do portfolio">Portfolio</button>
       <button type="button"
-                class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+                class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
+                data-target="#faq"
+                aria-label="Przejdź do FAQ">FAQ</button>
+      <button type="button"
+                class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
                 data-target="#opinions"
                 aria-label="Przejdź do opinii">Opinie</button>
       <button type="button"
-              class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+              class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
               data-target="#contact"
               data-speed="2"
-              aria-label="Przejdź do kontaktu">kontakt</button>
-      <span class="pl-6 border-l border-l-gray-800">
+              aria-label="Przejdź do kontaktu">Kontakt</button>
+      <span class="pl-6 border-l border-l-gray-500">
         <a href="/en"
            hreflang="en"
-           class="hidden mr-6 text-sm uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
+           class="hidden mr-6 text-sm uppercase duration-150 opacity-60 hover:opacity-100 sm:block"
            aria-label="Switch to English version">en</a>
       </span>
       <a href="https://github.com/cutme?tab=repositories"
@@ -83,10 +87,33 @@
     </nav>
 
     <div class="order-4 opacity-0 o-more text-center">
-      <button class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]"
+      <!-- <button class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]"
               data-target="#contact"
               data-speed="1"
-              aria-label="Przejdź do sekcji kontakt – zapytaj o wycenę">Zapytaj o wycenę</button>
+              aria-label="Przejdź do sekcji kontakt – zapytaj o wycenę">Zapytaj o wycenę</button> -->
+
+
+      <button type="button" 
+              data-target="#contact"
+              data-speed="1"
+              aria-label="Przejdź do sekcji kontakt – zapytaj o wycenę"
+              class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]
+                     box-border touch-manipulation rounded-full transition-colors ease-out 
+                     focus-visible:outline-none focus-visible:shadow-focus cursor-pointer
+                     relative isolate text-white
+                     before:content-[''] 
+                     before:absolute 
+                     before:inset-0 
+                     before:-z-10 
+                     before:rounded-full 
+                     before:pointer-events-none 
+
+                     border-accent-hover border-[1px]
+                     bg-accent-gradient 
+                     shadow-accent-gradient 
+                     
+                     before:bg-accent-gradient-hover 
+                     before:shadow-accent-gradient-inner">Zapytaj o wycenę</button>
     </div>
   </div>
 

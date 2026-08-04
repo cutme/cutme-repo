@@ -6,9 +6,13 @@
   >
   <!-- <h2 class="clamp-[mb,8,16] clamp-[text,3xl,5xl] font-serif text-white text-center">Portfolio</h2> -->
 
-  <header class="text-center clamp-[mb,6,16] flex flex-col clamp-[gap,1,2]">
-    <h2 class=" clamp-[text,3xl,5xl] font-serif text-white ">Portfolio</h2>
-    <p class="text-white clamp-[text,base,xl] opacity-30">Front-end &amp; WordPress</p>
+  <header class="text-center clamp-[mb,1,16] flex flex-col clamp-[gap,1,2] clamp-[gap,6,10] px-5 js-fadeInChildren">
+    <h2 class=" clamp-[text,4xl,7xl] font-serif text-white ">Portfolio</h2>
+    <!-- <p class="text-white clamp-[text,base,xl] opacity-30">Front-end &amp; WordPress</p> -->
+
+    <p class="opacity-80 text-white text-balance max-w-3xl mb-10 clamp-[text,1rem,1.25rem] font-light tracking-wide mx-auto text-center js-nowidows"
+       id="portfolioLead">
+      {{ portfolioLead }}</p>
   </header>
 
     <!-- ── Mobile: Swiper karuzela ──────────────────────────────────────── -->
@@ -67,6 +71,10 @@ const swiperModules = [Pagination];
 const BREAKPOINT = 1024;
 const isMobile = ref(window.innerWidth <= BREAKPOINT);
 
+const portfolioLead = isEn
+  ? 'Selected frontend projects implemented based on provided UI designs.'
+  : 'Poniżej kilka moich realizacji frontendowych.';
+
 function onResize() {
   isMobile.value = window.innerWidth <= BREAKPOINT;
 }
@@ -82,7 +90,7 @@ onUnmounted(() => window.removeEventListener('resize', onResize));
 
 /* ── Desktop grid (identyczny z poprzednim) ─────────────────────────────── */
 .pf-grid {
-  @apply grid lg:grid-cols-2;
+  @apply grid lg:grid-cols-2 gap-[1px];
 }
 
 /* ── Swiper wrapper ─────────────────────────────────────────────────────── */

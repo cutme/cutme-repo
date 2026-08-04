@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 
   <%- include('../includes/head-meta-en.ejs') %>
+  <%- include('../includes/head-fav-en.ejs') %>
    
 <% if (process.env.NODE_ENV === 'production') { %> 
   <%- include('../includes/head-gtm.ejs') %> 
@@ -16,19 +17,80 @@
   <meta name="robots" content="noindex, nofollow">
 <% } %>    
 
-  <title>WordPress Front-end Developer | Figma &amp; PSD to HTML – cutme.pl</title>
+  <title>Front-end Developer | Figma, PSD &amp; XD to HTML – Pixel Perfect &amp; WordPress – cutme.pl</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Bartosz Mediger",
-    "jobTitle": "WordPress Front-end Developer",
-    "url": "https://cutme.pl",
-    "sameAs": [
-      "https://www.facebook.com/cutmepl",
-      "https://github.com/cutme"
-    ],
-    "knowsAbout": ["WordPress", "Front-end development", "Pixel Perfect", "GSAP", "WCAG", "HTML", "CSS", "JavaScript", "Figma", "PSD to HTML"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://cutme.pl/#person",
+        "name": "Bartosz Mediger",
+        "jobTitle": "Front-end Developer & WordPress Specialist",
+        "url": "https://cutme.pl/en/",
+        "sameAs": [
+          "https://www.facebook.com/cutmepl",
+          "https://github.com/cutme"
+        ],
+        "knowsAbout": [
+          "WordPress",
+          "Front-end Development",
+          "Pixel Perfect Coding",
+          "Responsive Web Development",
+          "PSD to HTML",
+          "Figma to HTML",
+          "Adobe XD to HTML",
+          "GSAP animations",
+          "WCAG",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Tailwind CSS",
+          "Vue.js"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "name": "Front-end Development & WordPress Implementation",
+          "description": "Pixel Perfect coding of Figma, PSD and Adobe XD designs into responsive HTML/CSS pages and WordPress themes. GSAP animations, WCAG, SEO-friendly code."
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cutme.pl/en/#website",
+        "url": "https://cutme.pl/en/",
+        "name": "cutme.pl – Front-end Developer & WordPress Specialist",
+        "description": "Pixel Perfect front-end coding from Figma, PSD and XD designs. Responsive HTML/CSS and WordPress implementation. GSAP animations.",
+        "inLanguage": "en-US",
+        "author": { "@id": "https://cutme.pl/#person" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://cutme.pl/#business",
+        "name": "cutme.pl – Front-end Developer WordPress",
+        "url": "https://cutme.pl",
+        "description": "Front-end developer WordPress – coding projects from Figma, PSD and XD, WordPress implementation, Pixel Perfect, GSAP, WCAG.",
+        "founder": { "@id": "https://cutme.pl/#person" },
+        "logo": "https://cutme.pl/img/assets/og-image.jpg",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+48-691-630-013",
+          "contactType": "sales",
+          "availableLanguage": ["Polish", "English"]
+        }],
+        "sameAs": [
+          "https://www.facebook.com/cutmepl",
+          "https://github.com/cutme"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "6",
+          "reviewCount": "6"
+        }
+      }
+    ]
   }
   </script>
   <script>

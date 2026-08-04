@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Blokuj zminifikowane asety (cache-busted JS/CSS) — nie mają wartości SEO
+Disallow: /assets/
+
+# Blokuj skrypty PHP backendu
+Disallow: /contact.php
+Disallow: /upload.php
+
+# Blokuj pliki tymczasowe i backendowe
+Disallow: /*.php$
+
+Sitemap: https://cutme.pl/sitemap.xml

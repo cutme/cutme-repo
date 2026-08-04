@@ -26,7 +26,7 @@
 
       Pixel Perfect coding, GSAP animations, semantic code compliant with WCAG and SEO. I implement on WordPress. On time, without surprises.</h2>
 
-    <div class="relative c-welcome__skills flex gap-1.5 flex-wrap clamp-[mb,10,14] order-3 opacity-60 sm:max-w-2xl justify-center mx-auto"
+    <div class="relative c-welcome__skills flex gap-1.5 flex-wrap clamp-[mb,10,14] order-3 opacity-60 sm:max-w-2xl justify-center mx-auto max-md:hidden"
          style="visibility: hidden">
 
       <div class="arrow-skills absolute left-0 -translate-x-[80%] opacity-50 rotate-[41deg] scale-[0.6] bottom-[50%] max-lg:hidden"
@@ -57,23 +57,27 @@
 
     <nav class="absolute clamp-[top,6,12] clamp-[right,1.5rem,3rem] items-center nav flex opacity-0 text-sm tracking-wider" aria-label="Main navigation">
       <button type="button"
-              class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+              class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
               data-target="#portfolio"
-              aria-label="Go to portfolio">portfolio</button>
+              aria-label="Go to portfolio">Portfolio</button>
       <button type="button"
-                class="hidden mr-6 text-sm tracking-wider uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+                class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
+                data-target="#faq"
+                aria-label="Go to FAQ">FAQ</button>
+      <button type="button"
+                class="hidden mr-6 text-sm tracking-wider duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
                 data-target="#opinions"
-                aria-label="Go to opinions">opinions</button>
+                aria-label="Go to opinions">Opinions</button>
       <button type="button"
-              class="hidden mr-6 uppercase duration-150 opacity-30 hover:opacity-70 sm:block cursor-pointer"
+              class="hidden mr-6 duration-150 opacity-60 hover:opacity-100 sm:block cursor-pointer"
               data-target="#contact"
               data-speed="2"
-              aria-label="Go to contact">contact</button>
+              aria-label="Go to contact">Contact</button>
 
-      <span class="pl-6 border-l border-l-gray-800">
+      <span class="pl-6 border-l border-l-gray-500">
         <a href="/"
            hreflang="pl"
-           class="hidden mr-6 text-sm uppercase duration-150 opacity-30 hover:opacity-70 sm:block"
+           class="hidden mr-6 text-sm uppercase duration-150 opacity-60 hover:opacity-100 sm:block"
            aria-label="Przejdź do polskiej wersji strony">PL</a>
       </span>
 
@@ -85,8 +89,24 @@
     </nav>
 
     <div class="order-4 opacity-0 o-more text-center">
-      <button class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]"
-              data-target="#portfolio"
+      <button class="button md:text-xl clamp-[px,6,10] clamp-[py,4,5]
+                     box-border touch-manipulation rounded-full transition-colors ease-out 
+                     focus-visible:outline-none focus-visible:shadow-focus cursor-pointer
+                     relative isolate text-white
+                     before:content-[''] 
+                     before:absolute 
+                     before:inset-0 
+                     before:-z-10 
+                     before:rounded-full 
+                     before:pointer-events-none 
+
+                     border-accent-hover border-[1px]
+                     bg-accent-gradient 
+                     shadow-accent-gradient 
+                     
+                     before:bg-accent-gradient-hover 
+                     before:shadow-accent-gradient-inner"
+              data-target="#contact"
               data-speed="1"
               aria-label="Go to contact – ask for a quote">Ask for a quote</button>
     </div>

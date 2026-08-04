@@ -1,0 +1,82 @@
+<!-- Faq EN -->
+
+<%
+  const questions = [
+    {
+      question: "I don't have a Figma project – can I send it in a different format?",
+      answer: "Yes – besides Figma, it can be Adobe Photoshop, Adobe XD or Sketch. I deliver every project with attention to responsiveness and Pixel Perfect accuracy, regardless of the source format."
+    },
+    {
+      question: "How much does coding a project cost?",
+      answer: "The price depends on the number of subpages and the complexity of the project. To provide a quote, I need to see a preview of the design — I send it free of charge within 24 hours. Projects start from 800 PLN net."
+    },
+    {
+      question: "Can I order just slicing a design into HTML without WordPress implementation?",
+      answer: "Yes, I also build static websites."
+    },
+    {
+      question: "Do you offer revisions or support after the project is completed?",
+      answer: "After delivery you have 14 days to report any corrections arising from implementation errors — free of charge. Further changes and expansions are quoted individually. I don't disappear after deployment — you can contact me at any time."
+    },
+    {
+      question: "Can I count on animations on the website?",
+      answer: "Yes — scroll animations, hover effects and section transitions are a standard part of my implementations. I make sure animations are smooth, with no impact on page performance."
+    },
+    {
+      question: "How quickly can I expect the project to be completed?",
+      answer: "Simple HTML pages usually take 5–7 days, while more advanced projects can take up to several weeks."
+    },
+    {
+      question: "Do you handle SEO optimization?",
+      answer: "Yes, I offer basic and technical SEO optimization to improve your site's visibility in search engines. I focus on semantic HTML code, page speed, proper heading structure, responsiveness and accessibility best practices (WCAG)."
+    },
+    {
+      question: "Do you also do graphic design?",
+      answer: "No, I don't do graphic design, but I can recommend trusted designers I work with."
+    }
+  ];
+%>
+
+<div class="relative clamp-[pl,6,24] clamp-[pr,6,24] bg-white c-contact" id="faq">
+	<div class="clamp-[pt,16,40] o-wrap js-fadeInChildren">
+		
+
+    <div class="lg:grid lg:grid-cols-2">
+      <section class="md:pr-12 mb-16 js-sticky self-baseline">
+        <h2 class="md:max-w-[90%] clamp-[mb,5,10] clamp-[text,2.25rem,4.5rem] font-light -tracking-wide font-serif">Have any questions?</h2>
+        <p class="max-w-md clamp-[text,xl,2xl]">Check out the list of frequently asked questions – you might find the answer there. If not, contact me: <script>
+          var part1 = "info";
+          var part2 = Math.pow(2, 6);
+          var part3 = String.fromCharCode(part2);
+          var part4 = 'cutme.pl';
+          var part5 = part1 + String.fromCharCode(part2) + part4;
+          document.write("<a class='-ml-3 -mr-3 font-semibold u-link hover:ml-0 text-nowrap hover:mr-0' itemprop='email' href=" + "mai" + "lto" + ":"
+                 + part5 + ">" + part1 + part3 + part4 + "</a>");
+   </script></p>
+      </section>
+
+      
+      <!-- Accordion -->
+      <div class="divide-y-[1px] divide-black/20 js-nowidows">
+        <% questions.forEach((item, index) => { %>
+        <div data-accordion-item class="group">
+          <button class="w-full flex px-4 py-6 text-left" data-accordion-button>
+            <span class="clamp-[text,xl,2xl] group-[.is-open]:font-bold duration-150 hover:text-primary cursor-pointer ">
+              <%= item.question %>
+            </span>
+          </button>
+
+          <div
+            class="overflow-hidden max-w-3xl max-h-0 transition-[max-height] duration-500 ease-in-out"
+            data-accordion-content>
+            <div class="p-4 pb-6 pt-0 clamp-[text,base,xl]">
+              <p><%= item.answer %></p>
+            </div>
+          </div>
+        </div><!-- /data-accordion -->
+      <% }) %>
+      </div>
+
+    </div>
+	</div>
+</div>

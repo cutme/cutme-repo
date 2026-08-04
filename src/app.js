@@ -1,6 +1,8 @@
 //import './styles/tailwind.css';
 import './styles/styles.css';
+import './styles/cookiebot-overrides.css';
 
+import './js/accordion';
 import './js/anims';
 import './js/smoothscroll';
 import './js/init';

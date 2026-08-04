@@ -1,0 +1,82 @@
+<!-- Faq -->
+
+<%
+  const pytania = [
+    {
+      pytanie: "Nie mam projektu w Figmie, mogę podesłać w innym formacie?",
+      odpowiedz: "Tak - prócz Figmy może to być Adobe Photoshop, Adobe XD oraz Sketch. Każdy projekt realizuję z dbałością o responsywność oraz zgodność Pixel Perfect, niezależnie od formatu źródłowego."
+    },
+    {
+      pytanie: "Ile kosztuje zakodowanie projektu?",
+      odpowiedz: "Cena zależy od liczby podstron i złożoności zlecenia. Żeby wycenić, potrzebuję zobaczyć podgląd projektu — przesyłam ją bezpłatnie w ciągu 24h. Realizacje zaczynam od 800 zł netto."
+    },
+    {
+      pytanie: "Czy mogę zamówić samo cięcie grafiki do HTML bez wdrożenia do WordPress?",
+      odpowiedz: "Tak, realizuję również statyczne strony internetowe."
+    },
+    {
+      pytanie: "Czy oferujesz poprawki lub wsparcie po zakończeniu projektu?",
+      odpowiedz: "Po oddaniu projektu masz 14 dni na zgłoszenie poprawek wynikających z błędów realizacji — bezpłatnie. Dalsze zmiany i rozbudowę strony wyceniamy indywidualnie. Nie znikam po wdrożeniu, możesz się ze mną skontaktować w każdej chwili."
+    },
+    {
+      pytanie: "Czy mogę liczyć na animacje na stronie?",
+      odpowiedz: "Tak — animacje scroll, hover i przejścia sekcji są standardowym elementem moich wdrożeń. Dam o to, by animacje były płynne, bez wpływu na wydajność strony."
+    },
+    {
+      pytanie: "Jak szybko mogę oczekiwać realizacji zlecenia?",
+      odpowiedz: "Proste strony HTML zajmują zwykle 5-7 dni, natomiast bardziej zaawansowane projekty do kilku tygodni."
+    },
+    {
+      pytanie: "Czy zajmujesz się optymalizacją stron pod kątem SEO?",
+      odpowiedz: "Tak, oferuję podstawową i techniczną optymalizację stron pod kątem SEO, aby poprawić ich widoczność w wyszukiwarkach. Dbam m.in. o semantyczny kod HTML, szybkość działania, poprawną strukturę nagłówków, responsywność oraz dobre praktyki dostępności (WCAG)."
+    },
+    {
+      pytanie: "Czy zajmujesz się również projektowaniem graficznym?",
+      odpowiedz: "Nie, nie zajmuję się projektowaniem graficznym, jednak mogę polecić sprawdzonych grafików, z którymi współpracuję."
+    }
+  ];
+%>
+
+<div class="relative clamp-[pl,6,24] clamp-[pr,6,24] bg-white c-contact" id="faq">
+	<div class="clamp-[pt,16,40] o-wrap js-fadeInChildren">
+		
+
+    <div class="lg:grid lg:grid-cols-2">
+      <section class="md:pr-12 mb-16 js-sticky self-baseline">
+        <h2 class="md:max-w-[90%] clamp-[mb,5,10] clamp-[text,2.25rem,4.5rem] font-light -tracking-wide font-serif">Masz pytania?</h2>
+        <p class="max-w-md clamp-[text,xl,2xl]">Sprawdź listę najczęściej zadawanych pytań – być może znajdziesz tam odpowiedź. Jeśli nie, skontaktuj się ze mną: <script>
+          var part1 = "info";
+          var part2 = Math.pow(2, 6);
+          var part3 = String.fromCharCode(part2);
+          var part4 = 'cutme.pl';
+          var part5 = part1 + String.fromCharCode(part2) + part4;
+          document.write("<a class='-ml-3 -mr-3 font-semibold u-link hover:ml-0 text-nowrap hover:mr-0' itemprop='email' href=" + "mai" + "lto" + ":"
+                 + part5 + ">" + part1 + part3 + part4 + "</a>");
+   </script></p>
+      </section>
+
+      
+      <!-- Accordion -->
+      <div class="divide-y-[1px] divide-black/20 js-nowidows">
+        <% pytania.forEach((item, index) => { %>
+        <div data-accordion-item class="group">
+          <button class="w-full flex px-4 py-6 text-left" data-accordion-button>
+            <span class="clamp-[text,xl,2xl] group-[.is-open]:font-bold duration-150 hover:text-primary cursor-pointer ">
+              <%= item.pytanie %>
+            </span>
+          </button>
+
+          <div
+            class="overflow-hidden max-w-3xl max-h-0 transition-[max-height] duration-500 ease-in-out"
+            data-accordion-content>
+            <div class="p-4 pb-6 pt-0 clamp-[text,base,xl]">
+              <p><%= item.odpowiedz %></p>
+            </div>
+          </div>
+        </div><!-- /data-accordion -->
+      <% }) %>
+      </div>
+
+    </div>
+	</div>
+</div>

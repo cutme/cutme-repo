@@ -1,73 +1,130 @@
-import { gsap, Power2 } from "gsap";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener('DOMContentLoaded', () => {
+  // =========================
+  // 1. FAST SCROLL (jump)
+  // =========================
+  function jumpTo(y) {
+    window.scrollTo(0, y);
+  }
 
-  gsap.registerPlugin(ScrollToPlugin);
+  // =========================
+  // 2. SMOOTH FINISH SCROLL
+  // =========================
+  function smoothScrollTo(y, duration = 350) {
+    const start = window.scrollY;
+    const diff = y - start;
+    let startTime = null;
 
-  /**
-   * Scrolluje do elementu lub na górę strony.
-   *
-   * Zamiast przekazywać element bezpośrednio do GSAP ScrollToPlugin
-   * (który oblicza offsetTop raz na starcie i może dostać błędną wartość,
-   * gdy layout zmienia się po wyrenderowaniu Vue / lazy-loaded contentu),
-   * obliczamy aktualną pozycję przez getBoundingClientRect() w momencie
-   * wywołania — to gwarantuje poprawną wartość niezależnie od stanu layoutu.
-   */
-  window.runScroll = function (el, o = 0, speed = 1) {
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 
-    if (el === "body") {
-      gsap.to(window, { duration: +speed || 1, scrollTo: 0, ease: Power2.easeOut });
-      return;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+
+      const time = timestamp - startTime;
+      const progress = Math.min(time / duration, 1);
+      const eased = easeOutCubic(progress);
+
+      window.scrollTo(0, start + diff * eased);
+
+      if (time < duration) {
+        requestAnimationFrame(step);
+      }
     }
 
-    const targetEl = document.querySelector(el);
+    requestAnimationFrame(step);
+  }
+
+  // =========================
+  // RUN SCROLL (2-step UX)
+  // =========================
+  window.runScroll = function (selector, offset = 0) {
+
+    const targetEl = document.querySelector(selector);
     if (!targetEl) return;
 
-    const offset = +o || 0;
-    const rect = targetEl.getBoundingClientRect();
-    const targetY = window.scrollY + rect.top - offset;
+    // const topbar = document.querySelector('#topbar');
+    // const topbarHeight = topbar ? topbar.offsetHeight : 0;
 
-    gsap.to(window, {
-      duration: +speed || 1,
-      scrollTo: { y: targetY },
-      ease: Power2.easeOut,
-      onComplete: () => {
-        const rect = targetEl.getBoundingClientRect();
-        const finalY = window.scrollY + rect.top - offset;
+    const targetTop = targetEl.getBoundingClientRect().top + window.scrollY;
 
-        gsap.to(window, {
-          duration: 0.3,
-          scrollTo: finalY
-        });
-      }
+    const finalPosition = targetTop - offset;
+    // const finalPosition = targetTop - topbarHeight - offset;
+
+    const current = window.scrollY;
+
+    // jeśli już jesteś na miejscu → nie rób nic
+    if (Math.abs(current - finalPosition) < 10) return;
+
+    const jumpPosition = finalPosition - 120;
+
+    window.scrollTo(0, jumpPosition);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        smoothScrollTo(finalPosition, 450);
+      });
     });
   };
 
+  // =========================
+  // CLICK HANDLER
+  // =========================
   const gtt = document.querySelectorAll("[data-target]");
 
-  if (gtt.length > 0) {
-
+  if (gtt.length) {
     const action = function (e) {
       e.preventDefault();
 
       const target = e.currentTarget.dataset.target;
-      const offset = e.currentTarget.dataset.offset;
-      const speed = e.currentTarget.dataset.speed;
+      const href = e.currentTarget.getAttribute("href");
+      const offset = parseInt(e.currentTarget.dataset.offset || 0, 10);
 
-      if (target === "body") {
-        window.runScroll("body", offset, speed);
+      // 1. data-target ma pierwszeństwo
+      if (target) {
+        const exists = document.querySelector(target);
+
+        if (exists) {
+          window.runScroll(target, offset);
+        }
+
         return;
       }
 
-      if (document.querySelector(target)) {
-        window.runScroll(target, offset, speed);
-      } else {
-        window.open(window.location.origin + target, '_self');
+      // 2. fallback do href="#..."
+      if (href && href.startsWith("#")) {
+        const exists = document.querySelector(href);
+
+        if (exists) {
+          window.runScroll(href, offset);
+        }
+
+        return;
+      }
+
+      // 3. zwykła nawigacja
+      if (href) {
+        window.location.href = href;
       }
     };
 
-    gtt.forEach(el => el.addEventListener('click', action));
+    gtt.forEach(el => el.addEventListener("click", action));
   }
 
-}, false);
+  // =========================
+  // OBSŁUGA KOTWICY PRZY WEJŚCIU NA STRONĘ
+  // np. obszary.html#area
+  // =========================
+  if (window.__pendingHash) {
+    const hash = window.__pendingHash;
+
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        window.runScroll(hash, 0);
+
+        // przywrócenie hasha bez ponownego scrolla
+        history.replaceState(null, "", hash);
+      }, 50);
+    });
+  }
+
+});

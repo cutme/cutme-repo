@@ -2,9 +2,7 @@
 .pd {
   @apply flex flex-col gap-8 text-white;
 }
-.pd__hero img {
-  @apply w-full rounded-2xl;
-}
+/* .pd__hero img — przeniesiony do PdHero.vue (scoped) */
 .pd__skills {
   @apply flex flex-wrap gap-1.5 opacity-60 clamp-[pl,0,6];
 }

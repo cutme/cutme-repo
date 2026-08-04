@@ -8,28 +8,152 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NSWJ5JLZ');</script>
+  <!-- End Google Tag Manager -->
+  
   <%- include('head-meta.ejs') %>
   <%- include('head-fav.ejs') %>
     
 <% if (process.env.NODE_ENV === 'production') { %> 
-  <%- include('head-gtm.ejs') %> 
+  <%- //include('head-gtm.ejs') %> 
 <% } else { %>
   <meta name="robots" content="noindex, nofollow">
 <% } %>
     
-  <title>Front-end Developer WordPress | Kodowanie Figma i PSD – cutme.pl</title>
+  <title>Front-end Developer WordPress | Kodowanie Figma, PSD do HTML – Pixel Perfect – cutme.pl</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Bartosz Mediger",
-    "jobTitle": "Front-end Developer & WordPress Specialist",
-    "url": "https://cutme.pl",
-    "sameAs": [
-      "https://www.facebook.com/cutmepl",
-      "https://github.com/cutme"
-    ],
-    "knowsAbout": ["WordPress", "Front-end development", "Pixel Perfect", "GSAP", "WCAG", "HTML", "CSS", "JavaScript", "Figma", "PSD to HTML"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://cutme.pl/#person",
+        "name": "Bartosz Mediger",
+        "jobTitle": "Front-end Developer & WordPress Specialist",
+        "url": "https://cutme.pl",
+        "sameAs": [
+          "https://www.facebook.com/cutmepl",
+          "https://github.com/cutme"
+        ],
+        "knowsAbout": [
+          "WordPress",
+          "Front-end Development",
+          "Pixel Perfect Coding",
+          "Responsive Web Development",
+          "PSD to HTML",
+          "Figma to HTML",
+          "Adobe XD to HTML",
+          "GSAP animations",
+          "WCAG",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Tailwind CSS",
+          "Vue.js",
+          "kodowanie stron internetowych",
+          "cięcie layoutów",
+          "wdrożenie WordPress"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "name": "Kodowanie front-end i wdrożenie WordPress",
+          "description": "Pixel Perfect kodowanie projektów graficznych z Figma, PSD i Adobe XD na responsywne strony HTML/CSS i szablony WordPress. Animacje GSAP, WCAG, kod przyjazny SEO.",
+          "priceCurrency": "PLN",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "800",
+            "priceCurrency": "PLN"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cutme.pl/#website",
+        "url": "https://cutme.pl",
+        "name": "cutme.pl – Front-end Developer WordPress",
+        "description": "Kodowanie stron internetowych z Figma, PSD i XD – responsywny HTML/CSS i wdrożenie WordPress. Pixel Perfect, animacje GSAP.",
+        "inLanguage": "pl-PL",
+        "author": { "@id": "https://cutme.pl/#person" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://cutme.pl/#business",
+        "name": "cutme.pl – Front-end Developer WordPress",
+        "url": "https://cutme.pl",
+        "description": "Front-end developer WordPress – kodowanie projektów graficznych z Figma i PSD, wdrożenia WordPress, Pixel Perfect, GSAP, WCAG.",
+        "founder": { "@id": "https://cutme.pl/#person" },
+        "logo": "https://cutme.pl/img/assets/og-image.jpg",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+48-691-630-013",
+          "contactType": "sales",
+          "availableLanguage": ["Polish", "English"]
+        }],
+        "sameAs": [
+          "https://www.facebook.com/cutmepl",
+          "https://github.com/cutme"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "6",
+          "reviewCount": "6"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://cutme.pl/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Nie mam projektu w Figmie, mogę podesłać w innym formacie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak – prócz Figmy może to być Adobe Photoshop, Adobe XD oraz Sketch. Każdy projekt realizuję z dbałością o responsywność oraz zgodność Pixel Perfect, niezależnie od formatu źródłowego."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile kosztuje zakodowanie projektu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cena zależy od liczby podstron i złożoności zlecenia. Realizacje zaczynam od 800 zł netto. Wycenę przesyłam bezpłatnie w ciągu 24h po przesłaniu podglądu projektu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę zamówić samo kodowanie grafiki do HTML bez wdrożenia do WordPress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, realizuję również statyczne strony internetowe – samo cięcie layoutu Figma lub PSD do HTML/CSS bez wdrożenia CMS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy zajmujesz się optymalizacją stron pod kątem SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, oferuję podstawową i techniczną optymalizację stron pod kątem SEO: semantyczny HTML, poprawna struktura nagłówków, szybkość ładowania, responsywność i dobre praktyki dostępności (WCAG)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak szybko mogę oczekiwać realizacji zlecenia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Proste strony HTML zajmują zwykle 5–7 dni roboczych, bardziej zaawansowane projekty kilka tygodni."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <script>
