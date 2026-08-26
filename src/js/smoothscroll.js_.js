@@ -73,11 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (gtt.length) {
     const action = function (e) {
-      // Nie przechwytuj przycisków submit formularzy — data-target
-      // na takim przycisku (np. skopiowany z innego CTA) nie może
-      // blokować wysyłki formularza.
-      if (e.currentTarget.type === 'submit') return;
-
       e.preventDefault();
 
       const target = e.currentTarget.dataset.target;
